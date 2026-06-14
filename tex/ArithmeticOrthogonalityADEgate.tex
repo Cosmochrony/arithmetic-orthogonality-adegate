@@ -1,49 +1,346 @@
 \documentclass[11pt]{article}
 
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{doi}
+\usepackage{hyperref}
 
 \newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{Proposition}
 \newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
-\newtheorem{hypothesis}{Hypothesis}
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
-\title{
-  TODO Title
-}
+\newcommand{\Heis}{\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})}
+\newcommand{\Gal}{\mathrm{Gal}}
 
-\author{J. Beau\\
-Independent Researcher, France\\
-\texttt{jerome.beau@cosmochrony.org}}
-
-\date{2026}
+\title{Arithmetic Orthogonality of the ADE Case-Selection Gate}
+\author{J\'er\^ome Beau\\ \texttt{javarome@gmail.com}\\ ORCID: 0009-0001-7697-7868}
+\date{June 2026}
 
 \begin{document}
+
   \maketitle
 
   \begin{abstract}
-    TODO Abstract.
+    The generation-split value $\epsilon=\tfrac{1}{10}$ is often presented as a derived prediction of the spectral
+    stratigraphy of the corpus.
+    This note isolates its exact logical status.
+    First, $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate: once a case is selected whose
+    class-complete spectrum carries the external level ratio $3:2$, the generation-deficit normal form forces
+    $\epsilon=\tfrac{1}{10}$ and $\kappa=\tfrac{5}{12}$ algebraically, with no further input.
+    Second, the first-principles status of $\epsilon$ is therefore exactly the first-principles status of the gate.
+    We then characterise the obstruction to deriving the gate as an arithmetic orthogonality.
+    The selection of the $\sqrt{5}$-locus that carries the $3:2$ ratio requires the nontrivial element of
+    $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, the action $\sqrt{5}\mapsto-\sqrt{5}$.
+    The only field automorphism supplied by the foundations is the Born--Infeld parity $c\mapsto q-c$, which is the
+    restriction of complex conjugation $\zeta_q\mapsto\zeta_q^{-1}$ and fixes $\sqrt{5}$.
+    In the compositum $K_q=\mathbb{Q}(\zeta_q,\sqrt{5})$ the two actions lie in distinct direct factors of the Galois
+    group, hence are arithmetically orthogonal.
+    Consequently the gate cannot be discharged from the present axioms without an additional arithmetic principle at
+    the spin stratum, unless a type-rigidity property of the recursive non-injectivity tower is established.
+    The latter is the single open point that carries the weight of the negative result; we state it and indicate a
+    proof direction, but do not conclude it.
   \end{abstract}
 
-  \noindent\textbf{Keywords:}
-  TODO keywords.
+  \noindent\textbf{Keywords:} non-injective projection; ADE case selection; binary icosahedral group; golden ratio;
+  cyclotomic field; Galois action; Born--Infeld parity; generation split; epistemic stratification.
 
+  \newpage
+  \tableofcontents
+
+  \newpage
   \section{Introduction}
-    \label{sec:intro}
 
-    TODO
+    The generation sector of the corpus produces a three-level deficit structure whose outer ratio matches the
+    external ADE ratio $3:2$ of a selected case, and this matching fixes the split value $\epsilon=\tfrac{1}{10}$ and
+    the common scale $\kappa=\tfrac{5}{12}$~\cite{Beau2026q14,Beau2026a4,Beau2026bim}.
+    The value $\epsilon=\tfrac{1}{10}$ has occasionally been described as derived.
+    This note draws the line precisely, because the distinction between a posited value and a value forced once a case
+    is selected is the whole content of the matter.
 
-  \bibliographystyle{plain}
-  \bibliography{cosmochrony-bibliography}
+    The clarification is in two parts.
+    The first part is a trivial decomposition that nonetheless settles the status question: the algebra that takes the
+    $3:2$ ratio to $\epsilon=\tfrac{1}{10}$ is general and case-independent, so all of the first-principles content lives
+    in the upstream selection of the case~(Section~\ref{sec:conditional}).
+    The second part characterises why that upstream selection is not supplied by the present foundations.
+    The selection of the $\sqrt{5}$-locus that carries the $3:2$ ratio is an arithmetic act: it requires the Galois
+    action that separates the two two-dimensional irreducible characters of the binary icosahedral group $2I$.
+    The foundations supply only the Born--Infeld parity, which is complex conjugation on the central character and
+    fixes the real quadratic field $\mathbb{Q}(\sqrt{5})$.
+    These two actions sit in distinct direct factors of the Galois group of the natural compositum, so the parity
+    non-injectivity is not a partial version of the required Galois action; it is orthogonal to
+    it~(Sections~\ref{sec:organizing}--\ref{sec:negative}).
+
+    The recursive non-injectivity theorem of ENI~\cite{Beau2026l} guarantees that each stratum of a tower of genuinely
+    distinct emergent levels carries its own non-injectivity, but it constrains existence, not arithmetic type.
+    The base fibre is closed: its forced involution is the Born--Infeld parity~\cite{Beau2026m}.
+    Whether every recursive stratum above the base inherits the parity type, rather than introducing an action in the
+    $\sqrt{5}$ factor, is open.
+    This type-rigidity statement is the single point that carries the weight of the negative
+    result~(Section~\ref{sec:rigidity}).
+    Section~\ref{sec:status} records the epistemic stratification and the downstream consequence: observable masses
+    route through the explicit operator $E_\Pi$ and the Yukawa sector regardless of how the gate is
+    resolved~\cite{Beau2026fmnote,Beau2026prs}.
+
+  \section{The conditional split}
+    \label{sec:conditional}
+
+    We work with the generation-deficit normal form of the dynamical spectrum on the generation
+    factor~\cite{Beau2026q14}.
+    Let $s_0$ be the central eigenvalue, fixed by the projective involution $J_\Pi$, and let $s_\pm$ be the two outer
+    eigenvalues, in the normalisation $s_0=1$.
+
+    \begin{definition}[Exit deficit]
+For an eigenvalue $s$ with central value $s_0$, the exit deficit is $d_{\mathrm{exit}}(s):=s_0-s$.
+The normal form $s_0=1,\ s_\pm=\tfrac{1}{2}\pm\epsilon$ gives
+$d_{\mathrm{exit}}(s_0)=0$ and $d_{\mathrm{exit}}(s_\pm)=\tfrac{1}{2}\mp\epsilon$.
+    \end{definition}
+
+    \begin{lemma}[Algebraic ratio lemma]
+      \label{lem:algebraic}
+      If the outer exit deficits are in the ratio $3:2$, that is
+      \[
+        \frac{d_{\mathrm{exit}}(s_-)}{d_{\mathrm{exit}}(s_+)}=\frac{\tfrac{1}{2}+\epsilon}{\tfrac{1}{2}-\epsilon}=\frac{3}{2},
+      \]
+      then $\epsilon=\tfrac{1}{10}$.
+      If in addition a single common scale $\kappa$ satisfies $\kappa\, d_{\mathrm{exit}}(s_\pm)=|\lambda-1|$ on the two
+      outer levels with $\{|\lambda_1-1|,|\lambda_3-1|\}=\{\tfrac{1}{6},\tfrac{1}{4}\}$, then $\kappa=\tfrac{5}{12}$.
+    \end{lemma}
+
+    \begin{proof}
+      From $2(\tfrac{1}{2}+\epsilon)=3(\tfrac{1}{2}-\epsilon)$ one obtains $1+2\epsilon=\tfrac{3}{2}-3\epsilon$, hence
+      $5\epsilon=\tfrac{1}{2}$ and $\epsilon=\tfrac{1}{10}$.
+      The outer deficits are then $\{\tfrac{2}{5},\tfrac{3}{5}\}$, and
+      $\kappa=(\tfrac{1}{4})/(\tfrac{3}{5})=(\tfrac{1}{6})/(\tfrac{2}{5})=\tfrac{5}{12}$, consistent on both levels.
+    \end{proof}
+
+    The lemma is trivial and entirely case-independent: it uses only the ratio $3:2$, not any property of the binary
+    icosahedral group or of the generating set.
+    The status of $\epsilon=\tfrac{1}{10}$ is therefore the status of the hypothesis that supplies the ratio $3:2$.
+
+    \begin{theorem}[Conditional ADE split]
+      \label{thm:conditional}
+      Assume the ADE case-selection gate selects the central-lift class over the $\sqrt{5}$-locus, that is the parity
+      class over the $A_5$ five-cycle locus, whose class-complete Cayley spectrum has external ratio
+      \[
+        \frac{|\lambda_3-1|}{|\lambda_1-1|}=\frac{3}{2}
+      \]
+      with $\{|\lambda_1-1|,|\lambda_3-1|\}=\{\tfrac{1}{6},\tfrac{1}{4}\}$ and central level
+      $\lambda_2=1$~\cite{Beau2026a6,Beau2026a4}.
+      Then the generation-deficit normal form forces, by Lemma~\ref{lem:algebraic},
+      \[
+        \frac{\tfrac{1}{2}+\epsilon}{\tfrac{1}{2}-\epsilon}=\frac{3}{2},\qquad
+        \epsilon=\frac{1}{10},\qquad \kappa=\frac{5}{12}.
+      \]
+      The split value is not an independent parameter once the ADE case is selected.
+    \end{theorem}
+
+    \begin{remark}[Status]
+Theorem~\ref{thm:conditional} is conditional, not predictive.
+Its single nontrivial hypothesis is the gate.
+The first-principles status of $\epsilon=\tfrac{1}{10}$ is exactly the first-principles status of the gate, and
+nothing in the theorem bears on why the $\sqrt{5}$-locus is selected.
+The wording avoids committing to ``order five'' versus ``order ten'' for the generating class: the variable-valence
+exit analysis uses the order-five generating set~\cite{Beau2026a6}, while the bounded-flux admissibility analysis
+uses the order-ten classes $10a\cup 10b$~\cite{Beau2026a1}, and the two are identified by the central lift, as made
+precise in Corollary~\ref{cor:tiebreak}.
+    \end{remark}
+
+  \section{The arithmetic organizing lemma}
+    \label{sec:organizing}
+
+    Two arithmetic data enter the construction from independent parts of the apparatus.
+    The root of unity $\zeta_q=e^{2\pi i/q}$ is the central character of the fibre group $\Heis$, fixed by the
+    Stone--von Neumann identification of the Weil representation $V_\rho$~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+    The quadratic surd $\sqrt{5}$ is the character field of the two two-dimensional irreducible representations of the
+    binary icosahedral group $2I$, where it appears through the golden ratio identity
+    $\chi(10a)+\chi(10b)=\varphi-\bar{\varphi}=1$ on the order-ten classes~\cite{Beau2026a1,Beau2026a30}.
+    These origins are independent: the first is a property of the fibre group on which the axioms act, the second is a
+    representation-theoretic property of the spin-stratum subgroup.
+
+    \begin{lemma}[Arithmetic orthogonality]
+      \label{lem:organizing}
+      Let $q$ be prime with $q\neq 5$, and let $K_q=\mathbb{Q}(\zeta_q,\sqrt{5})$.
+      Then $\mathbb{Q}(\zeta_q)$ and $\mathbb{Q}(\sqrt{5})$ are linearly disjoint over $\mathbb{Q}$, so
+      \[
+        \Gal(K_q/\mathbb{Q})\;\cong\;\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})\times\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q}).
+      \]
+      The Born--Infeld parity $c\mapsto q-c$ is the restriction of complex conjugation; as an element of
+      $\Gal(K_q/\mathbb{Q})$ it is
+      \[
+        \text{BI parity}=(\zeta_q\mapsto\zeta_q^{-1},\ \sqrt{5}\mapsto\sqrt{5}).
+      \]
+      The Galois action separating the two two-dimensional irreducible characters of $2I$ is
+      \[
+        \text{Galois-spin}=(\zeta_q\mapsto\zeta_q,\ \sqrt{5}\mapsto-\sqrt{5}).
+      \]
+      These lie in distinct direct factors.
+      In particular the Born--Infeld parity fixes $\mathbb{Q}(\sqrt{5})$ pointwise and is not the Galois-spin action.
+    \end{lemma}
+
+    \begin{proof}
+      The unique quadratic subfield of $\mathbb{Q}(\zeta_q)$ is $\mathbb{Q}(\sqrt{q^{*}})$ with
+      $q^{*}=(-1)^{(q-1)/2}q$.
+      For prime $q\neq 5$ one has $q^{*}\neq 5$ up to squares, so $\sqrt{5}\notin\mathbb{Q}(\zeta_q)$ and
+      $\mathbb{Q}(\zeta_q)\cap\mathbb{Q}(\sqrt{5})=\mathbb{Q}$.
+      Linear disjointness gives the direct-product decomposition of the Galois group.
+      The central character satisfies
+      $e^{2\pi i c/q}\mapsto e^{2\pi i(q-c)/q}=e^{-2\pi i c/q}=\overline{e^{2\pi i c/q}}$ under $c\mapsto q-c$, so the
+      Born--Infeld parity is complex conjugation on the $\zeta_q$ factor; since $\sqrt{5}$ is real, complex conjugation
+      fixes it.
+      The Galois-spin action is the nontrivial element of $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$ and fixes $\zeta_q$.
+      The two thus occupy distinct direct factors.
+    \end{proof}
+
+    \begin{remark}[Why the disjunction is not accidental]
+The direct-factor separation reflects the independence of the two origins.
+The axioms act on the fibre $\Heis$ and on its cyclotomic factor $\mathbb{Q}(\zeta_q)$; they have no action on the
+factor in which $\sqrt{5}$ lives.
+The orthogonality is therefore structural, not numerical.
+    \end{remark}
+
+  \section{The central-lift tie-break}
+    \label{sec:tiebreak}
+
+    The order-ten elements of $2I$ are the order-five elements multiplied by the central element $-I$, since for an
+    order-five $g$ one has $(-Ig)^{5}=-I$ and $(-Ig)^{10}=I$.
+    The Weil lift of $-I$ is the central reflection $R_b=W(-I)=\mathrm{FT}^{2}$, scalar on the chiral carrier and
+    commuting with $\gamma_5$~\cite{Beau2026q11of}.
+
+    \begin{corollary}[Order-five versus order-ten is below parity resolution]
+      \label{cor:tiebreak}
+      Under the identification $R_b=W(-I)$ of the central lift with the Born--Infeld parity, the projective quotient that
+      the construction realises identifies the order-five and order-ten classes rather than distinguishing them.
+      The order-five versus order-ten alternative is not a selectable degree of freedom of the framework; it is a
+      central-lift ambiguity that the parity erases.
+    \end{corollary}
+
+    \begin{proof}
+      The pair of classes is exchanged by $\times(-I)$, whose realisation is $R_b$.
+      By Lemma~\ref{lem:organizing} the parity acts only on the $\zeta_q$ factor and fixes $\sqrt{5}$, so it permutes the
+      classes by the central lift while leaving the Galois data invariant.
+      Quotienting by the central lift identifies the two classes; it does not order them.
+      Hence the framework supplies no selector between order five and order ten, for the same arithmetic reason that it
+      supplies no Galois-spin action: it provides $\times(-I)$, not $\sqrt{5}\mapsto-\sqrt{5}$.
+    \end{proof}
+
+    The tie-break and the negative result of Section~\ref{sec:negative} are thus a single fact.
+    The parity fixes $\mathbb{Q}(\sqrt{5})$ and permutes only by $\times(-I)$.
+    It therefore neither separates order five from order ten, nor separates the two Galois-conjugate characters
+    $5a$ and $5b$.
+
+  \section{The negative theorem}
+    \label{sec:negative}
+
+    \begin{theorem}[No Galois-spin selection from the present axioms, modulo type-rigidity]
+      \label{thm:negative}
+      Assume the type-rigidity Lemma~\ref{lem:rigidity}.
+      Then every field automorphism forced by the foundations A1--A4 together with the recursive non-injectivity of
+      ENI~Corollary~6~\cite{Beau2026l} lies in the factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ of $\Gal(K_q/\mathbb{Q})$
+      and fixes $\mathbb{Q}(\sqrt{5})$ pointwise.
+      Consequently the Galois-spin selection, the nontrivial element of $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, is not
+      supplied by A1--A4 or by ENI~Corollary~6.
+      The $\sqrt{5}$-locus required by the ADE $3:2$ dictionary therefore cannot be selected without an additional
+      arithmetic principle at the spin stratum.
+    \end{theorem}
+
+    \begin{proof}
+      By Lemma~\ref{lem:rigidity} every forced automorphism is a realisation of the Born--Infeld parity, which by
+      Lemma~\ref{lem:organizing} lies in $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and fixes $\mathbb{Q}(\sqrt{5})$.
+      The Galois-spin action is the nontrivial element of the complementary factor
+      $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, which is not in the image of the forced automorphisms.
+      Selecting the $\sqrt{5}$-locus over the neutral order-four locus distinguishes the two two-dimensional characters by
+      their $\sqrt{5}$ content, hence requires that complementary factor, which the axioms do not provide.
+    \end{proof}
+
+    \begin{remark}[Selection against, not merely absence of selection]
+The neutral generators derived from Born--Infeld parity and admissibility are those with vanishing spin-$\tfrac{1}{2}$
+character, the order-four half-turns; the exact penalised spectral-capacity computation confirms that the order-five
+representative of the $\sqrt{5}$-locus is dominated and not selected for $\alpha>0$~\cite{Beau2026a1,Beau2026a2}.
+The negative result is therefore an orthogonality between the supplied parity and the required Galois action, not a
+mere gap in the derivation.
+    \end{remark}
+
+  \section{Type-rigidity along the tower}
+    \label{sec:rigidity}
+
+    \begin{lemma}[Type-rigidity, open]
+      \label{lem:rigidity}
+      Every non-injective projection forced by A1--A4 and ENI~Corollary~6, including the recursive non-injectivities at
+      strata above the base fibre, acts on the cyclotomic factor $\mathbb{Q}(\zeta_q)$ and fixes the real quadratic factor
+      $\mathbb{Q}(\sqrt{5})$.
+    \end{lemma}
+
+    The two regimes of this statement have opposite status, and conflating them is exactly the error to avoid.
+
+    For the base fibre $\Pi_1$ the statement is established.
+    The forced fibre involution is the Born--Infeld parity, the minimal fibre condition
+    $\Pi^{-1}(y)\supseteq\{\chi,-\chi\}$ closed by A3 and the Stone--von Neumann identification of
+    $V_\rho$~\cite{Beau2026m,Beau2026HeisenbergStructure}.
+    By Lemma~\ref{lem:organizing} this involution lies in $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and fixes $\sqrt{5}$.
+
+    For the recursive strata $\Pi_{i\geq 2}$ the statement is open.
+    ENI~Corollary~6 forces $S_{\Pi_i}>0$ at each stratum of a tower of genuinely distinct emergent levels, but it
+    constrains existence of the non-injectivity, not its arithmetic type~\cite{Beau2026l,Beau2026ninote}.
+    Nothing in the corollary forbids a stratum from realising its non-injectivity by an automorphism in the $\sqrt{5}$
+    factor.
+    The spin stratum is precisely such a recursive stratum, and it is where $\sqrt{5}$ enters through the representation
+    theory of $2I$.
+
+    \begin{remark}[Proof direction, not concluded]
+The entropy monotonicity $S_{\Pi_2\circ\Pi_1}\geq S_{\Pi_1}$ of ENI~Corollary~6 constrains the composition of
+strata.
+If the only automorphism available to realise a fibre non-injectivity is the parity, a candidate argument is that
+the composition cannot create an arithmetic factor absent from the individual stages, so that the recursive type is
+inherited from the base.
+This is a type-inheritance claim, distinct from entropy preservation, and the step from one to the other is not
+filled.
+Lemma~\ref{lem:rigidity} is therefore stated as structural and open, and Theorem~\ref{thm:negative} is conditional on
+it.
+    \end{remark}
+
+  \section{Status and downstream consequence}
+    \label{sec:status}
+
+    The epistemic stratification of the six statements is as follows.
+
+    \begin{center}
+      \begin{tabular}{lll}
+        \hline
+        Statement & Content & Status\\
+        \hline
+        Lemma~\ref{lem:algebraic} & ratio $3:2\Rightarrow\epsilon=\tfrac{1}{10}$ & proved, trivial, case-independent\\
+        Theorem~\ref{thm:conditional} & gate $\Rightarrow$ ratio $3:2\Rightarrow\epsilon$ & conditional / open hypothesis\\
+        Lemma~\ref{lem:organizing} & parity $\perp$ Galois-spin in $\Gal(K_q/\mathbb{Q})$ & proved\\
+        Corollary~\ref{cor:tiebreak} & order five $=$ order ten mod central lift & proved, modulo $R_b=W(-I)$\\
+        Theorem~\ref{thm:negative} & no Galois-spin from A1--A4 $+$ ENI Cor.~6 & proved modulo Lemma~\ref{lem:rigidity}\\
+        Lemma~\ref{lem:rigidity} & type-rigidity along the tower & structural / open\\
+        \hline
+      \end{tabular}
+    \end{center}
+
+    The net statement is that $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate, that the gate's
+    first-principles status reduces to the type-rigidity Lemma~\ref{lem:rigidity}, and that this reduction is an
+    arithmetic orthogonality rather than an unresolved computation.
+    This converts the obstruction from ``unproven'' to ``characterised as requiring an arithmetic principle foreign to
+    A1--A4 and ENI~Corollary~6, unless type-rigidity holds''.
+
+    The downstream consequence bounds the relevance of the gate.
+    The gate fixes a ratio of levels and hence the structural input $\epsilon$; it does not fix observable masses.
+    The charged-lepton and quark spectra and the mixing matrices require the explicit construction of the operator
+    $E_\Pi$ and the projected Yukawa sector, with the mass hierarchy carried by the cascade amplification and its
+    exponent~\cite{Beau2026fmnote,Beau2026prs,Beau2026a4}.
+    Even a derivation of the gate would not by itself produce a mass.
+    The gate is therefore a finite, characterisable structural sub-problem that can be held at conditional status while
+    the quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa sector.
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography}
 
 \end{document}
