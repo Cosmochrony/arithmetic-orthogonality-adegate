@@ -46,9 +46,14 @@
     In the compositum $K_q=\mathbb{Q}(\zeta_q,\sqrt{5})$ the two actions lie in distinct direct factors of the Galois
     group, hence are arithmetically orthogonal.
     Consequently the gate cannot be discharged from the present axioms without an additional arithmetic principle at
-    the spin stratum, unless a type-rigidity property of the recursive non-injectivity tower is established.
-    The latter is the single open point that carries the weight of the negative result; we state it and indicate a
-    proof direction, but do not conclude it.
+    the spin stratum.
+    A bounded character-table audit of the binary icosahedral group $2I\cong\mathrm{SL}(2,5)$ establishes the
+    type-rigidity the gate needs: the operations available at the spin stratum of the present corpus construction all
+    fix $\mathbb{Q}(\sqrt{5})$, so their generated group lies in the $\sqrt{5}$-fixing subgroup of
+    $\Gal(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism that realises
+    $\sqrt{5}\mapsto-\sqrt{5}$.
+    The no-go for the ADE gate is therefore unconditional in the present construction; only the abstract type-rigidity
+    of the full recursive tower remains open, and it is broader than the gate requires.
   \end{abstract}
 
   \noindent\textbf{Keywords:} non-injective projection; ADE case selection; binary icosahedral group; golden ratio;
@@ -83,10 +88,12 @@
     The recursive non-injectivity theorem of ENI~\cite{Beau2026l} guarantees that each stratum of a tower of genuinely
     distinct emergent levels carries its own non-injectivity, but it constrains existence, not arithmetic type.
     The base fibre is closed: its forced involution is the Born--Infeld parity~\cite{Beau2026m}.
-    Whether every recursive stratum above the base inherits the parity type, rather than introducing an action in the
-    $\sqrt{5}$ factor, is open.
-    This type-rigidity statement is the single point that carries the weight of the negative
-    result~(Section~\ref{sec:rigidity}).
+    The spin stratum is closed for the present corpus construction by a bounded character-table audit of
+    $2I\cong\mathrm{SL}(2,5)$, which shows that none of the operations available there realises the outer automorphism
+    that moves $\sqrt{5}$~(Section~\ref{sec:rigidity}, Appendix~\ref{app:audit}).
+    Whether every conceivable recursive stratum inherits the parity type, rather than introducing an action in the
+    $\sqrt{5}$ factor, remains open at the abstract level, but this generalisation is broader than the ADE gate
+    requires.
     Section~\ref{sec:status} records the epistemic stratification and the downstream consequence: observable masses
     route through the explicit operator $E_\Pi$ and the Yukawa sector regardless of how the gate is
     resolved~\cite{Beau2026fmnote,Beau2026prs}.
@@ -241,26 +248,35 @@ The orthogonality is therefore structural, not numerical.
   \section{The negative theorem}
     \label{sec:negative}
 
-    \begin{theorem}[No Galois-spin selection from the present axioms, modulo type-rigidity]
+    \begin{theorem}[No Galois-spin selection for the ADE gate in the present corpus construction]
       \label{thm:negative}
-      Assume the type-rigidity Lemma~\ref{lem:rigidity}.
-      Then every field automorphism forced by the foundations A1--A4 together with the recursive non-injectivity of
-      ENI~Corollary~6~\cite{Beau2026l} lies in the factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ of $\Gal(K_q/\mathbb{Q})$
-      and fixes $\mathbb{Q}(\sqrt{5})$ pointwise.
+      For the spin stratum of the present corpus construction (Proposition~\ref{prop:spinrigidity}), every field
+      automorphism forced by the foundations A1--A4, the recursive non-injectivity of ENI~Corollary~6~\cite{Beau2026l}
+      and the A4 locking lies in the factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ of $\Gal(K_q/\mathbb{Q})$ and fixes
+      $\mathbb{Q}(\sqrt{5})$ pointwise.
       Consequently the Galois-spin selection, the nontrivial element of $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, is not
-      supplied by A1--A4 or by ENI~Corollary~6.
-      The $\sqrt{5}$-locus required by the ADE $3:2$ dictionary therefore cannot be selected without an additional
-      arithmetic principle at the spin stratum.
+      supplied by these operations.
+      The $\sqrt{5}$-locus required by the ADE $3:2$ dictionary therefore cannot be selected, in the present
+      construction, without an additional arithmetic principle at the spin stratum.
     \end{theorem}
 
     \begin{proof}
-      By Lemma~\ref{lem:rigidity} every forced automorphism is a realisation of the Born--Infeld parity, which by
-      Lemma~\ref{lem:organizing} lies in $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and fixes $\mathbb{Q}(\sqrt{5})$.
+      By Proposition~\ref{prop:spinrigidity} the operations available at the spin stratum each fix
+      $\mathbb{Q}(\sqrt{5})$, so by Lemma~\ref{lem:organizing} their generated group lies in
+      $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$.
       The Galois-spin action is the nontrivial element of the complementary factor
-      $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, which is not in the image of the forced automorphisms.
-      Selecting the $\sqrt{5}$-locus over the neutral order-four locus distinguishes the two two-dimensional characters by
-      their $\sqrt{5}$ content, hence requires that complementary factor, which the axioms do not provide.
+      $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, which is not in the image of these operations.
+      Selecting the $\sqrt{5}$-locus over the neutral order-four locus distinguishes the two two-dimensional characters
+      by their $\sqrt{5}$ content, hence requires that complementary factor, which the present construction does not
+      provide.
     \end{proof}
+
+    \begin{remark}[Scope]
+      Theorem~\ref{thm:negative} is unconditional for the ADE gate in the present construction, resting on the
+      established Proposition~\ref{prop:spinrigidity}.
+      The abstract generalisation to every conceivable recursive stratum is Lemma~\ref{lem:rigidity}, which remains open
+      and is broader than the gate requires.
+    \end{remark}
 
     \begin{remark}[Selection against, not merely absence of selection]
 The neutral generators derived from Born--Infeld parity and admissibility are those with vanishing spin-$\tfrac{1}{2}$
@@ -273,14 +289,47 @@ mere gap in the derivation.
   \section{Type-rigidity along the tower}
     \label{sec:rigidity}
 
-    \begin{lemma}[Type-rigidity, open]
+    \begin{proposition}[Spin-stratum type-rigidity for the corpus construction]
+      \label{prop:spinrigidity}
+      Let $\mathcal{A}_{\mathrm{spin}}$ be the group generated by the operations available at the spin stratum of the
+      present corpus construction: inner conjugations in $2I$, the central element $-I$, the central reflection
+      $R_b=W(-I)$, the projective involution $J_\Pi$, the tensor functors of $\mathrm{Rep}(2I)$, the Schur projection,
+      and the A4 locking.
+      Each generator fixes $\mathbb{Q}(\sqrt{5})$ pointwise, so $\langle\mathcal{A}_{\mathrm{spin}}\rangle$ is contained
+      in the $\sqrt{5}$-fixing subgroup of $\Gal(K_q/\mathbb{Q})$.
+      In particular it does not contain the outer automorphism of $2I\cong\mathrm{SL}(2,5)$, the unique automorphism
+      that realises $\sqrt{5}\mapsto-\sqrt{5}$ and exchanges the two two-dimensional irreducible characters.
+    \end{proposition}
+
+    \begin{proof}
+      The action of each generator on $\mathrm{Irr}(2I)$ is determined by a character-table audit of
+      $2I\cong\mathrm{SL}(2,5)$, carried out from the group in Appendix~\ref{app:audit} and validated by the
+      orthogonality relations.
+      Inner conjugations act trivially on $\mathrm{Irr}(2I)$, since characters are class functions.
+      The central element $-I$ and its Weil lift $R_b=W(-I)$ act on each irreducible representation by the scalar
+      $\chi(-I)/\chi(1)=\pm1$, a spinorial grading that permutes nothing.
+      The projective involution $J_\Pi$ is complex conjugation on the central character; since every character of $2I$
+      is real-valued, it fixes every irreducible representation.
+      The tensor functors have integer fusion coefficients, and the Schur projection is defined through the
+      $J_\Pi$-parity and symplectic data, so both fix $\mathbb{Q}(\sqrt{5})$.
+      The A4 locking supplies an orientation, but it is the spontaneous $V-A$ sign $u(\pm s_*)=\mp u(s_*)$ under the
+      parity $s\mapsto-s$~\cite{Beau2026bim}; this is the $J_\Pi$-odd chiral $\mathbb{Z}/2$, in the parity factor, not
+      the Galois action $\sqrt{5}\mapsto-\sqrt{5}$, and the magnitude $|u|$ is itself dictionary-bound through
+      $\mathcal{N}_A$.
+      Each generator therefore fixes $\mathbb{Q}(\sqrt{5})$.
+      Since the $\sqrt{5}$-fixing automorphisms form a subgroup, closed under composition and inverse, no iteration,
+      central lift, projection or A4 locking built from these generators can manufacture the outer automorphism, which
+      moves $\sqrt{5}$.
+    \end{proof}
+
+    \begin{lemma}[Full recursive type-rigidity, open]
       \label{lem:rigidity}
       Every non-injective projection forced by A1--A4 and ENI~Corollary~6, including the recursive non-injectivities at
-      strata above the base fibre, acts on the cyclotomic factor $\mathbb{Q}(\zeta_q)$ and fixes the real quadratic factor
-      $\mathbb{Q}(\sqrt{5})$.
+      every stratum above the base fibre, acts on the cyclotomic factor $\mathbb{Q}(\zeta_q)$ and fixes the real
+      quadratic factor $\mathbb{Q}(\sqrt{5})$.
     \end{lemma}
 
-    The two regimes of this statement have opposite status, and conflating them is exactly the error to avoid.
+    Three regimes of this statement have different status, and conflating them is exactly the error to avoid.
 
     For the base fibre $\Pi_1$ the statement is established.
     The forced fibre involution is the Born--Infeld parity, the minimal fibre condition
@@ -288,15 +337,18 @@ mere gap in the derivation.
     $V_\rho$~\cite{Beau2026m,Beau2026HeisenbergStructure}.
     By Lemma~\ref{lem:organizing} this involution lies in $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and fixes $\sqrt{5}$.
 
-    For the recursive strata $\Pi_{i\geq 2}$ the statement is open.
+    For the spin stratum the statement is established for the present corpus construction by
+    Proposition~\ref{prop:spinrigidity}: the operations actually available there generate a $\sqrt{5}$-fixing group.
+    This is the only stratum the $\sqrt{5}$-locus of the ADE gate requires, so the no-go of
+    Theorem~\ref{thm:negative} is unconditional in the present construction.
+
+    For the abstract claim over every conceivable recursive stratum the statement is open.
     ENI~Corollary~6 forces $S_{\Pi_i}>0$ at each stratum of a tower of genuinely distinct emergent levels, but it
     constrains existence of the non-injectivity, not its arithmetic type~\cite{Beau2026l,Beau2026ninote}.
-    Nothing in the corollary forbids a stratum from realising its non-injectivity by an automorphism in the $\sqrt{5}$
-    factor.
-    The spin stratum is precisely such a recursive stratum, and it is where $\sqrt{5}$ enters through the representation
-    theory of $2I$.
+    Nothing in the corollary forbids some other construction from realising a stratum non-injectivity by an
+    automorphism in the $\sqrt{5}$ factor.
 
-    \begin{remark}[Proof direction, not concluded]
+    \begin{remark}[Proof direction for the full-tower version, not concluded]
 The entropy monotonicity $S_{\Pi_2\circ\Pi_1}\geq S_{\Pi_1}$ of ENI~Corollary~6 constrains the composition of
 strata.
 If the only automorphism available to realise a fibre non-injectivity is the parity, a candidate argument is that
@@ -304,17 +356,18 @@ the composition cannot create an arithmetic factor absent from the individual st
 inherited from the base.
 This is a type-inheritance claim, distinct from entropy preservation, and the step from one to the other is not
 filled.
-Lemma~\ref{lem:rigidity} is therefore stated as structural and open, and Theorem~\ref{thm:negative} is conditional on
-it.
+Lemma~\ref{lem:rigidity} is therefore stated as structural and open; it is broader than the ADE gate requires, and
+Theorem~\ref{thm:negative} does not depend on it.
     \end{remark}
 
   \section{Status and downstream consequence}
     \label{sec:status}
 
-    The epistemic stratification of the six statements is as follows.
+    The epistemic stratification of the seven statements is as follows.
 
     \begin{center}
-      \begin{tabular}{lll}
+      \small
+      \begin{tabular}{@{}p{0.215\textwidth}p{0.40\textwidth}p{0.30\textwidth}@{}}
         \hline
         Statement & Content & Status\\
         \hline
@@ -322,17 +375,21 @@ it.
         Theorem~\ref{thm:conditional} & gate $\Rightarrow$ ratio $3:2\Rightarrow\epsilon$ & conditional / open hypothesis\\
         Lemma~\ref{lem:organizing} & parity $\perp$ Galois-spin in $\Gal(K_q/\mathbb{Q})$ & proved\\
         Corollary~\ref{cor:tiebreak} & order five $=$ order ten mod central lift & proved, modulo $R_b=W(-I)$\\
-        Theorem~\ref{thm:negative} & no Galois-spin from A1--A4 $+$ ENI Cor.~6 & proved modulo Lemma~\ref{lem:rigidity}\\
-        Lemma~\ref{lem:rigidity} & type-rigidity along the tower & structural / open\\
+        Theorem~\ref{thm:negative} & no Galois-spin for the ADE gate (present construction) & proved\\
+        Proposition~\ref{prop:spinrigidity} & spin-stratum type-rigidity (corpus construction)
+        & proved, character-table audit\\
+        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & structural / open\\
         \hline
       \end{tabular}
     \end{center}
 
-    The net statement is that $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate, that the gate's
-    first-principles status reduces to the type-rigidity Lemma~\ref{lem:rigidity}, and that this reduction is an
-    arithmetic orthogonality rather than an unresolved computation.
-    This converts the obstruction from ``unproven'' to ``characterised as requiring an arithmetic principle foreign to
-    A1--A4 and ENI~Corollary~6, unless type-rigidity holds''.
+    The net statement is that $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate, and that for the
+    present corpus construction the gate is a no-go: the spin-stratum operations generate a $\sqrt{5}$-fixing subgroup
+    $\langle\mathcal{A}_{\mathrm{spin}}\rangle\subset\Gal(K_q/\mathbb{Q})_{\sqrt{5}}$, closed under composition, so no
+    iteration, central lift, Schur projection or A4 locking can manufacture the outer automorphism that the
+    $\sqrt{5}$-locus requires.
+    The obstruction is therefore not an unresolved computation but a closure argument: for the present corpus
+    construction, the gate requires an additional arithmetic principle not supplied by A1--A4, ENI, or A4 locking.
 
     The downstream consequence bounds the relevance of the gate.
     The gate fixes a ratio of levels and hence the structural input $\epsilon$; it does not fix observable masses.
@@ -340,8 +397,54 @@ it.
     $E_\Pi$ and the projected Yukawa sector, with the mass hierarchy carried by the cascade amplification and its
     exponent~\cite{Beau2026fmnote,Beau2026prs,Beau2026a4}.
     Even a derivation of the gate would not by itself produce a mass.
-    The gate is therefore a finite, characterisable structural sub-problem that can be held at conditional status while
-    the quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa sector.
+    The gate is therefore a finite, characterisable structural sub-problem, now settled negatively for the present
+    construction, while the quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa
+    sector.
+
+    \newpage
+    \appendix
+
+  \section{Reproducible audit of the spin-stratum operations}
+    \label{app:audit}
+
+    The audit is a finite, bias-independent computation, reproducible from the group with no hard-coded character data.
+    The protocol is as follows.
+    \begin{enumerate}
+      \item Construct $2I\cong\mathrm{SL}(2,5)$ explicitly as the $120$ matrices over $\mathbb{F}_5$ of determinant one.
+      \item Compute the conjugacy classes from the group: nine classes, of orders $1,2,3,4,5,5,6,10,10$ and sizes
+      $1,1,20,30,12,12,20,12,12$.
+      \item Reconstruct the character table from the class algebra by simultaneous diagonalisation of the class-sum
+      matrices $A_i$, with $(A_i)_{jk}=a_{ikj}$ the class-multiplication constants, recovering the dimensions
+      $1,2,2',3,3',4,4',5,6$.
+      \item Validate by the row orthogonality relations, which hold to machine precision; the reconstructed table agrees
+      with the published character table of $2I$~\cite{Beau2026a1}.
+      \item Apply the Galois action $\sqrt{5}\mapsto-\sqrt{5}$ to the table: it induces the permutation
+      $(2\,2')(3\,3')$ of $\mathrm{Irr}(2I)$, fixing $1,4,4',5,6$.
+      \item Compute the action of each spin-stratum operation: inner conjugations, complex conjugation $J_\Pi$, the
+      central element $-I$ and $R_b=W(-I)$ all induce the identity permutation of $\mathrm{Irr}(2I)$; none
+      realises $2\leftrightarrow2'$.
+    \end{enumerate}
+
+    The two two-dimensional irreducible characters on the $\sqrt{5}$-locus are Galois-conjugate, with
+    $\varphi=(1+\sqrt{5})/2$ and $\bar\varphi=\varphi-1=(\sqrt{5}-1)/2$:
+    \[
+      \begin{array}{c|cccc}
+        & 5a & 5b & 10a & 10b\\
+        \hline
+        \chi_{2}  & \bar\varphi & -\varphi & \varphi & -\bar\varphi\\
+        \chi_{2'} & -\varphi & \bar\varphi & -\bar\varphi & \varphi
+      \end{array}
+    \]
+    so $\chi_{2'}=\sigma(\chi_2)$ with $\sigma:\sqrt{5}\mapsto-\sqrt{5}$, and the swap $2\leftrightarrow2'$ is realised
+    by $\sigma$ alone.
+    Since every character of $2I$ is real-valued, complex conjugation $J_\Pi$ fixes each irreducible representation; the
+    central element $-I$ and $R_b=W(-I)$ act by the scalar $\chi(-I)/\chi(1)=\pm1$ without permuting; and inner
+    conjugations are trivial on class functions.
+    No spin-stratum operation moves $\mathbb{Q}(\sqrt{5})$, and the $\sqrt{5}$-fixing automorphisms form a subgroup, so
+    no composition of them realises $\sigma$.
+    This establishes Proposition~\ref{prop:spinrigidity}.
+    A companion script performing the construction, reconstruction, orthogonality validation and permutation tests is
+    deposited with the note.
 
     \newpage
     \bibliographystyle{plain}
