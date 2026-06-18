@@ -20,7 +20,7 @@
 \newcommand{\Heis}{\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})}
 \newcommand{\Gal}{\mathrm{Gal}}
 
-\title{Arithmetic Orthogonality of the ADE Case-Selection Gate}
+\title{Spin-Stratum Type-Rigidity: Orthogonality of the ADE Gate and Closure of the Chiral Lift}
 \author{J\'{e}r\^{o}me Beau\\[0.3em]
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
@@ -52,12 +52,16 @@
     fix $\mathbb{Q}(\sqrt{5})$, so their generated group lies in the $\sqrt{5}$-fixing subgroup of
     $\Gal(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism that realises
     $\sqrt{5}\mapsto-\sqrt{5}$.
-    The no-go for the ADE gate is therefore unconditional in the present construction; only the abstract type-rigidity
-    of the full recursive tower remains open, and it is broader than the gate requires.
+    The no-go for the ADE gate is therefore unconditional in the present construction; the same rigidity closes the
+    chiral orientation note, the Lorentzian chiral lift inducing no action on $\mathbb{Q}(\sqrt{5})$ and hence
+    $[\mathrm{H\text{-}orient}]$ unconditionally within the present spin stratum~\cite{Beau2026cho}.
+    Only the abstract type-rigidity of the full recursive tower remains open, and it is broader than either application
+    requires.
   \end{abstract}
 
   \noindent\textbf{Keywords:} non-injective projection; ADE case selection; binary icosahedral group; golden ratio;
-  cyclotomic field; Galois action; Born--Infeld parity; generation split; epistemic stratification.
+  cyclotomic field; Galois action; Born--Infeld parity; generation split; Lorentzian chiral lift; metaplectic lift;
+  Weil representation type; epistemic stratification.
 
   \newpage
   \tableofcontents
@@ -94,6 +98,16 @@
     Whether every conceivable recursive stratum inherits the parity type, rather than introducing an action in the
     $\sqrt{5}$ factor, remains open at the abstract level, but this generalisation is broader than the ADE gate
     requires.
+    The same spin-stratum type-rigidity has a second consequence, of opposite sign.
+    The chiral orientation note closes $[\mathrm{H\text{-}orient}]$ in the inherited Heisenberg central-phase lift and
+    isolates a single residual obstruction: a possible additional spin-Galois phase of the full Lorentzian chiral lift,
+    orthogonal to $\zeta_q$, in particular a $\sqrt{5}$ or ADE-spin factor~\cite{Beau2026cho}.
+    Section~\ref{sec:chiral} discharges that obstruction from the same Proposition~\ref{prop:spinrigidity}: the
+    Lorentzian lift induces no action on $\mathbb{Q}(\sqrt{5})$, the chiral weight $\sigma_L$ being the Weyl conjugation
+    type that lives in the parity factor and not in the $\sqrt{5}$ factor.
+    For the gate the rigidity is fatal, the required $\sqrt{5}$ action being absent; for the chiral lift it is the
+    closure, the feared $\sqrt{5}$ action being absent.
+
     Section~\ref{sec:status} records the epistemic stratification and the downstream consequence: observable masses
     route through the explicit operator $E_\Pi$ and the Yukawa sector regardless of how the gate is
     resolved~\cite{Beau2026fmnote,Beau2026prs}.
@@ -360,10 +374,113 @@ Lemma~\ref{lem:rigidity} is therefore stated as structural and open; it is broad
 Theorem~\ref{thm:negative} does not depend on it.
     \end{remark}
 
+  \section{The chiral-lift corollary}
+    \label{sec:chiral}
+
+    The spin-stratum type-rigidity of Proposition~\ref{prop:spinrigidity} was used in Section~\ref{sec:negative} to
+    obstruct the ADE gate.
+    The same proposition discharges the residual obstruction of the chiral orientation note, where it acts with the
+    opposite sign.
+    There $[\mathrm{H\text{-}orient}]$ is closed in the inherited Heisenberg central-phase lift, the chiral phase being
+    the linear cyclotomic character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$, and the single caveat left is a possible
+    additional spin-Galois phase of the full Lorentzian chiral lift, orthogonal to $\zeta_q$~\cite{Beau2026cho}.
+    We show the caveat does not arise.
+
+    The object is the metaplectic lift of the ordered cascade step.
+    The two cascade flows are the Weil images of the unipotent one-parameter subgroups of $\mathrm{SL}(2,\mathbb{R})$,
+    with product $S_X(t)S_Y(s)=W\!\left(\begin{smallmatrix}1+ts&t\\s&1\end{smallmatrix}\right)$; a
+    Baker--Campbell--Hausdorff reduction identifies the per-step $J_3$ component with the oriented symplectic area swept
+    per step, the Carnot-degree-two central increment of $\mathrm{Heis}_3$~\cite{Beau2026aar}.
+    The Lorentzian metric forces the complexification
+    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ and the chiral split $S_L\oplus
+  S_R$~\cite{Beau2026q5b,Beau2026q11}, and the chiral weight $\sigma_L$ classes $S_L$ versus $S_R$ by the Weyl
+    representation type $\mathbf{2}$ versus $\bar{\mathbf{2}}$~\cite{Beau2026cho}.
+
+    \begin{lemma}[The Lorentzian boost is Galois-internal]
+      \label{lem:boost}
+      The action induced on $K_q$ by the Lorentzian chiral lift extends $\mathcal{A}_{\mathrm{spin}}$ only by the
+      central character and the analytic complexification, both of which fix $\mathbb{Q}(\sqrt{5})$.
+      The central character contributes the cyclotomic phase $\zeta_q$, whose only field automorphism is complex
+      conjugation $\zeta_q\mapsto\zeta_q^{-1}$~\cite{Beau2026a16}.
+      The metaplectic cocycle is absent in the inherited model, and should it appear it is cyclotomic of Weil/Maslov
+      type and does not supply $\sqrt{5}\mapsto-\sqrt{5}$~\cite{Beau2026cho}.
+      The Lorentzian boost is the analytic complexification unit $i$ on the integral structure constants of
+      $\mathfrak{sl}_2(\mathbb{C})$, inducing no automorphism of $K_q$ outside the cyclotomic factor.
+      Hence the boost lies in the $\sqrt{5}$-fixing subgroup of $\Gal(K_q/\mathbb{Q})$: it is Galois-internal to the
+      spin stratum.
+    \end{lemma}
+
+    \begin{lemma}[Weyl conjugation versus Galois conjugation]
+      \label{lem:weyl}
+      The chiral weight $\sigma_L$ classes the Weyl branches $S_L$ versus $S_R$ by complex-conjugation type,
+      $\mathbf{2}$ versus $\bar{\mathbf{2}}$~\cite{Beau2026cho}, whereas the Galois action $\sqrt{5}\mapsto-\sqrt{5}$
+      classes the two two-dimensional irreducible characters $2$ versus $2'$ of $2I$, the swap realised by $\sigma$
+      alone (Appendix~\ref{app:audit}).
+      These distinctions are not the same.
+      Under the restriction $2I\subset\mathrm{SU}(2)\subset\mathrm{SL}(2,\mathbb{C})$ the representations of
+      $\mathrm{SU}(2)$ are pseudoreal, so $S_L$ and $S_R$ restrict to the same two-dimensional carrier, while $2'$ is
+      the Galois conjugate of that carrier and not the right Weyl branch.
+      The spinorial grading $\chi(-I)/\chi(1)=-1$ that $\sigma_L$ reads is common to both two-dimensional irreducibles
+      (Proposition~\ref{prop:spinrigidity}), and their $\sqrt{5}$ content sits only on the order-five and order-ten
+      classes (Corollary~\ref{cor:tiebreak}), which the Weyl-conjugation label does not address.
+      Hence $\sigma_L$ is orthogonal to the outer automorphism that distinguishes $2$ from $2'$.
+    \end{lemma}
+
+    \begin{corollary}[Spin-Galois type-rigidity of the Lorentzian chiral lift]
+      \label{cor:chiralrigidity}
+      Let $q$ be prime with $q\neq5$.
+      Every field automorphism induced on $K_q$ by the Lorentzian chiral lift of the ordered cascade step acts
+      trivially on $\mathbb{Q}(\sqrt{5})$; the nontrivial action, when present, is cyclotomic.
+      In particular $\sigma_L$ lies in the parity factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and does not probe the
+      Galois-spin factor $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$.
+    \end{corollary}
+
+    \begin{proof}
+      By Proposition~\ref{prop:spinrigidity} the spin-stratum operations fix $\mathbb{Q}(\sqrt{5})$, and by
+      Lemma~\ref{lem:boost} so does the Lorentzian boost; their generated group lies in the $\sqrt{5}$-fixing subgroup
+      of $\Gal(K_q/\mathbb{Q})$, closed under composition and inverse.
+      The only generator that could move $\sqrt{5}$ is the outer automorphism of $2I$, which by Lemma~\ref{lem:weyl} is
+      not coupled by $\sigma_L$ and is supplied by no operation of the lift.
+      Hence the induced action on $K_q$ fixes $\mathbb{Q}(\sqrt{5})$, and any nontrivial part is cyclotomic.
+    \end{proof}
+
+    \begin{corollary}[Unconditional orientation within the present spin stratum]
+      \label{cor:orient}
+      Within the Lorentzian chiral lift generated by the present spin stratum,
+      \[
+        \omega_\chi(e)=\zeta_q^{\Delta A_c(e)}
+        \ \Longrightarrow\ \rho_\chi=1
+        \ \Longrightarrow\ [\mathrm{H\text{-}orient}]
+        \ \Longrightarrow\ N_A=\theta_{\max}\neq0 .
+      \]
+    \end{corollary}
+
+    \begin{proof}
+      By Corollary~\ref{cor:chiralrigidity} the chiral phase carries no Galois-spin factor orthogonal to $\zeta_q$, so
+      the residual obstruction left open by the chiral orientation note~\cite{Beau2026cho} does not arise.
+      After the central-character convention and the outgoing branch of~\cite{Beau2026cho} are fixed, a cyclotomic
+      reindexing does not define a new spin-Galois phase: it is absorbed into the choice of the Heisenberg central block
+      and its Born--Infeld conjugate.
+      Thus the relevant chiral landing phase is the same linear character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$ used
+      in the inherited-lift calculation, rather than an independent average over cyclotomic embeddings.
+      The implications are then those of the inherited lift, now with no orthogonal factor available to set
+      $\rho_\chi=0$.
+    \end{proof}
+
+    \begin{remark}[Boundary with the Schur transport]
+      Corollary~\ref{cor:orient} closes the frontier amplitude datum $N_A\neq0$.
+      It does not establish $u\neq0$, which lives in the projected Dirac residue through the Schur complement, as the
+      $J_\Pi$-odd asymmetry of the eliminated block and not in any frontier average~\cite{Beau2026prs}.
+      The statement closed here is $N_A\neq0$, not
+      $\Pi_S\,D\,(\partial_s P|_0)\,D\,\Pi_S^{*}\big|_{\mathrm{gen},\,J_\Pi\text{-odd}}\neq0$; the promotion of the
+      signal to the spectral split $u\neq0$ remains the Schur transport on the $J_\Pi$-odd generation
+      sector~\cite{Beau2026prs,Beau2026a4}.
+    \end{remark}
+
   \section{Status and downstream consequence}
     \label{sec:status}
 
-    The epistemic stratification of the seven statements is as follows.
+    The epistemic stratification of the nine statements is as follows.
 
     \begin{center}
       \small
@@ -378,6 +495,9 @@ Theorem~\ref{thm:negative} does not depend on it.
         Theorem~\ref{thm:negative} & no Galois-spin for the ADE gate (present construction) & proved\\
         Proposition~\ref{prop:spinrigidity} & spin-stratum type-rigidity (corpus construction)
         & proved, character-table audit\\
+        Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp$ Galois-spin
+        & proved\\
+        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum) & proved\\
         Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & structural / open\\
         \hline
       \end{tabular}
@@ -390,6 +510,10 @@ Theorem~\ref{thm:negative} does not depend on it.
     $\sqrt{5}$-locus requires.
     The obstruction is therefore not an unresolved computation but a closure argument: for the present corpus
     construction, the gate requires an additional arithmetic principle not supplied by A1--A4, ENI, or A4 locking.
+    The same closure argument, applied to the Lorentzian chiral lift, discharges the residual obstruction of the chiral
+    orientation note: the lift induces no action on $\mathbb{Q}(\sqrt{5})$, so $[\mathrm{H\text{-}orient}]$ is closed
+    unconditionally within the present spin stratum, the gate no-go and the chiral closure being opposite cuts of
+    Proposition~\ref{prop:spinrigidity}~\cite{Beau2026cho}.
 
     The downstream consequence bounds the relevance of the gate.
     The gate fixes a ratio of levels and hence the structural input $\epsilon$; it does not fix observable masses.
