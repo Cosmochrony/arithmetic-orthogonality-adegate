@@ -1,12 +1,15 @@
 \documentclass[11pt]{article}
 
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{doi}
 \usepackage{hyperref}
 \usepackage{amsfonts}
 \usepackage{amstext}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -55,8 +58,9 @@
     The no-go for the ADE gate is therefore unconditional in the present construction; the same rigidity closes the
     chiral orientation note, the Lorentzian chiral lift inducing no action on $\mathbb{Q}(\sqrt{5})$ and hence
     $[\mathrm{H\text{-}orient}]$ unconditionally within the present spin stratum~\cite{Beau2026cho}.
-    Only the abstract type-rigidity of the full recursive tower remains open, and it is broader than either application
-    requires.
+    The abstract type-rigidity of the full recursive tower is then established under the corpus notion of an admissible
+    fibre operation: recursive non-injectivity multiplies the vertical parity type already present and cannot
+    manufacture the horizontal Galois transport, so it preserves the binary-icosahedral arithmetic type.
   \end{abstract}
 
   \noindent\textbf{Keywords:} non-injective projection; ADE case selection; binary icosahedral group; golden ratio;
@@ -96,8 +100,9 @@
     $2I\cong\mathrm{SL}(2,5)$, which shows that none of the operations available there realises the outer automorphism
     that moves $\sqrt{5}$~(Section~\ref{sec:rigidity}, Appendix~\ref{app:audit}).
     Whether every conceivable recursive stratum inherits the parity type, rather than introducing an action in the
-    $\sqrt{5}$ factor, remains open at the abstract level, but this generalisation is broader than the ADE gate
-    requires.
+    $\sqrt{5}$ factor, is settled in Section~\ref{sec:rigidity}: every admissible fibre operation is carrier-preserving,
+    the horizontal exchange $2\leftrightarrow2'$ being the unique $\sqrt{5}$-moving operation and not carrier-preserving,
+    so a finite recursive tower preserves the arithmetic type.
     The same spin-stratum type-rigidity has a second consequence, of opposite sign.
     The chiral orientation note closes $[\mathrm{H\text{-}orient}]$ in the inherited Heisenberg central-phase lift and
     isolates a single residual obstruction: a possible additional spin-Galois phase of the full Lorentzian chiral lift,
@@ -288,8 +293,9 @@ The orthogonality is therefore structural, not numerical.
     \begin{remark}[Scope]
       Theorem~\ref{thm:negative} is unconditional for the ADE gate in the present construction, resting on the
       established Proposition~\ref{prop:spinrigidity}.
-      The abstract generalisation to every conceivable recursive stratum is Lemma~\ref{lem:rigidity}, which remains open
-      and is broader than the gate requires.
+      The abstract generalisation to every conceivable recursive stratum, Lemma~\ref{lem:rigidity}, is established under
+      the corpus notion of an admissible fibre operation by
+      Proposition~\ref{prop:verticality-admissible-identifications}, and is broader than the gate requires.
     \end{remark}
 
     \begin{remark}[Selection against, not merely absence of selection]
@@ -356,11 +362,12 @@ mere gap in the derivation.
     This is the only stratum the $\sqrt{5}$-locus of the ADE gate requires, so the no-go of
     Theorem~\ref{thm:negative} is unconditional in the present construction.
 
-    For the abstract claim over every conceivable recursive stratum the statement is open.
+    For the abstract claim over every conceivable recursive stratum the statement was open at the abstract level.
     ENI~Corollary~6 forces $S_{\Pi_i}>0$ at each stratum of a tower of genuinely distinct emergent levels, but it
     constrains existence of the non-injectivity, not its arithmetic type~\cite{Beau2026l,Beau2026ninote}.
-    Nothing in the corollary forbids some other construction from realising a stratum non-injectivity by an
-    automorphism in the $\sqrt{5}$ factor.
+    Proposition~\ref{prop:verticality-admissible-identifications} settles it under the corpus notion of an admissible
+    fibre operation: ENI supplies no operation in the $\sqrt{5}$ factor, every admissible identification being
+    carrier-preserving and hence vertical.
 
     \begin{remark}[Reduction to a type-preservation question]
       \label{rem:type-preservation}
@@ -389,11 +396,95 @@ type: recursive emergence multiplies the parity type already present without man
 \]
 The remaining rigidity question is whether every admissible recursive stratum is forced to be vertical, or whether
 an admissible stratum can carry the horizontal automorphism exchanging the two two-dimensional icosahedral types.
-This is the type-inheritance content of Lemma~\ref{lem:rigidity}, distinct from entropy preservation; the step is
-not filled here.
-Lemma~\ref{lem:rigidity} is therefore stated as structural and open; it is broader than the ADE gate requires, and
+This is the type-inheritance content of Lemma~\ref{lem:rigidity}, distinct from entropy preservation, and it is
+settled below under the corpus notion of an admissible fibre operation.
 Theorem~\ref{thm:negative} does not depend on it.
     \end{remark}
+
+    A possible ambiguity must be addressed before the question can be settled.
+    The quadratic surd $\sqrt{5}$ already occurs in the icosahedral geometry, through the golden-ratio Gram data of the
+    binary-icosahedral embedding, so the admissibility data may well contain invariants defined over
+    $\mathbb{Q}(\sqrt{5})$.
+    This by itself provides no horizontal operation.
+    What must be excluded is not the occurrence of $\sqrt{5}$, but the existence of an admissible operation
+    implementing its non-trivial Galois involution $\sqrt{5}\mapsto-\sqrt{5}$.
+
+    \begin{lemma}[No horizontal admissible operation]
+      \label{lem:no-horizontal-admissible-operation}
+      The admissibility data A1--A4 and the Born--Infeld parity may use the binary-icosahedral Gram geometry, hence
+      may contain invariants defined over $\mathbb{Q}(\sqrt{5})$, but they supply no admissible operation acting by
+      the non-trivial automorphism of this field.
+      Equivalently, they contain no operation in the external coset that exchanges the two inequivalent
+      two-dimensional binary-icosahedral types.
+    \end{lemma}
+
+    \begin{proof}
+      An admissible fibre operation acts inside the admissible carrier: it identifies states, phases, central
+      characters, or parity-related vectors within the realised representation, so it preserves the carrier as a
+      subgroup of $\mathrm{SU}(2)$ and commutes with the $2I$-action up to the inner and central data.
+      By Schur's lemma such an operation preserves each isotypic component, hence fixes the isomorphism class of every
+      irreducible carrier and fixes the character field $\mathbb{Q}(\sqrt{5})$ pointwise.
+      The involution $\sqrt{5}\mapsto-\sqrt{5}$ is realised by the entrywise Galois map $\sigma$ on the defining
+      carrier.
+      A bounded exact audit of the $120$-element icosian realisation of $2I$ (Appendix~\ref{app:audit}) shows that
+      $\sigma$ does not preserve the carrier: it maps $2I$ onto its Galois-conjugate copy $\sigma(2I)$, the
+      opposite-chirality icosian set, while post-composition with $\sigma$ sends the defining character $\chi_2$ to the
+      inequivalent character $\chi_{2'}$, with $\langle\chi_2\circ\sigma,\chi_2\rangle=0$.
+      Hence $\sigma$ is the outer automorphism of $2I\cong\mathrm{SL}(2,5)$ and is not carrier-preserving.
+      By contrast the Born--Infeld parity is the entrywise complex conjugation $\kappa$, which preserves the carrier
+      and fixes both $\sqrt{5}$ and the golden ratio $\varphi$, so $\chi_2\circ\kappa=\chi_2$.
+      The chirality of the admissible carrier is itself fixed by the construction, the chiral weight $\sigma_L$ being a
+      Weyl conjugation type orthogonal to the $\sqrt{5}$ factor~\cite{Beau2026cho}, so the opposite-chirality carrier
+      $\sigma(2I)$ is not admissible.
+      An admissible operation, being carrier-preserving, therefore cannot equal $\sigma$, and none implements
+      $\sqrt{5}\mapsto-\sqrt{5}$.
+    \end{proof}
+
+    \begin{proposition}[Verticality of admissible fibre identifications]
+      \label{prop:verticality-admissible-identifications}
+      Every fibre identification forced by A1--A4 and the Born--Infeld parity is vertical.
+      It preserves the isomorphism class of each binary-icosahedral irreducible carrier and fixes the arithmetic type
+      of the spinorial gate.
+    \end{proposition}
+
+    \begin{proof}
+      By the minimal fibre condition the forced identification is generated by the central pair $\{\chi,-\chi\}$ and
+      the operations enumerated in Proposition~\ref{prop:spinrigidity}: inner conjugation, the central element, the
+      Born--Infeld parity, the Schur scalars, the projective involution $J_\Pi$, and the A4 locking.
+      Each acts inside the admissible carrier and, by Lemma~\ref{lem:no-horizontal-admissible-operation}, lies in the
+      $\sqrt{5}$-fixing subgroup of $\Gal(K_q/\mathbb{Q})$.
+      A fibre identification is a composition of such operations, hence is itself carrier-preserving and
+      $\sqrt{5}$-fixing: it preserves the isomorphism class of every irreducible carrier and fixes
+      $\mathbb{Q}(\sqrt{5})$, which is the arithmetic type of the spinorial gate.
+    \end{proof}
+
+    \begin{corollary}[Full-tower type preservation]
+      \label{cor:full-tower-type-preservation}
+      A finite tower of admissible recursive non-injective strata cannot generate the horizontal Galois exchange
+      $2\leftrightarrow2'$.
+      It can only compose vertical fibre identifications, hence it preserves the binary-icosahedral arithmetic type.
+    \end{corollary}
+
+    \begin{proof}
+      By Proposition~\ref{prop:verticality-admissible-identifications} each stratum identification is vertical.
+      The $\sqrt{5}$-fixing operations form a subgroup, closed under composition, so any finite composition of vertical
+      identifications is vertical and fixes $\mathbb{Q}(\sqrt{5})$.
+      The horizontal exchange $2\leftrightarrow2'$ is the outer automorphism, which moves $\sqrt{5}$ and is therefore
+      not in this subgroup.
+    \end{proof}
+
+    Corollary~\ref{cor:full-tower-type-preservation} establishes the full-tower regime of Lemma~\ref{lem:rigidity}
+    under the corpus notion of an admissible fibre operation: recursive non-injectivity multiplies the vertical parity
+    type already present and cannot manufacture the horizontal Galois transport.
+    The residue is no longer an open arithmetic possibility, but the single modelling hypothesis that every admissible
+    stratum operation is carrier-preserving, which is the defining property of a fibre identification together with the
+    fixed chirality of the construction.
+
+    The closure holds in this precise sense.
+    The result closes the rigidity problem for admissible fibre operations in the sense of A1--A4 and the Born--Infeld
+    parity.
+    It does not assert that no external equivalence of abstract character tables exists; it proves that the horizontal
+    Galois exchange is not realised by an admissible operation preserving the binary-icosahedral carrier.
 
   \section{The chiral-lift corollary}
     \label{sec:chiral}
@@ -519,7 +610,12 @@ Theorem~\ref{thm:negative} does not depend on it.
         Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp$ Galois-spin
         & proved\\
         Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum) & proved\\
-        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & structural / open\\
+        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & established (admissible-operation sense)\\
+        Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sqrt{5}$-moving operation
+        & proved, realisation audit\\
+        Proposition~\ref{prop:verticality-admissible-identifications} & admissible fibre identifications are vertical
+        & proved\\
+        Corollary~\ref{cor:full-tower-type-preservation} & finite tower preserves the arithmetic type & proved\\
         \hline
       \end{tabular}
     \end{center}
@@ -650,8 +746,19 @@ Theorem~\ref{thm:negative} does not depend on it.
     No spin-stratum operation moves $\mathbb{Q}(\sqrt{5})$, and the $\sqrt{5}$-fixing automorphisms form a subgroup, so
     no composition of them realises $\sigma$.
     This establishes Proposition~\ref{prop:spinrigidity}.
-    A companion script performing the construction, reconstruction, orthogonality validation and permutation tests is
-    deposited with the note.
+
+    A complementary realisation audit confirms the carrier-level statement of
+    Lemma~\ref{lem:no-horizontal-admissible-operation}.
+    Realising $2I$ as the $120$ icosians in $\mathrm{SU}(2)$, exact over $\mathbb{Q}(\mathrm{i},\sqrt{5})$, the
+    entrywise Galois map $\sigma:\sqrt{5}\mapsto-\sqrt{5}$ does not preserve this set: it carries the icosians onto the
+    opposite-chirality copy $\sigma(2I)\neq 2I$, and $\chi_2\circ\sigma=\chi_{2'}$ with
+    $\langle\chi_2\circ\sigma,\chi_2\rangle=0$.
+    By contrast the entrywise complex conjugation $\kappa:\mathrm{i}\mapsto-\mathrm{i}$, the Born--Infeld parity,
+    preserves $2I$ and fixes both $\sqrt{5}$ and the golden ratio $\varphi$, so $\chi_2\circ\kappa=\chi_2$.
+    Thus the operation exchanging $2\leftrightarrow2'$ is not carrier-preserving, whereas every admissible operation is,
+    which is the content of Lemma~\ref{lem:no-horizontal-admissible-operation}.
+    Companion scripts performing the construction, reconstruction, orthogonality validation, permutation tests, and the
+    icosian realisation audit are deposited with the note.
 
     \newpage
     \bibliographystyle{plain}
