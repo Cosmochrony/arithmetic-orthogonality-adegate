@@ -28,7 +28,7 @@ compositum $K_q = \mathbb{Q}(\zeta_q, \sqrt{5})$ the two actions lie in distinct
 the Galois group, hence are arithmetically orthogonal. A bounded character-table audit of the
 binary icosahedral group $2I \cong \mathrm{SL}(2,5)$ establishes the type-rigidity the gate needs:
 every operation available at the spin stratum of the present corpus construction fixes
-$\mathbb{Q}(\sqrt{5})$, so their generated group lies in the $\sqrt{5}$-fixing subgroup of
+$\mathbb{Q}(\sqrt{5})$ (for the central reflection $R_b$, under [H-WS] of Q11OF), so their generated group lies in the $\sqrt{5}$-fixing subgroup of
 $\mathrm{Gal}(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism. The
 no-go for the ADE gate is therefore **proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] (Q11OF: $R_b$ acts on the chiral carrier as a scalar, supplied by no source)**; only the
 abstract type-rigidity of the full recursive tower remains open, and it is broader than the gate
@@ -49,7 +49,7 @@ ADE-spin factor. This note discharges that obstruction from the same proposition
   $S_L$ vs. $S_R$ by complex-conjugation type ($\mathbf{2}$ vs. $\bar{\mathbf{2}}$), which is
   orthogonal to the outer automorphism that separates the two two-dimensional irreducible
   characters $2$ vs. $2'$ of $2I$.
-- **Corollary (spin-Galois rigidity of the lift).** Every field automorphism induced on $K_q$ by
+- **Corollary (spin-Galois rigidity of the lift, under [H-WS]).** Every field automorphism induced on $K_q$ by
   the Lorentzian chiral lift fixes $\mathbb{Q}(\sqrt{5})$; any nontrivial part is cyclotomic.
 - **Corollary (orientation, under [H-WS]).** Within the present spin stratum,
   $\omega_\chi(e) = \zeta_q^{\Delta A_c(e)} \Rightarrow \rho_\chi = 1 \Rightarrow
