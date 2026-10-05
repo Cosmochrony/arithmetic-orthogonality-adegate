@@ -30,7 +30,7 @@ binary icosahedral group $2I \cong \mathrm{SL}(2,5)$ establishes the type-rigidi
 every operation available at the spin stratum of the present corpus construction fixes
 $\mathbb{Q}(\sqrt{5})$ (for the central reflection $R_b$, under [H-WS] of Q11OF), so their generated group lies in the $\sqrt{5}$-fixing subgroup of
 $\mathrm{Gal}(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism. The
-no-go for the ADE gate is therefore **proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] (Q11OF: $R_b$ acts on the chiral carrier as a scalar, supplied by no source)**; only the
+no-go for the ADE gate is therefore **proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] (Q11OF: $R_b$ acts on the chiral carrier as the scalar $-1$, supplied by no source)**; only the
 abstract type-rigidity of the full recursive tower remains open, and it is broader than the gate
 requires.
 
@@ -40,7 +40,7 @@ The same spin-stratum type-rigidity has a second consequence, of **opposite sign
 orientation note (CHO) closes $[\mathrm{H\text{-}orient}]$ in the inherited Heisenberg
 central-phase lift and leaves a single residual obstruction: a possible additional spin-Galois
 phase of the full Lorentzian chiral lift, orthogonal to $\zeta_q$ — in particular a $\sqrt{5}$ or
-ADE-spin factor. This note discharges that obstruction from the same proposition:
+ADE-spin factor. This note discharges, under [H-WS], that obstruction from the same proposition:
 
 - **Lemma (Galois-internal boost).** The Lorentzian chiral lift extends the spin-stratum action on
   $K_q$ only by the central character and the analytic complexification, both fixing
