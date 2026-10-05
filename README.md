@@ -57,8 +57,9 @@ ADE-spin factor. This note discharges that obstruction from the same proposition
 
 For the gate the rigidity is fatal (the required $\sqrt{5}$ action is absent); for the chiral lift
 it is the closure (the feared $\sqrt{5}$ action is absent). The statement closed here is
-$N_A \neq 0$, **not** $u \neq 0$, whose promotion to the spectral split remains the Schur transport
-on the $J_\Pi$-odd generation sector (PRS).
+$N_A \neq 0$, **not** $u \neq 0$, whose promotion to the spectral split would need the transport
+hypothesis [H-Tr] of the Schur reduction on the $J_\Pi$-odd generation sector, supplied by no source
+(PRS).
 
 ## Position in the programme
 
