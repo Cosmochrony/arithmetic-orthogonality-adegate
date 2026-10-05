@@ -30,7 +30,7 @@ binary icosahedral group $2I \cong \mathrm{SL}(2,5)$ establishes the type-rigidi
 every operation available at the spin stratum of the present corpus construction fixes
 $\mathbb{Q}(\sqrt{5})$, so their generated group lies in the $\sqrt{5}$-fixing subgroup of
 $\mathrm{Gal}(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism. The
-no-go for the ADE gate is therefore **unconditional in the present construction** (its use of the central reflection $R_b$ as the element $-I$ of $2I$ being under the hypothesis [H-WS] of Q11OF: a group-level Weil-to-spin map, supplied by no source); only the
+no-go for the ADE gate is therefore **proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] (Q11OF: $R_b$ acts on the chiral carrier as a scalar, supplied by no source)**; only the
 abstract type-rigidity of the full recursive tower remains open, and it is broader than the gate
 requires.
 
@@ -57,15 +57,16 @@ ADE-spin factor. This note discharges that obstruction from the same proposition
 
 For the gate the rigidity is fatal (the required $\sqrt{5}$ action is absent); for the chiral lift
 it is the closure (the feared $\sqrt{5}$ action is absent). The statement closed here is
-$N_A \neq 0$, **not** $u \neq 0$, whose promotion to the spectral split would need the transport
-hypothesis [H-Tr] of the Schur reduction on the $J_\Pi$-odd generation sector, supplied by no source
-(PRS).
+$N_A \neq 0$, **not** $u \neq 0$, whose promotion to the spectral split would need a transport of the oriented signal to the
+$J_\Pi$-odd generation sector; the only transport stated in PRS is [H-Tr] for the $\mathfrak{sl}_2$
+opening, supplied by no source, and the identification of the frontier signal with that opening is a
+further input.
 
 ## Position in the programme
 
 This note belongs to the **fermionic matter sub-programme** (Presentation Note 6). It fixes the
 logical status of the generation-split value $\epsilon$, shows that the ADE case-selection gate is
-a no-go unconditional in the present corpus construction, and — via the chiral-lift corollary —
+a no-go proved in the present corpus construction (for the central reflection $R_b$, under [H-WS]), and — via the chiral-lift corollary —
 discharges, under [H-WS], the residual obstruction of the **chiral orientation note** (CHO), the gate no-go and
 the chiral closure being opposite cuts of a single spin-stratum type-rigidity. The downstream
 consequence bounds the relevance of the gate: observable masses route through the explicit operator

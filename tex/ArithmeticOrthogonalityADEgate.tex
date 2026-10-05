@@ -55,8 +55,7 @@
     fix $\mathbb{Q}(\sqrt{5})$, so their generated group lies in the $\sqrt{5}$-fixing subgroup of
     $\Gal(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism that realises
     $\sqrt{5}\mapsto-\sqrt{5}$.
-    The no-go for the ADE gate is therefore unconditional in the present construction (its use of the central reflection
-    $R_b$ as the element $-I$ of $2I$ being under the hypothesis [H-WS] of~\cite{Beau2026q11of}); the same rigidity closes the
+    The no-go for the ADE gate is therefore proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}; the same rigidity closes the
     chiral orientation note, the Lorentzian chiral lift inducing no action on $\mathbb{Q}(\sqrt{5})$ and hence
     $[\mathrm{H\text{-}orient}]$ within the present spin stratum, under [H-WS] of~\cite{Beau2026q11of} and
     \cite{Beau2026cho}.
@@ -242,23 +241,24 @@ The orthogonality is therefore structural, not numerical.
     The order-ten elements of $2I$ are the order-five elements multiplied by the central element $-I$, since for an
     order-five $g$ one has $(-Ig)^{5}=-I$ and $(-Ig)^{10}=I$.
     The Weil lift of $-I$ is the central reflection $R_b=W(-I)=\mathrm{FT}^{2}$.
-    That it is scalar on the chiral carrier and commutes with $\gamma_5$ holds under the hypothesis [H-WS]
-    of~\cite{Beau2026q11of}: a group-level map from the finite Weil group to the spin-solder
-    $\mathrm{SL}(2,\mathbb{C})$ taking $W(-I)$ to $-I$, supplied by no source.
+    That it is scalar on the chiral carrier, so that $[\gamma_5,R_b]=0$, is the hypothesis [H-WS]
+    of~\cite{Beau2026q11of}, supplied by no source; the stronger group-level formulation (a homomorphism from the
+    finite Weil group to $\mathrm{SL}(2,\mathbb{C})$ taking $W(-I)$ to $-I$) is not available at the corpus primes.
     Every use below of $R_b$ as the central element $-I$ of $2I$ is under [H-WS].
 
     \begin{corollary}[Order-five versus order-ten is below parity resolution]
       \label{cor:tiebreak}
-      Under the identification $R_b=W(-I)$ of the central lift with the Born--Infeld parity, the projective quotient that
-      the construction realises identifies the order-five and order-ten classes rather than distinguishing them.
+      The central lift $\times(-I)$ is realised by $R_b=W(-I)$, under [H-WS]; $R_b$ is unitary and distinct from the
+      antiunitary Born--Infeld parity $J_\Pi$ ($\varphi=R_b\circ J_\Pi$ in~\cite{Beau2026q11of}).
+      Modulo the central lift, the projective quotient that the construction realises identifies the order-five and order-ten classes rather than distinguishing them.
       The order-five versus order-ten alternative is not a selectable degree of freedom of the framework; it is a
       central-lift ambiguity that the parity erases.
     \end{corollary}
 
     \begin{proof}
       The pair of classes is exchanged by $\times(-I)$, whose realisation is $R_b$.
-      By Lemma~\ref{lem:organizing} the parity acts only on the $\zeta_q$ factor and fixes $\sqrt{5}$, so it permutes the
-      classes by the central lift while leaving the Galois data invariant.
+      By Lemma~\ref{lem:organizing} the parity acts only on the $\zeta_q$ factor and fixes $\sqrt{5}$, and so does $R_b$
+      under [H-WS]; together they permute the classes by the central lift while leaving the Galois data invariant.
       Quotienting by the central lift identifies the two classes; it does not order them.
       Hence the framework supplies no selector between order five and order ten, for the same arithmetic reason that it
       supplies no Galois-spin action: it provides $\times(-I)$, not $\sqrt{5}\mapsto-\sqrt{5}$.
@@ -296,8 +296,7 @@ The orthogonality is therefore structural, not numerical.
     \end{proof}
 
     \begin{remark}[Scope]
-      Theorem~\ref{thm:negative} is unconditional for the ADE gate in the present construction (modulo [H-WS] for
-      $R_b$), resting on the
+      Theorem~\ref{thm:negative} is proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}, resting on the
       established Proposition~\ref{prop:spinrigidity}.
       The abstract generalisation to every conceivable recursive stratum, Lemma~\ref{lem:rigidity}, is established under
       the corpus notion of an admissible fibre operation by
@@ -368,7 +367,7 @@ mere gap in the derivation.
     For the spin stratum the statement is established for the present corpus construction by
     Proposition~\ref{prop:spinrigidity}: the operations actually available there generate a $\sqrt{5}$-fixing group.
     This is the only stratum the $\sqrt{5}$-locus of the ADE gate requires, so the no-go of
-    Theorem~\ref{thm:negative} is unconditional in the present construction (modulo [H-WS] for $R_b$).
+    Theorem~\ref{thm:negative} is proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}.
 
     For the abstract claim over every conceivable recursive stratum the statement was open at the abstract level.
     ENI~Corollary~6 forces $S_{\Pi_i}>0$ at each stratum of a tower of genuinely distinct emergent levels, but it
@@ -510,8 +509,9 @@ Theorem~\ref{thm:negative} does not depend on it.
     The two cascade flows are the Weil images of the unipotent one-parameter subgroups of $\mathrm{SL}(2,\mathbb{R})$,
     with product $S_X(t)S_Y(s)=W\!\left(\begin{smallmatrix}1+ts&t\\s&1\end{smallmatrix}\right)$; a
     Baker--Campbell--Hausdorff reduction in $\mathfrak{sl}_2$ identifies the per-step $J_3$ component, to leading order, with the
-    oriented product $ts$ of the two shear parameters, produced by the $\mathfrak{sl}_2$ commutator $[E,F]=H$ and not by
-    the Heisenberg bracket~\cite{Beau2026aar,Beau2026q14}.
+    oriented product $ts$ of the two shear parameters, produced by the $\mathfrak{sl}_2$ commutator $[E,F]=H$ in the
+    $\mathrm{SL}(2)$-on-$V$ model, where no Heisenberg bracket is used~\cite{Beau2026prs,Beau2026aar}; no map between the two
+    brackets is supplied.
     The Lorentzian metric forces the complexification
     $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ and the chiral split $S_L\oplus
   S_R$~\cite{Beau2026q5b,Beau2026q11}, and the chiral weight $\sigma_L$ classes $S_L$ versus $S_R$ by the Weyl
@@ -615,11 +615,13 @@ Theorem~\ref{thm:negative} does not depend on it.
         Theorem~\ref{thm:conditional} & gate $\Rightarrow$ ratio $3:2\Rightarrow\epsilon$ & conditional / open hypothesis\\
         Lemma~\ref{lem:organizing} & parity $\perp$ Galois-spin in $\Gal(K_q/\mathbb{Q})$ & proved\\
         Corollary~\ref{cor:tiebreak} & order five $=$ order ten mod central lift & proved, modulo $R_b=W(-I)$ and under [H-WS]\\
-        Theorem~\ref{thm:negative} & no Galois-spin for the ADE gate (present construction) & proved\\
+        Theorem~\ref{thm:negative} & no Galois-spin for the ADE gate (present construction)
+        & proved for every generator of $\mathcal{A}_{\mathrm{spin}}$ other than $R_b$; the $R_b$ clause of
+        Prop.~\ref{prop:spinrigidity} is under [H-WS]\\
         Proposition~\ref{prop:spinrigidity} & spin-stratum type-rigidity (corpus construction)
-        & proved (character-table audit); use of $R_b$ under [H-WS]\\
+        & proved (character-table audit); the $R_b$ clause is under [H-WS]\\
         Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp$ Galois-spin
-        & proved\\
+        & proved; inherits the $R_b$ clause of Prop.~\ref{prop:spinrigidity} (under [H-WS])\\
         Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum) & proved under [H-WS]\\
         Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & established (admissible-operation sense)\\
         Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sqrt{5}$-moving operation
@@ -632,7 +634,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     \end{center}
 
     The net statement is that $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate, and that for the
-    present corpus construction the gate is a no-go: the spin-stratum operations generate a $\sqrt{5}$-fixing subgroup
+    present corpus construction the gate is a no-go (for the central reflection $R_b$, under [H-WS]): the spin-stratum operations generate a $\sqrt{5}$-fixing subgroup
     $\langle\mathcal{A}_{\mathrm{spin}}\rangle\subset\Gal(K_q/\mathbb{Q})_{\sqrt{5}}$, closed under composition, so no
     iteration, central lift, Schur projection or A4 locking can manufacture the outer automorphism that the
     $\sqrt{5}$-locus requires.
@@ -650,7 +652,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     exponent~\cite{Beau2026fmnote,Beau2026prs,Beau2026a4}.
     Even a derivation of the gate would not by itself produce a mass.
     The gate is therefore a finite, characterisable structural sub-problem, now settled negatively for the present
-    construction, while the quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa
+    construction (for the central reflection $R_b$, under [H-WS]), while the quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa
     sector.
 
     \paragraph{Residual role of the ADE gate in the angular normalisation.}
@@ -744,8 +746,8 @@ Theorem~\ref{thm:negative} does not depend on it.
       \item Apply the Galois action $\sqrt{5}\mapsto-\sqrt{5}$ to the table: it induces the permutation
       $(2\,2')(3\,3')$ of $\mathrm{Irr}(2I)$, fixing $1,4,4',5,6$.
       \item Compute the action of each spin-stratum operation: inner conjugations, complex conjugation $J_\Pi$, the
-      central element $-I$ and $R_b=W(-I)$ all induce the identity permutation of $\mathrm{Irr}(2I)$; none
-      realises $2\leftrightarrow2'$.
+      central element $-I$ and, under [H-WS] of~\cite{Beau2026q11of}, $R_b=W(-I)$ all induce the identity permutation of
+      $\mathrm{Irr}(2I)$; none realises $2\leftrightarrow2'$.
     \end{enumerate}
 
     The two two-dimensional irreducible characters on the $\sqrt{5}$-locus are Galois-conjugate, with
