@@ -57,8 +57,8 @@ for g in G:
         cls_of[x] = len(classes)
     classes.append(sorted(orb))
 
-# name classes by (order, index among classes of equal order); 5a/5b and 10a/10b are the two
-# classes of each of these orders (the labelling of a versus b is a convention)
+# name classes by (order, index among classes of equal order); 5a/5b are the two classes of order 5
+# (the labelling of a versus b is a convention); the order-10 classes are then named by 10x := -(5x), below
 names = {}
 count = {}
 for c in classes:
@@ -68,6 +68,15 @@ for c in sorted(classes, key=lambda c: (order(c[0]), c)):
     o = order(c[0])
     tmp[o] = tmp.get(o, 0) + 1
     names[cls_of[c[0]]] = f"{o}" if count[o] == 1 else f"{o}{'ab'[tmp[o] - 1]}"
+
+# convention (fixed once, as in the note's appendix table): 10a := -(5a) and 10b := -(5b), so that the
+# central lift g -> -g exchanges 5a <-> 10a and 5b <-> 10b by definition of the labels.
+neg0 = lambda g: tuple((-x) % P for x in g)
+for c in classes:
+    if order(c[0]) == 10:
+        src = cls_of[neg0(c[0])]
+        assert order(classes[src][0]) == 5
+        names[cls_of[c[0]]] = "10" + names[src][-1]
 
 print("classes (name: size):", {names[i]: len(classes[i]) for i in sorted(names, key=lambda i: (order(classes[i][0]), names[i]))})
 

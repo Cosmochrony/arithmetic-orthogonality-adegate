@@ -13,11 +13,13 @@ We make the decisive contrast explicit at the matrix level on the defining 2-dim
 
   sigma : sqrt5 -> -sqrt5 (the horizontal Galois involution)
                           -> MOVES phi (phi -> 1-phi), and chi_2 o sigma = chi_2' != chi_2:
-                             it is the OUTER automorphism of 2I = SL(2,5), exchanging 2 <-> 2'.  HORIZONTAL.
+                             its class in Out(2I) = Out(SL(2,5)) is the outer class exchanging 2 <-> 2'
+                             (sigma itself maps 2I to a different subgroup sigma(2I), see below).  HORIZONTAL.
 
 Three audit targets (Jerome):
   (1) internal : inner conjugation, centre -I, BI parity kappa, Schur scalars, J_Pi fix the irrep type;
-  (2) external : the exchange 2<->2' is realised ONLY by sigma (outer aut / sqrt5-mover), not inside 2I;
+  (2) external : the exchange 2<->2' is induced by sigma (sqrt5-mover) followed by a conjugation in SU(2); it is
+      not an operation inside 2I;
   (3) compatibility : no admissible operation lies in the external (sqrt5-moving) coset.
 
 Construction: the 120 icosians (600-cell vertices) in SU(2), exact over Q(i, sqrt5).
@@ -95,9 +97,9 @@ def is_setmap(sub):
 
 print(f"\nsigma (sqrt5->-sqrt5) permutes the 120 icosians: {is_setmap(sigma_sub)}")
 print("  -> KEY: sigma does NOT preserve the carrier 2I inside SU(2); it maps 2I onto its")
-print("     Galois-conjugate copy sigma(2I) (a different binary icosahedral subgroup of SU(2)). Realising the")
-print("     outer aut / 2<->2' exchange requires LEAVING the carrier; it is not a carrier-")
-print("     preserving operation at all, a fortiori not an admissible fibre operation.")
+print("     Galois-conjugate copy sigma(2I) (a different binary icosahedral subgroup of SU(2)). Inducing the")
+print("     2<->2' exchange by sigma requires LEAVING the carrier: sigma is not carrier-preserving, hence")
+print("     outside the list of operations relative to the modelling premise [M] (carrier-preservation).")
 print(f"kappa (i->-i)         permutes the 120 icosians: {is_setmap(kappa_sub)}")
 print("  -> kappa (BI parity / complex conjugation) preserves the carrier 2I and fixes sqrt5.")
 
@@ -113,7 +115,7 @@ def is_hom(sub, n=8):
                 return False
     return True
 
-print(f"sigma is a group homomorphism (sampled): {is_hom(sigma_sub)}")
+print(f"sigma is a group homomorphism (sampled) on the icosian set, with image sigma(2I): {is_hom(sigma_sub)}")
 print(f"kappa is a group homomorphism (sampled): {is_hom(kappa_sub)}")
 
 # ---- characters of the defining rep and their images under sigma, kappa -----
@@ -154,11 +156,11 @@ print(f"  sigma(phi) = {simplify(sigma_sub(phi))}   (= 1 - phi = -1/phi : MOVED)
 print(f"  kappa(phi) = {simplify(kappa_sub(phi))}   (= phi : FIXED)")
 print("  => sqrt5 OCCURS in the carrier (phi is a real invariant), but only sigma realises sqrt5->-sqrt5.")
 
-# ---- sigma is OUTER (not inner): no g in 2I conjugates to it --------------
+# ---- the class of sigma is the outer class (not inner) --------------
 # sigma is inner  <=>  chi o sigma = chi for every irreducible character (inner = identity on Irr).
 # We already have chi_2 o sigma != chi_2, so sigma is NOT inner.
 print("\n--- sigma is outer, kappa is inner-type (on Irr) ---")
-print(f"  sigma inner ? {all(simplify(a-b)==0 for a,b in zip(chi2_sigma, chi2))}   (False => OUTER automorphism)")
+print(f"  sigma inner ? {all(simplify(a-b)==0 for a,b in zip(chi2_sigma, chi2))}   (False => the class of sigma in Out is the outer class)")
 print(f"  kappa inner-type on Irr ? {all(simplify(a-b)==0 for a,b in zip(chi2_kappa, chi2))}   (True => fixes Irr)")
 # sigma^2 = identity on entries => inner (trivial); so <sigma> mod inner = Z/2 = Out(2I).
 sigma2 = [simplify(expand((apply_map(apply_map(cl[0], sigma_sub), sigma_sub))[0,0]
@@ -182,7 +184,7 @@ print(f"  BI parity kappa fixes iso class and sqrt5: True (shown above)")
 
 print("\n=== VERDICT (point 3 settled) ===")
 print("sqrt5 occurs as an invariant of the icosahedral carrier (phi), but the non-trivial Galois")
-print("involution sqrt5->-sqrt5 is realised ONLY by sigma = the OUTER automorphism exchanging 2<->2'.")
+print("involution sqrt5->-sqrt5, followed by a conjugation in SU(2), induces the outer class exchanging 2<->2'.")
 print("Every internal/admissible operation (inner conj, centre, BI parity kappa, Schur scalar, J_Pi)")
 print("fixes phi and the iso class -> lies in the sqrt5-FIXING (vertical) subgroup.")
 print("No operation of the listed generator set lies in the external (sqrt5-moving) coset (completeness of the list is a modelling premise).")

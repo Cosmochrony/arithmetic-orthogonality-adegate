@@ -9,8 +9,8 @@ Goal (bias-independent, no fit, exact over Q(i, sqrt5)):
       field Q(sqrt5).  These are exactly the operations a non-injective FIBRE identification
       {chi, -chi} can realise (ENI minimal-fibre condition).
 
-  (B) HORIZONTAL operation (the Galois action sqrt5 -> -sqrt5) is the OUTER automorphism of
-      2I ~ SL(2,5): it permutes the two 2-dimensional irreducible characters chi_2 <-> chi_2'.
+  (B) HORIZONTAL operation (the Galois action sqrt5 -> -sqrt5): its class in Out(2I) = Out(SL(2,5)) is the
+      outer class; it permutes the two 2-dimensional irreducible characters chi_2 <-> chi_2'.
       It is NOT realised by any central/scalar/inner (vertical) operation.
 
   Realising the Galois action sigma needs (B); recursive non-injectivity (ENI Cor. 6) is modelled as supplying only (A)-type fibre
@@ -134,7 +134,7 @@ for trkey, group in sorted(by_trace.items(), key=lambda kv: len(kv[1])):
 print(f"  (sum of class sizes = {sum(c[0] for c in chi2_vals)}, must be 120)")
 
 # ---------------------------------------------------------------------------
-# 4. Character field and the Galois action sqrt5 -> -sqrt5 (the OUTER automorphism).
+# 4. Character field and the Galois action sqrt5 -> -sqrt5 (its class in Out is the outer class).
 # ---------------------------------------------------------------------------
 # does chi_2 take a value involving sqrt5?
 involves_sqrt5 = any(sqrt(5) in simplify(tr).atoms(type(sqrt(5))) or
@@ -162,7 +162,7 @@ print(f"  <chi_2', chi_2'>   = {inner(chi2p_vals, chi2p_vals)}   (Galois image s
 print(f"  <chi_2 , chi_2'>   = {inner(chi2_vals, chi2p_vals)}   (0 iff genuinely DIFFERENT irrep)")
 
 same = all(simplify(a - b) == 0 for (_, _, a), (_, _, b) in zip(chi2_vals, chi2p_vals))
-print(f"  chi_2' == chi_2 ?  {same}   (False => sqrt5->-sqrt5 PERMUTES the two 2-dim irreps = OUTER aut)")
+print(f"  chi_2' == chi_2 ?  {same}   (False => sqrt5->-sqrt5 PERMUTES the two 2-dim irreps: outer class)")
 
 # ---------------------------------------------------------------------------
 # 5. VERTICAL operations fix every character pointwise.
@@ -181,7 +181,7 @@ print("global trace factor and never moves sqrt5.  Hence every fibre identificat
 print("(ENI minimal fibre) is sqrt5-fixing.")
 
 print("\n=== VERDICT ===")
-print("HORIZONTAL (sqrt5->-sqrt5) = outer aut of 2I, the unique operation swapping chi_2<->chi_2'.")
+print("HORIZONTAL (sqrt5->-sqrt5) induces the outer class of 2I, the class of the character swap chi_2<->chi_2'.")
 print("VERTICAL (central/scalar/inner = every ENI fibre identification) fixes Q(sqrt5) pointwise.")
 print("Realising sigma needs HORIZONTAL; the listed fibre operations (modelled as the only ones) are VERTICAL.")
 print("(AOG 1.8: no link between the ADE gate and sigma is claimed by this script.)")

@@ -13,8 +13,9 @@ Lemma "no horizontal admissible operation"). They are self-contained: nothing ou
 | `frontB_recursive_type_rigidity.py` | vendored from the same directory (last change `5a56ab8`) | 2026-06-27 |
 | `outer_automorphism_classes.py` | written for AOG 1.8 (2026-10-05), not vendored | 2026-10-05 |
 
-Differences between the vendored copies and the PRS originals: only the text of some printed verdict lines and
-docstring sentences, edited in AOG 1.8 so that they no longer assert a conclusion about the ADE gate (the note does not
+Differences between the vendored copies and the PRS originals: only the text of some printed verdict lines, docstring
+sentences and comments, edited in AOG 1.8 so that they no longer assert a conclusion about the ADE gate, no longer call
+sigma itself "the outer automorphism" (sigma maps 2I to sigma(2I); only its class in Out(2I) is the outer class) (the note does not
 establish a link between the gate and the Galois action) and no longer call the Galois conjugate icosian set an
 "opposite-chirality" set; `R_b` is stated as hypothesis-dependent ([H-WS]). The computations are unchanged.
 
@@ -37,7 +38,7 @@ Run from the repository root, e.g. `python -W error code/<script>.py` (return co
 - `outer_automorphism_classes.py` (about 0.1 s). Enumerates `SL(2,5)` and computes the class permutation of the outer
   automorphism (conjugation by `diag(2,1)` in `GL(2,5)`) and of the central lift `g -> -g`. Expected: `5a<->5b`,
   `10a<->10b`, all other classes fixed (in particular the order-four class); each of the loci `5a u 5b`, `10a u 10b` is
-  mapped onto itself; `g -> -g` exchanges `1<->2`, `3<->6`, `5a<->10a`, `5b<->10b` and fixes the order-four class.
+  mapped onto itself; `g -> -g` exchanges `1<->2`, `3<->6`, `5a<->10a`, `5b<->10b` (labelling convention: `10a := -(5a)`, `10b := -(5b)`, as in the note's appendix table; a versus b of the order-5 classes is a convention fixed in the note by `chi_2(5a) = phibar`) and fixes the order-four class.
 - `frontB2_no_horizontal_operation.py` (about 1 s). Exact (sympy) icosian realisation of `2I` in `SU(2)` over
   `Q(i, sqrt5)`: the entrywise map `sigma: sqrt5 -> -sqrt5` does not permute the 120 icosians (it maps `2I` to a
   different subgroup), `chi_2 o sigma` is orthogonal to `chi_2`; complex conjugation `kappa: i -> -i` preserves `2I` and

@@ -30,19 +30,20 @@ arithmetically orthogonal.
 
 Each result is stated with its own status; the note does **not** conclude anything about the ADE gate.
 
-- **(a) Proved by the character-table audit** (computed from the group, `code/`): inner conjugations, the central
+- **Clause (a) of Prop. spin-rigidity: proved by the character-table audit** (computed from the group, `code/`): inner conjugations, the central
   element $-I$ and the projective involution $J_\Pi$ induce the identity permutation of $\mathrm{Irr}(2I)$, whereas
   $\sigma$ induces $(2\,2')(3\,3')$. The outer automorphism fixes the order-four class and maps each of the loci
   $5a \cup 5b$ and $10a \cup 10b$ onto itself (exchanging $5a \leftrightarrow 5b$, $10a \leftrightarrow 10b$).
-- **(b) Modelling premise** [M]: the list of generators of the spin stratum (equivalently, carrier-preservation of
+- **Modelling premise** [M] (distinct from the tex clauses (a)-(d)): the list of generators of the spin stratum (equivalently, carrier-preservation of
   every admissible fibre operation) is complete. This is not proved.
-- **(c) Conditional clauses**: the central reflection $R_b$ acts as $-I$ under [H-WS] of Q11OF; the A4-locking clause
-  holds under the A4 hypotheses ([H-Gen], $J_\Pi$-covariance, diagonal form, a locked pair); the tensor-functor and
-  Schur-projection clauses are modelling assertions, not part of the audit.
-- **Consequence (Theorem)**: modulo (c) and (b), no listed operation of the spin stratum realises $\sigma$.
+- **Conditional clauses (tex clauses (b)-(d))**: the central reflection $R_b$ acts as $-I$ under [H-WS] of Q11OF; the
+  A4-locking clause holds under the A4 hypotheses ([H-Gen], $J_\Pi$-covariance, diagonal form, a locked pair) and is
+  also a modelling assertion (the locking contributes nothing beyond a sign); the tensor-functor and Schur-projection
+  clauses are modelling assertions, not part of the audit.
+- **Consequence (Theorem)**: modulo the conditional clauses and [M], no listed operation of the spin stratum realises $\sigma$.
   This is a statement about $\sigma$ only: since both candidate loci (order four; order five/ten) are
   $\sigma$-invariant, a link between the gate and $\sigma$ is **not established**.
-- **(d) Full tower** (one status everywhere): the extension to a recursive tower of admissible fibre operations holds
+- **Full tower** (one status everywhere): the extension to a recursive tower of admissible fibre operations holds
   **relative to the modelling premise** [M] (recursive non-injectivity multiplies the vertical parity type and cannot
   supply $\sigma$); it is not unconditional.
 
@@ -53,15 +54,17 @@ convention and under [H-WS], and leaves a residual caveat: a possible additional
 Lorentzian chiral lift. The Lorentzian chiral lift ($S_L\oplus S_R$,
 $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$) is an **input that this note does not
 construct**: its status is that of the spin-solder hypothesis [H-Spin] of Q14 (part (ii) is supplied by no source).
-Under [H-Spin], [H-WS], [M] and the inherited central-phase convention of CHO:
+Under [H-Spin], [H-WS], [M], [B] and the inherited central-phase convention of CHO:
 
-- **Lemma (Galois-internal boost, under [H-Spin]).** The lift supplies no action on $\mathbb{Q}(\sqrt{5})$ (structural
-  assertion: the unit $\mathrm{i}$ lies in $K_q(\mathrm{i})$, not in $K_q$).
+- **Lemma (Galois-internal boost, under [H-Spin] and the premise [B]).** [B] (asserted, not derived): the lift extends
+  the spin-stratum operations only by the central character and the complexification unit $\mathrm{i}$, acting by complex
+  conjugation; it supplies no automorphism moving $\sqrt{5}$, although $\mathrm{Gal}(K_q(\mathrm{i})/\mathbb{Q})$ contains
+  such elements. Under [B] the lift supplies no action on $\mathbb{Q}(\sqrt{5})$.
 - **Lemma (Weyl vs. Galois conjugation, under [H-Spin]).** The chiral weight $\sigma_L$ classes the Weyl branches
   $\mathbf{2}$ vs. $\bar{\mathbf{2}}$, which is orthogonal to the outer automorphism separating $2$ from $2'$.
-- **Corollary (spin-Galois rigidity of the lift, under [H-Spin], [M], [H-WS]).** Every field automorphism induced on
+- **Corollary (spin-Galois rigidity of the lift, under [H-Spin], [M], [B], [H-WS]).** Every field automorphism induced on
   $K_q$ by the lift fixes $\mathbb{Q}(\sqrt{5})$; any nontrivial part is cyclotomic.
-- **Corollary (orientation, under [H-Spin], [H-WS], [M] and the inherited convention [C]).**
+- **Corollary (orientation, under [H-Spin], [H-WS], [M], [B] and the inherited convention [C]).**
   $\omega_\chi(e) = \zeta_q^{\Delta A_c(e)} \Rightarrow \rho_\chi = 1 \Rightarrow
   [\mathrm{H\text{-}orient}] \Rightarrow N_A = \theta_{\max} \neq 0$, where $\rho_\chi = 1$ holds by definition of
   $\sigma_L := \mathrm{sgn}\,\Delta A_c$ on the support. That a cyclotomic reindexing is absorbed into the central block
