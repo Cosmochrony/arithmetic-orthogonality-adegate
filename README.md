@@ -21,7 +21,8 @@ therefore exactly the first-principles status of the gate, which this note does 
 
 We then examine a candidate arithmetic obstruction. In the compositum
 $K_q = \mathbb{Q}(\zeta_q, \sqrt{5})$ the Born–Infeld parity $c \mapsto q-c$, the restriction of complex
-conjugation $\zeta_q \mapsto \zeta_q^{-1}$, fixes $\sqrt{5}$, whereas the Galois action
+conjugation $\zeta_q \mapsto \zeta_q^{-1}$ (the *candidate* fibre involution of Foundation M, a structurally motivated hypothesis
+there and taken here as a premise, not derived), fixes $\sqrt{5}$, whereas the Galois action
 $\sigma : \sqrt{5} \mapsto -\sqrt{5}$, which exchanges the two two-dimensional irreducible characters of the
 binary icosahedral group $2I \cong \mathrm{SL}(2,5)$, lies in the other direct factor: the two are
 arithmetically orthogonal.
@@ -34,8 +35,11 @@ Each result is stated with its own status; the note does **not** conclude anythi
   element $-I$ and the projective involution $J_\Pi$ induce the identity permutation of $\mathrm{Irr}(2I)$, whereas
   $\sigma$ induces $(2\,2')(3\,3')$. The outer automorphism fixes the order-four class and maps each of the loci
   $5a \cup 5b$ and $10a \cup 10b$ onto itself (exchanging $5a \leftrightarrow 5b$, $10a \leftrightarrow 10b$).
-- **Modelling premise** [M] (distinct from the tex clauses (a)-(d)): the list of generators of the spin stratum (equivalently, carrier-preservation of
-  every admissible fibre operation) is complete. This is not proved.
+- **Modelling premise** [M] (distinct from the tex clauses (a)-(d)): the list of generators of the spin stratum is complete. This is not proved; it implies
+  (and the carrier-level lemma uses only) carrier-preservation of every admissible fibre operation.
+- **Candidate base-fibre involution** (hypothesis of Foundation M, not proved there; the fibre identification is an open
+  classification problem and O18 shows the parity orbit is not forced into the fibres): taken as a premise. What is
+  proved here about it is only that, as complex conjugation, it fixes $\mathbb{Q}(\sqrt{5})$.
 - **Conditional clauses (tex clauses (b)-(d))**: the central reflection $R_b$ acts as $-I$ under [H-WS] of Q11OF; the
   A4-locking clause holds under the A4 hypotheses ([H-Gen], $J_\Pi$-covariance, diagonal form, a locked pair) and is
   also a modelling assertion (the locking contributes nothing beyond a sign); the tensor-functor and Schur-projection
@@ -44,7 +48,7 @@ Each result is stated with its own status; the note does **not** conclude anythi
   This is a statement about $\sigma$ only: since both candidate loci (order four; order five/ten) are
   $\sigma$-invariant, a link between the gate and $\sigma$ is **not established**.
 - **Full tower** (one status everywhere): the extension to a recursive tower of admissible fibre operations holds
-  **relative to the modelling premise** [M] (recursive non-injectivity multiplies the vertical parity type and cannot
+  **relative to the modelling premise** [M] and, for the central reflection, [H-WS] (recursive non-injectivity multiplies the vertical parity type and cannot
   supply $\sigma$); it is not unconditional.
 
 ## The chiral lift: conditional consequences

@@ -38,7 +38,7 @@ Run from the repository root, e.g. `python -W error code/<script>.py` (return co
 - `outer_automorphism_classes.py` (about 0.1 s). Enumerates `SL(2,5)` and computes the class permutation of the outer
   automorphism (conjugation by `diag(2,1)` in `GL(2,5)`) and of the central lift `g -> -g`. Expected: `5a<->5b`,
   `10a<->10b`, all other classes fixed (in particular the order-four class); each of the loci `5a u 5b`, `10a u 10b` is
-  mapped onto itself; `g -> -g` exchanges `1<->2`, `3<->6`, `5a<->10a`, `5b<->10b` (labelling convention: `10a := -(5a)`, `10b := -(5b)`, as in the note's appendix table; a versus b of the order-5 classes is a convention fixed in the note by `chi_2(5a) = phibar`) and fixes the order-four class.
+  mapped onto itself; `g -> -g` exchanges `1<->2`, `3<->6`, `5a<->10a`, `5b<->10b` (labelling convention: `10a := -(5a)`, `10b := -(5b)`, as in the note's appendix table; spectral-admissibility labels the order-ten classes the other way round, `10a` there carrying the value `phi`, i.e. `10a_a1 = -(5b)`; a versus b of the order-5 classes is a convention fixed in the note by `chi_2(5a) = phibar`) and fixes the order-four class.
 - `frontB2_no_horizontal_operation.py` (about 1 s). Exact (sympy) icosian realisation of `2I` in `SU(2)` over
   `Q(i, sqrt5)`: the entrywise map `sigma: sqrt5 -> -sqrt5` does not permute the 120 icosians (it maps `2I` to a
   different subgroup), `chi_2 o sigma` is orthogonal to `chi_2`; complex conjugation `kappa: i -> -i` preserves `2I` and
