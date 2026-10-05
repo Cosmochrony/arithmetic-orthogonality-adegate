@@ -12,10 +12,11 @@
 \pdfgentounicode=1
 \hypersetup{
   unicode,
-  pdftitle={Spin-Stratum Type-Rigidity: Orthogonality of the ADE Gate and Closure of the Chiral Lift},
+  pdftitle={Spin-Stratum Type-Rigidity: An Obstruction to the Galois Action on the Binary Icosahedral Stratum, with Conditional Consequences for the Chiral Lift},
   pdfauthor={Jérôme Beau}
 }
 
+\emergencystretch=3em
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
@@ -28,7 +29,7 @@
 \newcommand{\Heis}{\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})}
 \newcommand{\Gal}{\mathrm{Gal}}
 
-\title{Spin-Stratum Type-Rigidity: Orthogonality of the ADE Gate and Closure of the Chiral Lift}
+\title{Spin-Stratum Type-Rigidity: An Obstruction to the Galois Action on the Binary Icosahedral Stratum, with Conditional Consequences for the Chiral Lift}
 \author{J\'{e}r\^{o}me Beau\\[0.3em]
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
@@ -45,29 +46,36 @@
     First, $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate: once a case is selected whose
     class-complete spectrum carries the external level ratio $3:2$, the generation-deficit normal form forces
     $\epsilon=\tfrac{1}{10}$ and $\kappa=\tfrac{5}{12}$ algebraically, with no further input.
-    Second, the first-principles status of $\epsilon$ is therefore exactly the first-principles status of the gate.
-    We then characterise the obstruction to deriving the gate as an arithmetic orthogonality.
-    The selection of the $\sqrt{5}$-locus that carries the $3:2$ ratio requires the nontrivial element of
-    $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, the action $\sqrt{5}\mapsto-\sqrt{5}$.
-    The only field automorphism supplied by the foundations is the Born--Infeld parity $c\mapsto q-c$, which is the
-    restriction of complex conjugation $\zeta_q\mapsto\zeta_q^{-1}$ and fixes $\sqrt{5}$.
-    In the compositum $K_q=\mathbb{Q}(\zeta_q,\sqrt{5})$ the two actions lie in distinct direct factors of the Galois
-    group, hence are arithmetically orthogonal.
-    Consequently the gate cannot be discharged from the present axioms without an additional arithmetic principle at
-    the spin stratum.
-    A bounded character-table audit of the binary icosahedral group $2I\cong\mathrm{SL}(2,5)$ establishes the
-    type-rigidity the gate needs: the operations available at the spin stratum of the present corpus construction all
-    fix $\mathbb{Q}(\sqrt{5})$ (for the central reflection $R_b$, under [H-WS] of~\cite{Beau2026q11of}), so their generated group lies in the $\sqrt{5}$-fixing subgroup of
-    $\Gal(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism that realises
-    $\sqrt{5}\mapsto-\sqrt{5}$.
-    The no-go for the ADE gate is therefore proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}; the same rigidity closes the
-    chiral orientation note, the Lorentzian chiral lift inducing no action on $\mathbb{Q}(\sqrt{5})$ and hence
-    $[\mathrm{H\text{-}orient}]$ within the present spin stratum, under [H-WS] of~\cite{Beau2026q11of} and
-    \cite{Beau2026cho}, and with [H-Spin] as input.
-    The Lorentzian chiral lift ($S_L\oplus S_R$, $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$) is taken as input from Q5b, Q11 and CHO; in Q14 this is the spin-solder hypothesis [H-Spin]~\cite{Beau2026q14}, which this note does not derive.
-    The abstract type-rigidity of the full recursive tower is then established under the corpus notion of an admissible
-    fibre operation: recursive non-injectivity multiplies the vertical parity type already present and cannot
-    manufacture the horizontal Galois transport, so it preserves the binary-icosahedral arithmetic type.
+    Second, the first-principles status of $\epsilon$ is therefore exactly the first-principles status of the gate,
+    which this note does not settle.
+    We then examine a candidate arithmetic obstruction.
+    In the compositum $K_q=\mathbb{Q}(\zeta_q,\sqrt{5})$ the Born--Infeld parity $c\mapsto q-c$, the restriction of
+    complex conjugation $\zeta_q\mapsto\zeta_q^{-1}$, fixes $\sqrt{5}$, whereas the Galois action
+    $\sigma:\sqrt{5}\mapsto-\sqrt{5}$, which exchanges the two two-dimensional irreducible characters of the binary
+    icosahedral group $2I\cong\mathrm{SL}(2,5)$, lies in the other direct factor of the Galois group: the two are
+    arithmetically orthogonal.
+    A character-table audit of $2I$, computed from the group, proves that inner conjugations, the central element
+    $-I$ and the projective involution $J_\Pi$ induce the identity permutation of $\mathrm{Irr}(2I)$, whereas
+    $\sigma$ induces the permutation $(2\,2')(3\,3')$; under [H-WS] of~\cite{Beau2026q11of} the central reflection
+    $R_b$ acts as $-I$ does.
+    The remaining generators of the spin stratum enter as stated clauses of different status: the Schur-projection and
+    tensor-functor clauses are modelling assertions, and the A4-locking clause holds under the A4 hypotheses
+    ([H-Gen], $J_\Pi$-covariance, a locked pair).
+    The completeness of this generator list is a modelling premise, not a proved fact.
+    Modulo these clauses and that premise, no operation of the spin stratum realises $\sigma$.
+    This is a statement about $\sigma$ and not about the ADE gate: the outer automorphism fixes the order-four class
+    and maps each of the order-five and order-ten loci to itself, so a link between the gate and $\sigma$ is not
+    established here, and no conclusion on the gate is drawn.
+    The extension to a recursive tower of admissible fibre operations is conditional on the same modelling premise
+    (every admissible operation is carrier-preserving): recursive non-injectivity then multiplies the vertical parity
+    type and cannot supply $\sigma$.
+    The Lorentzian chiral lift ($S_L\oplus S_R$, $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$)
+    is an input that this note does not construct; its status is that of the spin-solder hypothesis [H-Spin] of
+    Q14~\cite{Beau2026q14}, which no source supplies.
+    Under [H-Spin], [H-WS], the modelling premise and the inherited central-phase convention of the chiral orientation
+    note~\cite{Beau2026cho}, the lift induces no action on $\mathbb{Q}(\sqrt{5})$, so that the residual spin-Galois
+    caveat of that note does not arise within the present spin stratum; the overlap $\rho_\chi=1$ holds there by
+    definition of $\sigma_L$, and the conclusion $N_A\neq0$ is conditional on all of these.
   \end{abstract}
 
   \noindent\textbf{Keywords:} non-injective projection; ADE case selection; binary icosahedral group; golden ratio;
@@ -91,37 +99,42 @@
     The first part is a trivial decomposition that nonetheless settles the status question: the algebra that takes the
     $3:2$ ratio to $\epsilon=\tfrac{1}{10}$ is general and case-independent, so all of the first-principles content lives
     in the upstream selection of the case~(Section~\ref{sec:conditional}).
-    The second part characterises why that upstream selection is not supplied by the present foundations.
-    The selection of the $\sqrt{5}$-locus that carries the $3:2$ ratio is an arithmetic act: it requires the Galois
-    action that separates the two two-dimensional irreducible characters of the binary icosahedral group $2I$.
+    The second part examines a candidate arithmetic obstruction and states exactly what is and is not proved about it.
+    The Galois action $\sigma:\sqrt{5}\mapsto-\sqrt{5}$ exchanges the two two-dimensional irreducible characters of the
+    binary icosahedral group $2I$.
     The foundations supply only the Born--Infeld parity, which is complex conjugation on the central character and
     fixes the real quadratic field $\mathbb{Q}(\sqrt{5})$.
-    These two actions sit in distinct direct factors of the Galois group of the natural compositum, so the parity
-    non-injectivity is not a partial version of the required Galois action; it is orthogonal to
-    it~(Sections~\ref{sec:organizing}--\ref{sec:negative}).
+    These two actions sit in distinct direct factors of the Galois group of the natural compositum, so the parity is not
+    a partial version of $\sigma$; it is orthogonal to it~(Section~\ref{sec:organizing}).
+    A character-table audit then shows that the operations listed for the spin stratum do not realise
+    $\sigma$~(Sections~\ref{sec:negative}--\ref{sec:rigidity}).
+    This is a statement about $\sigma$.
+    That the ADE gate requires $\sigma$ is not established: the outer automorphism fixes the order-four class and
+    preserves each of the order-five and order-ten loci (Remark~\ref{rem:gate-link}), so no conclusion on the gate is
+    drawn.
 
     The recursive non-injectivity theorem of ENI~\cite{Beau2026l} guarantees that each stratum of a tower of genuinely
     distinct emergent levels carries its own non-injectivity, but it constrains existence, not arithmetic type.
     The base fibre is closed: its forced involution is the Born--Infeld parity~\cite{Beau2026m}.
-    The spin stratum is closed for the present corpus construction by a bounded character-table audit of
-    $2I\cong\mathrm{SL}(2,5)$, which shows that none of the operations available there realises the outer automorphism
-    that moves $\sqrt{5}$~(Section~\ref{sec:rigidity}, Appendix~\ref{app:audit}; for the central reflection $R_b$, under
-    [H-WS] of~\cite{Beau2026q11of}).
-    Whether every conceivable recursive stratum inherits the parity type, rather than introducing an action in the
-    $\sqrt{5}$ factor, is settled in Section~\ref{sec:rigidity}: every admissible fibre operation is carrier-preserving,
-    the horizontal exchange $2\leftrightarrow2'$ being the unique $\sqrt{5}$-moving operation and not carrier-preserving,
-    so a finite recursive tower preserves the arithmetic type.
-    The same spin-stratum type-rigidity has a second consequence, of opposite sign.
-    The chiral orientation note closes $[\mathrm{H\text{-}orient}]$ in the inherited Heisenberg central-phase lift and
-    isolates a single residual obstruction: a possible additional spin-Galois phase of the full Lorentzian chiral lift,
-    orthogonal to $\zeta_q$, in particular a $\sqrt{5}$ or ADE-spin factor~\cite{Beau2026cho}.
-    Section~\ref{sec:chiral} discharges that obstruction, under [H-WS] of~\cite{Beau2026q11of} and with the Lorentzian
-    chiral lift taken as input ([H-Spin] of~\cite{Beau2026q14}, not derived here), from the same
-    Proposition~\ref{prop:spinrigidity}: the
-    Lorentzian lift induces no action on $\mathbb{Q}(\sqrt{5})$, the chiral weight $\sigma_L$ being the Weyl conjugation
-    type that lives in the parity factor and not in the $\sqrt{5}$ factor.
-    For the gate the rigidity is fatal, the required $\sqrt{5}$ action being absent; for the chiral lift it is the
-    closure (under [H-Spin] as input and [H-WS]), the feared $\sqrt{5}$ action being absent.
+    For the spin stratum, a bounded character-table audit of $2I\cong\mathrm{SL}(2,5)$ shows that the inner
+    conjugations, $-I$ and $J_\Pi$ induce the identity permutation of $\mathrm{Irr}(2I)$ (the central reflection $R_b$
+    under [H-WS] of~\cite{Beau2026q11of}; the Schur-projection, tensor-functor and A4-locking clauses under the
+    modelling assertions and A4 hypotheses of Proposition~\ref{prop:spinrigidity}), so that none of the listed
+    operations realises $\sigma$~(Section~\ref{sec:rigidity}, Appendix~\ref{app:audit}).
+    Whether every conceivable recursive stratum inherits the parity type is treated in Section~\ref{sec:rigidity}
+    relative to a modelling premise [M]: every admissible fibre operation is carrier-preserving.
+    Since $\sigma$ is not carrier-preserving, a finite recursive tower of such operations cannot generate it, and
+    preserves the arithmetic type; the premise [M] itself is not proved.
+    The chiral orientation note~\cite{Beau2026cho} proves the orientation chain
+    $[\mathrm{H\text{-}orient}]$ within the inherited Heisenberg central-phase convention and under [H-WS]
+    of~\cite{Beau2026q11of}, and isolates a single residual caveat: a possible additional spin-Galois phase of the
+    full Lorentzian chiral lift, orthogonal to $\zeta_q$, in particular a $\sqrt{5}$ or ADE-spin factor.
+    Section~\ref{sec:chiral} examines that caveat.
+    It takes the Lorentzian chiral lift as an input that this note does not construct (the spin-solder hypothesis
+    [H-Spin] of~\cite{Beau2026q14}, supplied by no source), and shows that under [H-Spin], [H-WS], [M] and the
+    inherited central-phase convention the lift induces no action on $\mathbb{Q}(\sqrt{5})$; the chiral weight
+    $\sigma_L$ is the Weyl conjugation type, which lives in the parity factor and not in the $\sqrt{5}$ factor.
+    The conclusion is conditional on all of these inputs, and $\rho_\chi=1$ holds there by definition of $\sigma_L$.
 
     Section~\ref{sec:status} records the epistemic stratification and the downstream consequence: observable masses
     route through the explicit operator $E_\Pi$ and the Yukawa sector regardless of how the gate is
@@ -181,6 +194,7 @@ $d_{\mathrm{exit}}(s_0)=0$ and $d_{\mathrm{exit}}(s_\pm)=\tfrac{1}{2}\mp\epsilon
     \end{theorem}
 
     \begin{remark}[Status]
+      \label{rem:status}
 Theorem~\ref{thm:conditional} is conditional, not predictive.
 Its single nontrivial hypothesis is the gate.
 The first-principles status of $\epsilon=\tfrac{1}{10}$ is exactly the first-principles status of the gate, and
@@ -199,7 +213,8 @@ precise in Corollary~\ref{cor:tiebreak}.
     Stone--von Neumann identification of the Weil representation $V_\rho$~\cite{Beau2026m,Beau2026HeisenbergStructure}.
     The quadratic surd $\sqrt{5}$ is the character field of the two two-dimensional irreducible representations of the
     binary icosahedral group $2I$, where it appears through the golden ratio identity
-    $\chi(10a)+\chi(10b)=\varphi-\bar{\varphi}=1$ on the order-ten classes~\cite{Beau2026a1,Beau2026a30}.
+    $\chi(10a)+\chi(10b)=\varphi-\bar\varphi=1$ on the order-ten classes, with $\varphi=(1+\sqrt{5})/2$ and
+    $\bar\varphi=\varphi-1=1/\varphi$ (the latter is not the Galois conjugate $-1/\varphi$ of $\varphi$)~\cite{Beau2026a1,Beau2026a30}.
     These origins are independent: the first is a property of the fibre group on which the axioms act, the second is a
     representation-theoretic property of the spin-stratum subgroup.
 
@@ -253,6 +268,8 @@ The orthogonality is therefore structural, not numerical.
     That it acts on the chiral carrier as the scalar $-1$, so that $[\gamma_5,R_b]=0$ and $R_b$ realises multiplication
     by $-I$, is the hypothesis [H-WS] of~\cite{Beau2026q11of}, supplied by no source; the stronger group-level formulation (a homomorphism from the
     finite Weil group to $\mathrm{SL}(2,\mathbb{C})$ taking $W(-I)$ to $-I$) is not available at the corpus primes.
+    (On $\ell^2(\mathbb{Z}_q)$ itself $\mathrm{FT}^2$ is the reflection $f(x)\mapsto f(-x)$, not a scalar: [H-WS] is a
+    stipulation about the chiral carrier.)
     Every use below of $R_b$ as the central element $-I$ of $2I$ is under [H-WS].
 
     \begin{corollary}[Order-five versus order-ten is below parity resolution]
@@ -269,102 +286,140 @@ The orthogonality is therefore structural, not numerical.
       By Lemma~\ref{lem:organizing} the parity acts only on the $\zeta_q$ factor and fixes $\sqrt{5}$, and so does $R_b$
       under [H-WS]; together they permute the classes by the central lift while leaving the Galois data invariant.
       Quotienting by the central lift identifies the two classes; it does not order them.
-      Hence the framework supplies no selector between order five and order ten, for the same arithmetic reason that it
-      supplies no Galois-spin action: it provides $\times(-I)$, not $\sqrt{5}\mapsto-\sqrt{5}$.
+      Hence the framework supplies no selector between order five and order ten.
+      The central lift $\times(-I)$ exchanges the classes $5a\leftrightarrow10a$ and $5b\leftrightarrow10b$, whereas $\sigma$
+      preserves the order-five and the order-ten loci and exchanges only $5a\leftrightarrow5b$ and $10a\leftrightarrow10b$
+      (\texttt{code/outer\_automorphism\_classes.py}): the two are different maps.
     \end{proof}
 
-    The tie-break and the negative result of Section~\ref{sec:negative} are thus a single fact.
     The parity fixes $\mathbb{Q}(\sqrt{5})$ and permutes only by $\times(-I)$.
-    It therefore neither separates order five from order ten, nor separates the two Galois-conjugate characters
-    $5a$ and $5b$.
+    It therefore neither separates order five from order ten, nor separates the two classes $5a$ and $5b$, which
+    $\sigma$ exchanges.
 
   \section{The negative theorem}
     \label{sec:negative}
 
-    \begin{theorem}[No Galois-spin selection for the ADE gate in the present corpus construction]
+    \begin{theorem}[The Galois action $\sigma$ is not realised by the listed spin-stratum operations]
       \label{thm:negative}
-      For the spin stratum of the present corpus construction (Proposition~\ref{prop:spinrigidity}; the $R_b$ clause
-      under [H-WS] of~\cite{Beau2026q11of}), every field
-      automorphism forced by the foundations A1--A4, the recursive non-injectivity of ENI~Corollary~6~\cite{Beau2026l}
-      and the A4 locking lies in the factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ of $\Gal(K_q/\mathbb{Q})$ and fixes
-      $\mathbb{Q}(\sqrt{5})$ pointwise.
-      Consequently the Galois-spin selection, the nontrivial element of $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, is not
-      supplied by these operations.
-      The $\sqrt{5}$-locus required by the ADE $3:2$ dictionary therefore cannot be selected, in the present
-      construction, without an additional arithmetic principle at the spin stratum.
+      Let $\mathcal{A}_{\mathrm{spin}}$ be the group generated by the operations of
+      Proposition~\ref{prop:spinrigidity}.
+      Under the clauses and hypotheses stated there ([H-WS] of~\cite{Beau2026q11of} for $R_b$; the A4 hypotheses for the
+      locking; the modelling assertions for the tensor functors and the Schur projection), every element of
+      $\mathcal{A}_{\mathrm{spin}}$ acts trivially on $\mathrm{Irr}(2I)$ and fixes $\mathbb{Q}(\sqrt{5})$ pointwise; in
+      particular no element induces the permutation $(2\,2')(3\,3')$ of $\mathrm{Irr}(2I)$ induced by $\sigma$.
+      By Lemma~\ref{lem:organizing} the field automorphisms so generated lie in the factor
+      $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ of $\Gal(K_q/\mathbb{Q})$.
+      Consequently $\sigma$, the nontrivial element of $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, is not supplied by these
+      operations; modulo the modelling premise [M] of Section~\ref{sec:rigidity}, they are all the operations that
+      A1--A4, the recursive non-injectivity of ENI~Corollary~6~\cite{Beau2026l} and the A4 locking make available at
+      the spin stratum.
     \end{theorem}
 
     \begin{proof}
-      By Proposition~\ref{prop:spinrigidity} the operations available at the spin stratum each fix
-      $\mathbb{Q}(\sqrt{5})$, so by Lemma~\ref{lem:organizing} their generated group lies in
-      $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$.
-      The Galois-spin action is the nontrivial element of the complementary factor
-      $\Gal(\mathbb{Q}(\sqrt{5})/\mathbb{Q})$, which is not in the image of these operations.
-      Selecting the $\sqrt{5}$-locus over the neutral order-four locus distinguishes the two two-dimensional characters
-      by their $\sqrt{5}$ content, hence requires that complementary factor, which the present construction does not
-      provide.
+      By Proposition~\ref{prop:spinrigidity} the listed operations each fix $\mathbb{Q}(\sqrt{5})$, so by
+      Lemma~\ref{lem:organizing} their generated group lies in $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ when the operations
+      are modelled as automorphisms of $K_q$.
+      The $\sqrt{5}$-fixing automorphisms form a subgroup, closed under composition and inverse, and $\sigma$ is not in it.
+      Equivalently, the generated group acts trivially on $\mathrm{Irr}(2I)$, whereas $\sigma$ acts as $(2\,2')(3\,3')$.
     \end{proof}
 
-    \begin{remark}[Scope]
-      Theorem~\ref{thm:negative} is proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}, resting on the
-      established Proposition~\ref{prop:spinrigidity}.
-      The abstract generalisation to every conceivable recursive stratum, Lemma~\ref{lem:rigidity}, is established under
-      the corpus notion of an admissible fibre operation by
-      Proposition~\ref{prop:verticality-admissible-identifications}, and is broader than the gate requires.
+    \begin{remark}[What is not shown: the link between the gate and $\sigma$]
+      \label{rem:gate-link}
+      Theorem~\ref{thm:negative} is a statement about $\sigma$.
+      It does not say that the ADE case-selection gate requires $\sigma$.
+      The gate selects the central-lift class over the $\sqrt{5}$-locus, that is the order-five and order-ten classes
+      rather than the neutral order-four class.
+      An exact enumeration over $\mathrm{SL}(2,5)$ (\texttt{code/outer\_automorphism\_classes.py}) shows that the outer
+      automorphism fixes the order-four class and maps each of the loci $5a\cup5b$ and $10a\cup10b$ onto itself,
+      exchanging $5a\leftrightarrow5b$ and $10a\leftrightarrow10b$.
+      Both candidate loci are therefore $\sigma$-invariant: $\sigma$ would be needed to tell $5a$ from $5b$, or $2$
+      from $2'$, not to choose between the order-four and the order-five locus.
+      Both two-dimensional characters moreover vanish on the order-four class.
+      A link between the gate and $\sigma$ would need a separate argument that the selection of the locus is carried by
+      an action on $\mathbb{Q}(\sqrt{5})$; none is given here.
+      This note therefore draws no conclusion on the gate: its first-principles status stays that of
+      Remark~\ref{rem:status}.
     \end{remark}
 
-    \begin{remark}[Selection against, not merely absence of selection]
-The neutral generators derived from Born--Infeld parity and admissibility are those with vanishing spin-$\tfrac{1}{2}$
-character, the order-four half-turns; the exact penalised spectral-capacity computation confirms that the order-five
-representative of the $\sqrt{5}$-locus is dominated and not selected for $\alpha>0$~\cite{Beau2026a1,Beau2026a2}.
-The negative result is therefore an orthogonality between the supplied parity and the required Galois action, not a
-mere gap in the derivation.
+    \begin{remark}[Scope]
+      Theorem~\ref{thm:negative} concerns the listed operations, with the clauses of
+      Proposition~\ref{prop:spinrigidity} carrying their own status ($R_b$ under [H-WS]; the A4-locking clause under the
+      A4 hypotheses; the tensor-functor and Schur-projection clauses as modelling assertions).
+      The extension to every conceivable recursive stratum, Lemma~\ref{lem:rigidity}, is relative to the modelling
+      premise [M].
+    \end{remark}
+
+    \begin{remark}[Independent computational evidence on the loci]
+      Separately from Theorem~\ref{thm:negative}, other notes of the corpus report that the neutral generators derived
+      from Born--Infeld parity and admissibility are those with vanishing spin-$\tfrac{1}{2}$ character, the
+      order-four half-turns, and that the exact penalised spectral-capacity computation finds the order-five
+      representative of the $\sqrt{5}$-locus dominated for $\alpha>0$~\cite{Beau2026a1,Beau2026a2}.
+      This is a different argument, not a consequence of Theorem~\ref{thm:negative} and not re-derived here.
     \end{remark}
 
   \section{Type-rigidity along the tower}
     \label{sec:rigidity}
 
-    \begin{proposition}[Spin-stratum type-rigidity for the corpus construction]
+    \paragraph{Modelling premise [M].}
+    The statements of this section concern the operations of a list.
+    The premise [M] is that the operations available at a spin stratum, at every level of the tower, are exactly the
+    compositions of those listed in Proposition~\ref{prop:spinrigidity}; equivalently, that every admissible fibre
+    operation is a carrier-preserving operation of that list.
+    This completeness of the generator list is a modelling premise, not a proved fact, and every statement labelled
+    ``relative to [M]'' below depends on it.
+
+    \begin{proposition}[Spin-stratum type-rigidity for the listed operations]
       \label{prop:spinrigidity}
       Let $\mathcal{A}_{\mathrm{spin}}$ be the group generated by the operations available at the spin stratum of the
       present corpus construction: inner conjugations in $2I$, the central element $-I$, the central reflection
       $R_b=W(-I)$, the projective involution $J_\Pi$, the tensor functors of $\mathrm{Rep}(2I)$, the Schur projection,
       and the A4 locking.
-      Each generator fixes $\mathbb{Q}(\sqrt{5})$ pointwise (for $R_b$, under [H-WS] of~\cite{Beau2026q11of}), so
-      $\langle\mathcal{A}_{\mathrm{spin}}\rangle$ is contained
-      in the $\sqrt{5}$-fixing subgroup of $\Gal(K_q/\mathbb{Q})$.
-      In particular it does not contain the outer automorphism of $2I\cong\mathrm{SL}(2,5)$, the unique automorphism
-      that realises $\sqrt{5}\mapsto-\sqrt{5}$ and exchanges the two two-dimensional irreducible characters.
+      The clauses have different status.
+      \begin{enumerate}
+        \item[(a)] \emph{Proved by the character-table audit} (Appendix~\ref{app:audit}).
+        Inner conjugations, $-I$ and $J_\Pi$ induce the identity permutation of $\mathrm{Irr}(2I)$.
+        The outer automorphism of $2I\cong\mathrm{SL}(2,5)$, which realises $\sqrt{5}\mapsto-\sqrt{5}$, induces
+        $(2\,2')(3\,3')$ on $\mathrm{Irr}(2I)$ and exchanges the classes $5a\leftrightarrow5b$, $10a\leftrightarrow10b$,
+        fixing the others.
+        \item[(b)] \emph{Under [H-WS] of~\cite{Beau2026q11of}.} $R_b=W(-I)$ acts on the chiral carrier as the scalar $-1$,
+        as $-I$ does, and induces the identity permutation.
+        \item[(c)] \emph{Under the A4 hypotheses.} Where a locked pair $\pm s_*$ exists (a hypothesis of the A4 note), under
+        [H-Gen] of~\cite{Beau2026prs}, the $J_\Pi$-covariance and the diagonal form of the $J_\Pi$-odd lemma
+        of~\cite{Beau2026a4} (and [H-F], [H-Nd] for the orientation branch), the locking contributes the sign of $u$,
+        odd under the parity of the $J_\Pi$-odd modulus, in the parity factor.
+        \item[(d)] \emph{Modelling assertion, not part of the audit.} The tensor functors (integer fusion coefficients)
+        and the Schur projection (defined through $J_\Pi$-parity and symplectic data) fix $\mathbb{Q}(\sqrt{5})$.
+      \end{enumerate}
+      Consequently, modulo clauses (b)--(d), $\langle\mathcal{A}_{\mathrm{spin}}\rangle$ acts trivially on
+      $\mathrm{Irr}(2I)$ and fixes $\mathbb{Q}(\sqrt{5})$ pointwise, so it contains no element inducing
+      $(2\,2')(3\,3')$, that is no realisation of $\sigma$; relative to [M] this covers every operation of the spin
+      stratum.
     \end{proposition}
 
     \begin{proof}
-      The action of each generator on $\mathrm{Irr}(2I)$ is determined by a character-table audit of
-      $2I\cong\mathrm{SL}(2,5)$, carried out from the group in Appendix~\ref{app:audit} and validated by the
-      orthogonality relations.
+      Clause (a) is the character-table audit of $2I\cong\mathrm{SL}(2,5)$, carried out from the group in
+      Appendix~\ref{app:audit} and validated by the orthogonality relations.
       Inner conjugations act trivially on $\mathrm{Irr}(2I)$, since characters are class functions.
       The central element $-I$ acts on each irreducible representation by the scalar
-      $\chi(-I)/\chi(1)=\pm1$, a spinorial grading that permutes nothing; under [H-WS] of~\cite{Beau2026q11of}, its
-      Weil lift $R_b=W(-I)$ acts, as the scalar $-1$ of [H-WS], as $-I$ does, hence permutes nothing.
+      $\chi(-I)/\chi(1)=\pm1$, a spinorial grading that permutes nothing.
       The projective involution $J_\Pi$ is complex conjugation on the central character; since every character of $2I$
       is real-valued, it fixes every irreducible representation.
-      The tensor functors have integer fusion coefficients, and the Schur projection is defined through the
-      $J_\Pi$-parity and symplectic data, so both fix $\mathbb{Q}(\sqrt{5})$.
-      In the A4 note, where a locked pair $\pm s_*$ exists (a hypothesis there), the sign of $u$ is odd under the
-      parity $s\mapsto-s$ of the $J_\Pi$-odd modulus, $u(-s)=-u(s)$, under the generation-reading hypothesis of the
-      Schur reduction and the $J_\Pi$-covariance of the family~\cite{Beau2026bim}; this is the $J_\Pi$-odd chiral
-      $\mathbb{Z}/2$, in the parity factor, not the Galois action $\sqrt{5}\mapsto-\sqrt{5}$, and the magnitude
-      $|u|$ is not predicted there, being dictionary-bound through $\mathcal{N}_A$.
-      Each generator therefore fixes $\mathbb{Q}(\sqrt{5})$.
+      The audit does not cover the other generators.
+      Clause (b) transfers the action of $-I$ to $R_b$ by the scalar $-1$ of [H-WS].
+      For clause (c), the sign of $u$ is odd under the parity $s\mapsto-s$, $u(-s)=-u(s)$, under the stated hypotheses
+      of~\cite{Beau2026bim,Beau2026a4}; this is the $J_\Pi$-odd chiral $\mathbb{Z}/2$, in the parity factor, not the
+      Galois action $\sqrt{5}\mapsto-\sqrt{5}$, and the magnitude $|u|$ is not predicted there, being dictionary-bound
+      through $\mathcal{N}_A$; that the locking contributes nothing beyond this sign is part of the modelling.
+      Clause (d) is asserted, not computed.
       Since the $\sqrt{5}$-fixing automorphisms form a subgroup, closed under composition and inverse, no iteration,
-      central lift, projection or A4 locking built from these generators can manufacture the outer automorphism, which
-      moves $\sqrt{5}$.
+      central lift, projection or A4 locking built from these generators can induce the permutation $(2\,2')(3\,3')$.
     \end{proof}
 
-    \begin{lemma}[Full recursive type-rigidity, open]
+    \begin{lemma}[Full recursive type-rigidity, relative to the modelling premise {[M]}]
       \label{lem:rigidity}
       Every non-injective projection forced by A1--A4 and ENI~Corollary~6, including the recursive non-injectivities at
       every stratum above the base fibre, acts on the cyclotomic factor $\mathbb{Q}(\zeta_q)$ and fixes the real
-      quadratic factor $\mathbb{Q}(\sqrt{5})$.
+      quadratic factor $\mathbb{Q}(\sqrt{5})$, relative to [M].
     \end{lemma}
 
     Three regimes of this statement have different status, and conflating them is exactly the error to avoid.
@@ -375,17 +430,15 @@ mere gap in the derivation.
     $V_\rho$~\cite{Beau2026m,Beau2026HeisenbergStructure}.
     By Lemma~\ref{lem:organizing} this involution lies in $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and fixes $\sqrt{5}$.
 
-    For the spin stratum the statement is established for the present corpus construction by
-    Proposition~\ref{prop:spinrigidity}: the operations actually available there generate a $\sqrt{5}$-fixing group.
-    This is the only stratum the $\sqrt{5}$-locus of the ADE gate requires, so the no-go of
-    Theorem~\ref{thm:negative} is proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}.
+    For the spin stratum the statement holds for the listed operations, with the status of each clause given in
+    Proposition~\ref{prop:spinrigidity}.
 
-    For the abstract claim over every conceivable recursive stratum the statement was open at the abstract level.
+    For the abstract claim over every conceivable recursive stratum the statement is not an arithmetic fact but is
+    relative to [M].
     ENI~Corollary~6 forces $S_{\Pi_i}>0$ at each stratum of a tower of genuinely distinct emergent levels, but it
     constrains existence of the non-injectivity, not its arithmetic type~\cite{Beau2026l,Beau2026ninote}.
-    Proposition~\ref{prop:verticality-admissible-identifications} settles it under the corpus notion of an admissible
-    fibre operation: ENI supplies no operation in the $\sqrt{5}$ factor, every admissible identification being
-    carrier-preserving and hence vertical.
+    Proposition~\ref{prop:verticality-admissible-identifications} derives the statement from [M]: ENI supplies no
+    operation in the $\sqrt{5}$ factor, every admissible identification being carrier-preserving and hence vertical.
 
     \begin{remark}[Reduction to a type-preservation question]
       \label{rem:type-preservation}
@@ -397,10 +450,10 @@ the type.
 The relevant invariant is therefore not the fibre entropy itself, but the Galois-module type of the fibre
 identification.
 
-In the binary-icosahedral gate the vertical operations, generated by central parity, Schur scalars, internal
+For the binary icosahedral stratum the vertical operations, generated by central parity, Schur scalars, internal
 conjugation, and the already fixed admissibility involutions, act inside each irreducible carrier and fix the
 quadratic field $\mathbb{Q}(\sqrt{5})$ by Proposition~\ref{prop:spinrigidity}.
-By contrast the operation required to exchange the two spinorial two-dimensional icosahedral types is the horizontal
+By contrast the operation exchanging the two spinorial two-dimensional icosahedral types is the horizontal
 Galois involution $\sqrt{5}\mapsto-\sqrt{5}$, the outer automorphism of $2I\cong\mathrm{SL}(2,5)$ that permutes the
 two two-dimensional irreducible characters.
 Since the vertical operations form a subgroup, a finite tower of vertical identifications preserves the arithmetic
@@ -415,11 +468,11 @@ type: recursive emergence multiplies the parity type already present without man
 The remaining rigidity question is whether every admissible recursive stratum is forced to be vertical, or whether
 an admissible stratum can carry the horizontal automorphism exchanging the two two-dimensional icosahedral types.
 This is the type-inheritance content of Lemma~\ref{lem:rigidity}, distinct from entropy preservation, and it is
-settled below under the corpus notion of an admissible fibre operation.
-Theorem~\ref{thm:negative} does not depend on it.
+reduced below to the premise [M].
+Theorem~\ref{thm:negative} does not depend on it, except for its completeness clause.
     \end{remark}
 
-    A possible ambiguity must be addressed before the question can be settled.
+    A possible ambiguity must be addressed before the question can be treated.
     The quadratic surd $\sqrt{5}$ already occurs in the icosahedral geometry, through the golden-ratio Gram data of the
     binary-icosahedral embedding, so the admissibility data may well contain invariants defined over
     $\mathbb{Q}(\sqrt{5})$.
@@ -427,17 +480,17 @@ Theorem~\ref{thm:negative} does not depend on it.
     What must be excluded is not the occurrence of $\sqrt{5}$, but the existence of an admissible operation
     implementing its non-trivial Galois involution $\sqrt{5}\mapsto-\sqrt{5}$.
 
-    \begin{lemma}[No horizontal admissible operation]
+    \begin{lemma}[No horizontal admissible operation, relative to {[M]}]
       \label{lem:no-horizontal-admissible-operation}
       The admissibility data A1--A4 and the Born--Infeld parity may use the binary-icosahedral Gram geometry, hence
-      may contain invariants defined over $\mathbb{Q}(\sqrt{5})$, but they supply no admissible operation acting by
-      the non-trivial automorphism of this field.
+      may contain invariants defined over $\mathbb{Q}(\sqrt{5})$, but, relative to [M], they supply no admissible
+      operation acting by the non-trivial automorphism of this field.
       Equivalently, they contain no operation in the external coset that exchanges the two inequivalent
       two-dimensional binary-icosahedral types.
     \end{lemma}
 
     \begin{proof}
-      An admissible fibre operation acts inside the admissible carrier: it identifies states, phases, central
+      By [M] an admissible fibre operation acts inside the admissible carrier: it identifies states, phases, central
       characters, or parity-related vectors within the realised representation, so it preserves the carrier as a
       subgroup of $\mathrm{SU}(2)$ and commutes with the $2I$-action up to the inner and central data.
       By Schur's lemma such an operation preserves each isotypic component, hence fixes the isomorphism class of every
@@ -445,35 +498,34 @@ Theorem~\ref{thm:negative} does not depend on it.
       The involution $\sqrt{5}\mapsto-\sqrt{5}$ is realised by the entrywise Galois map $\sigma$ on the defining
       carrier.
       A bounded exact audit of the $120$-element icosian realisation of $2I$ (Appendix~\ref{app:audit}) shows that
-      $\sigma$ does not preserve the carrier: it maps $2I$ onto its Galois-conjugate copy $\sigma(2I)$, the
-      opposite-chirality icosian set, while post-composition with $\sigma$ sends the defining character $\chi_2$ to the
-      inequivalent character $\chi_{2'}$, with $\langle\chi_2\circ\sigma,\chi_2\rangle=0$.
-      Hence $\sigma$ is the outer automorphism of $2I\cong\mathrm{SL}(2,5)$ and is not carrier-preserving.
+      $\sigma$ does not preserve the carrier: it maps $2I$ onto its Galois-conjugate copy $\sigma(2I)\neq2I$, another
+      binary icosahedral subgroup of $\mathrm{SU}(2)$, while post-composition with $\sigma$ sends the defining
+      character $\chi_2$ to the inequivalent character $\chi_{2'}$, with $\langle\chi_2\circ\sigma,\chi_2\rangle=0$.
+      Hence the class of $\sigma$ is the nontrivial class of $\mathrm{Out}(2I)\cong\mathbb{Z}/2$ ($\sigma$ followed by a
+      conjugation in $\mathrm{SU}(2)$ carrying $\sigma(2I)$ back to $2I$ is an outer automorphism of $2I\cong\mathrm{SL}(2,5)$),
+      and $\sigma$ itself is not carrier-preserving.
       By contrast the Born--Infeld parity is the entrywise complex conjugation $\kappa$, which preserves the carrier
       and fixes both $\sqrt{5}$ and the golden ratio $\varphi$, so $\chi_2\circ\kappa=\chi_2$.
-      The chirality of the admissible carrier is itself fixed by the construction, the chiral weight $\sigma_L$ being a
-      Weyl conjugation type orthogonal to the $\sqrt{5}$ factor~\cite{Beau2026cho}, so the opposite-chirality carrier
-      $\sigma(2I)$ is not admissible.
-      An admissible operation, being carrier-preserving, therefore cannot equal $\sigma$, and none implements
+      An admissible operation, being carrier-preserving by [M], therefore cannot equal $\sigma$, and none implements
       $\sqrt{5}\mapsto-\sqrt{5}$.
     \end{proof}
 
-    \begin{proposition}[Verticality of admissible fibre identifications]
+    \begin{proposition}[Verticality of admissible fibre identifications, relative to {[M]}]
       \label{prop:verticality-admissible-identifications}
-      Every fibre identification forced by A1--A4 and the Born--Infeld parity is vertical.
+      Relative to [M], every fibre identification forced by A1--A4 and the Born--Infeld parity is vertical.
       It preserves the isomorphism class of each binary-icosahedral irreducible carrier and fixes the arithmetic type
       of the spinorial gate.
     \end{proposition}
 
     \begin{proof}
-      By the minimal fibre condition the forced identification is generated by the central pair $\{\chi,-\chi\}$ and
+      Relative to [M], the forced identification is generated by the central pair $\{\chi,-\chi\}$ and
       operations of Proposition~\ref{prop:spinrigidity}: inner conjugation, the central element, the
       Born--Infeld parity, the Schur scalars, the projective involution $J_\Pi$, and the A4 locking (the Proposition
       lists the tensor functors and the Schur projection, which are carrier-preserving by Schur's lemma, in place of
       the Schur scalars here).
       This list contains the central element $-I$ of $2I$ and the parity $J_\Pi$, and does not name the central
-      reflection $R_b$ separately; if $R_b$ is counted among the admissible operations, the statement inherits the
-      $R_b$ clause of Proposition~\ref{prop:spinrigidity}, under [H-WS] of~\cite{Beau2026q11of}.
+      reflection $R_b$ separately; if $R_b$ is counted among the admissible operations, the statement inherits clause (b)
+      of Proposition~\ref{prop:spinrigidity}, under [H-WS] of~\cite{Beau2026q11of}, and clause (c) for the locking.
       Each acts inside the admissible carrier and, by Lemma~\ref{lem:no-horizontal-admissible-operation}, lies in the
       $\sqrt{5}$-fixing subgroup of $\Gal(K_q/\mathbb{Q})$.
       A fibre identification is a composition of such operations, hence is itself carrier-preserving and
@@ -481,10 +533,10 @@ Theorem~\ref{thm:negative} does not depend on it.
       $\mathbb{Q}(\sqrt{5})$, which is the arithmetic type of the spinorial gate.
     \end{proof}
 
-    \begin{corollary}[Full-tower type preservation]
+    \begin{corollary}[Full-tower type preservation, relative to {[M]}]
       \label{cor:full-tower-type-preservation}
-      A finite tower of admissible recursive non-injective strata cannot generate the horizontal Galois exchange
-      $2\leftrightarrow2'$.
+      Relative to [M], a finite tower of admissible recursive non-injective strata cannot generate the horizontal Galois
+      exchange $2\leftrightarrow2'$.
       It can only compose vertical fibre identifications, hence it preserves the binary-icosahedral arithmetic type.
     \end{corollary}
 
@@ -496,41 +548,41 @@ Theorem~\ref{thm:negative} does not depend on it.
       not in this subgroup.
     \end{proof}
 
-    Corollary~\ref{cor:full-tower-type-preservation} establishes the full-tower regime of Lemma~\ref{lem:rigidity}
-    under the corpus notion of an admissible fibre operation: recursive non-injectivity multiplies the vertical parity
-    type already present and cannot manufacture the horizontal Galois transport.
-    The residue is no longer an open arithmetic possibility, but the single modelling hypothesis that every admissible
-    stratum operation is carrier-preserving, which is the defining property of a fibre identification together with the
-    fixed chirality of the construction.
+    The full-tower statement thus carries one status throughout this note: it holds relative to the modelling premise
+    [M], that every admissible stratum operation is a carrier-preserving operation of the list of
+    Proposition~\ref{prop:spinrigidity}, which is the defining property of a fibre identification in the corpus notion
+    of an admissible fibre operation; [M] is not proved.
+    It does not assert that no external equivalence of abstract character tables exists; it shows that, relative to
+    [M], the horizontal Galois exchange is not realised by an operation preserving the binary-icosahedral carrier.
 
-    The closure holds in this precise sense.
-    The result closes the rigidity problem for admissible fibre operations in the sense of A1--A4 and the Born--Infeld
-    parity.
-    It does not assert that no external equivalence of abstract character tables exists; it proves that the horizontal
-    Galois exchange is not realised by an admissible operation preserving the binary-icosahedral carrier.
-
-  \section{The chiral-lift corollary}
+  \section{The chiral lift: conditional consequences}
     \label{sec:chiral}
 
-    The spin-stratum type-rigidity of Proposition~\ref{prop:spinrigidity} was used in Section~\ref{sec:negative} to
-    obstruct the ADE gate.
-    The same proposition discharges, under [H-WS] of~\cite{Beau2026q11of} (the $R_b$ clause), the residual obstruction
-    of the chiral orientation note, where it acts with the opposite sign.
-    There $[\mathrm{H\text{-}orient}]$ is closed in the inherited Heisenberg central-phase lift, the chiral phase being
-    the linear cyclotomic character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$, and the single caveat left is a possible
-    additional spin-Galois phase of the full Lorentzian chiral lift, orthogonal to $\zeta_q$~\cite{Beau2026cho}.
-    We show that, under [H-Spin] (as input) and [H-WS], the caveat does not arise.
+    The chiral orientation note~\cite{Beau2026cho} proves the orientation chain within the inherited Heisenberg
+    central-phase convention and under [H-WS] of~\cite{Beau2026q11of}, the chiral phase being the linear cyclotomic
+    character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$, and leaves a single caveat: a possible additional spin-Galois
+    phase of the full Lorentzian chiral lift, orthogonal to $\zeta_q$.
+    This section applies Proposition~\ref{prop:spinrigidity} to that caveat.
+    We show that, under the inputs listed next, the caveat does not arise within the present spin stratum.
 
     \paragraph{Inputs of this section.}
-    Two named hypotheses enter, and neither is derived here.
-    (a)~[H-WS] of~\cite{Beau2026q11of}, for the $R_b$ clause (parts~(i) and~(ii), as above).
-    (b)~The Lorentzian chiral lift: the identification of the $\mathrm{SL}(2,\mathbb{C})$ obtained from
-    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ with the group acting on the chiral split
-    $S_L\oplus S_R$, in which $2I\subset\mathrm{SU}(2)\subset\mathrm{SL}(2,\mathbb{C})$ is read.
-    This lift is taken as input from~\cite{Beau2026q5b,Beau2026q11,Beau2026cho}; in Q14 it is the spin-solder
-    hypothesis [H-Spin] (the Lorentzian spin solder)~\cite{Beau2026q14}, which this note does not derive.
-    Lemma~\ref{lem:weyl} and Corollary~\ref{cor:chiralrigidity} are stated under [H-Spin] (as input) and, for the
-    $R_b$ clause, [H-WS]; Lemma~\ref{lem:boost} uses the same lift, and Corollary~\ref{cor:orient} inherits both.
+    Four inputs enter, and none is derived here.
+    (a)~[H-WS] of~\cite{Beau2026q11of}, for the $R_b$ clause (parts~(i) and~(ii) of that hypothesis).
+    (b)~The Lorentzian chiral lift: the identification of the $\mathrm{SL}(2,\mathbb{C})$ obtained by integrating
+    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ with the group acting on the chiral
+    split $S_L\oplus S_R$, in which $2I\subset\mathrm{SU}(2)\subset\mathrm{SL}(2,\mathbb{C})$ is read.
+    This note does not construct it.
+    Its status is that of the spin-solder hypothesis [H-Spin] of Q14 (Hypothesis ``Lorentzian spin solder'' and
+    Section~6 of~\cite{Beau2026q14}), whose part~(ii), the identification of this $\mathrm{SL}(2,\mathbb{C})$ with the
+    spin group of the effective co-metric, Q14 states is supplied by no source, the metaplectic group itself not acting
+    on the doublet.
+    The chiral orientation note uses the $\mathfrak{sl}_2(\mathbb{C})$ reading of the carrier with Q14 as its
+    reference~\cite{Beau2026cho}.
+    (c)~The modelling premise [M] of Section~\ref{sec:rigidity}.
+    (d)~The inherited central-phase convention [C] of~\cite{Beau2026cho}: after the central-character convention and the
+    outgoing branch are fixed, the chiral landing phase is the linear character $\omega_\chi=\zeta_q^{\Delta A_c}$.
+    Lemma~\ref{lem:boost}, Lemma~\ref{lem:weyl} and Corollary~\ref{cor:chiralrigidity} are stated under [H-Spin] (as
+    input), [M] and, for the $R_b$ clause, [H-WS]; Corollary~\ref{cor:orient} inherits all of them and adds [C].
 
     The object is the metaplectic lift of the ordered cascade step.
     The two cascade flows are the Weil images of the unipotent one-parameter subgroups of $\mathrm{SL}(2,\mathbb{R})$,
@@ -539,23 +591,26 @@ Theorem~\ref{thm:negative} does not depend on it.
     oriented product $ts$ of the two shear parameters, produced by the $\mathfrak{sl}_2$ commutator $[E,F]=H$ in the
     $\mathrm{SL}(2)$-on-$V$ model, where no Heisenberg bracket is used~\cite{Beau2026prs,Beau2026aar}; no map between the two
     brackets is supplied.
-    The Lorentzian metric forces the complexification
-    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ and the chiral split $S_L\oplus
-  S_R$~\cite{Beau2026q5b,Beau2026q11}, and the chiral weight $\sigma_L$ classes $S_L$ versus $S_R$ by the Weyl
+    Under [H-Spin], the Lorentzian metric is read through $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ and the
+    chiral split $S_L\oplus S_R$~\cite{Beau2026q14}, and the chiral weight $\sigma_L$ classes $S_L$ versus $S_R$ by the Weyl
     representation type $\mathbf{2}$ versus $\bar{\mathbf{2}}$~\cite{Beau2026cho}.
 
-    \begin{lemma}[The Lorentzian boost is Galois-internal]
+    \begin{lemma}[The Lorentzian boost is Galois-internal, under {[H-Spin]} as input]
       \label{lem:boost}
-      The action induced on $K_q$ by the Lorentzian chiral lift extends $\mathcal{A}_{\mathrm{spin}}$ only by the
-      central character and the analytic complexification, both of which fix $\mathbb{Q}(\sqrt{5})$.
-      The central character contributes the cyclotomic phase $\zeta_q$, whose only field automorphism is complex
-      conjugation $\zeta_q\mapsto\zeta_q^{-1}$~\cite{Beau2026a16}.
+      Under [H-Spin], the action induced on $K_q$ by the Lorentzian chiral lift extends $\mathcal{A}_{\mathrm{spin}}$
+      only by the central character and the analytic complexification unit $\mathrm{i}$, and neither supplies an action on
+      $\mathbb{Q}(\sqrt{5})$.
+      The central character contributes the cyclotomic phase $\zeta_q$, whose automorphisms form
+      $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$, of which complex conjugation $\zeta_q\mapsto\zeta_q^{-1}$ is the only element
+      supplied by the foundations~\cite{Beau2026a16}.
       The metaplectic cocycle is absent in the inherited model, and should it appear it is cyclotomic of Weil/Maslov
       type and does not supply $\sqrt{5}\mapsto-\sqrt{5}$~\cite{Beau2026cho}.
-      The Lorentzian boost is the analytic complexification unit $i$ on the integral structure constants of
-      $\mathfrak{sl}_2(\mathbb{C})$, inducing no automorphism of $K_q$ outside the cyclotomic factor.
-      Hence the boost lies in the $\sqrt{5}$-fixing subgroup of $\Gal(K_q/\mathbb{Q})$: it is Galois-internal to the
-      spin stratum.
+      The unit $\mathrm{i}$ is not in $K_q$ (for odd prime $q$ the quadratic subfields of $K_q$ are
+      $\mathbb{Q}(\sqrt{q^{*}})$, $\mathbb{Q}(\sqrt{5})$ and $\mathbb{Q}(\sqrt{5q^{*}})$), so the boost is read in $K_q(\mathrm{i})$,
+      where it enters by $\mathrm{i}\mapsto-\mathrm{i}$, that is by complex conjugation, which fixes $\sqrt{5}$; the group
+      $\Gal(K_q(\mathrm{i})/\mathbb{Q})$ does contain elements moving $\sqrt{5}$, so the absence of such an action is an
+      assertion about what the lift supplies, not a consequence of the field.
+      Under this assertion the boost lies in the $\sqrt{5}$-fixing subgroup: it is Galois-internal to the spin stratum.
     \end{lemma}
 
     \begin{lemma}[Weyl conjugation versus Galois conjugation, under {[H-Spin]} as input]
@@ -574,11 +629,11 @@ Theorem~\ref{thm:negative} does not depend on it.
       Hence $\sigma_L$ is orthogonal to the outer automorphism that distinguishes $2$ from $2'$.
     \end{lemma}
 
-    \begin{corollary}[Spin-Galois type-rigidity of the Lorentzian chiral lift, under {[H-Spin]} as input and {[H-WS]}]
+    \begin{corollary}[Spin-Galois type-rigidity of the Lorentzian chiral lift, under {[H-Spin]} as input, {[M]} and {[H-WS]}]
       \label{cor:chiralrigidity}
       Let $q$ be prime with $q\neq5$.
-      Under [H-Spin] (taken as input, not derived here) and, for the $R_b$ clause of Proposition~\ref{prop:spinrigidity},
-      under [H-WS] of~\cite{Beau2026q11of},
+      Under [H-Spin] (taken as input, not derived here), relative to [M] and, for the $R_b$ clause of
+      Proposition~\ref{prop:spinrigidity}, under [H-WS] of~\cite{Beau2026q11of},
       every field automorphism induced on $K_q$ by the Lorentzian chiral lift of the ordered cascade step acts
       trivially on $\mathbb{Q}(\sqrt{5})$; the nontrivial action, when present, is cyclotomic.
       In particular $\sigma_L$ lies in the parity factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and does not probe the
@@ -594,25 +649,31 @@ Theorem~\ref{thm:negative} does not depend on it.
       Hence the induced action on $K_q$ fixes $\mathbb{Q}(\sqrt{5})$, and any nontrivial part is cyclotomic.
     \end{proof}
 
-    \begin{corollary}[Orientation within the present spin stratum, under {[H-Spin]} as input and {[H-WS]}]
+    \begin{corollary}[Orientation within the present spin stratum, under {[H-Spin]} as input, {[H-WS]}, {[M]} and the inherited convention {[C]}]
       \label{cor:orient}
-      Within the Lorentzian chiral lift generated by the present spin stratum,
+      Within the Lorentzian chiral lift generated by the present spin stratum, under [H-Spin] (as input), [H-WS], [M] and
+      the inherited central-phase convention [C] of~\cite{Beau2026cho},
       \[
         \omega_\chi(e)=\zeta_q^{\Delta A_c(e)}
         \ \Longrightarrow\ \rho_\chi=1
         \ \Longrightarrow\ [\mathrm{H\text{-}orient}]
-        \ \Longrightarrow\ N_A=\theta_{\max}\neq0 .
+        \ \Longrightarrow\ N_A=\theta_{\max}\neq0 ,
       \]
+      where $\rho_\chi=1$ holds by definition of $\sigma_L:=\operatorname{sgn}\Delta A_c$ on the nonzero-cocycle support
+      (it is not a measured quantity), and the chain is that of~\cite{Beau2026cho,Beau2026q11of} within the inherited
+      convention.
     \end{corollary}
 
     \begin{proof}
       By Corollary~\ref{cor:chiralrigidity} the chiral phase carries no Galois-spin factor orthogonal to $\zeta_q$, so
-      the residual obstruction left open by the chiral orientation note~\cite{Beau2026cho} does not arise.
-      After the central-character convention and the outgoing branch of~\cite{Beau2026cho} are fixed, a cyclotomic
-      reindexing does not define a new spin-Galois phase: it is absorbed into the choice of the Heisenberg central block
-      and its Born--Infeld conjugate.
-      Thus the relevant chiral landing phase is the same linear character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$ used
-      in the inherited-lift calculation, rather than an independent average over cyclotomic embeddings.
+      the residual caveat left open by the chiral orientation note~\cite{Beau2026cho} does not arise.
+      A cyclotomic reindexing of the phase, for instance a Gauss or Maslov phase, is a cyclotomic quantity: for prime $q$
+      a Gauss sum lies in $\mathbb{Q}(\sqrt{q^{*}})\subset\mathbb{Q}(\zeta_q)$, which does not contain $\sqrt{5}$
+      (Lemma~\ref{lem:organizing}), so it defines no spin-Galois phase.
+      That such a reindexing is absorbed into the choice of the Heisenberg central block and its Born--Infeld
+      conjugate, so that the landing phase stays the linear character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$ used in the
+      inherited-lift calculation rather than an independent average over cyclotomic embeddings, is not argued here: it
+      is the assumption [C], the inherited convention of~\cite{Beau2026cho}.
       The implications are then those of the inherited lift, now with no orthogonal factor available to set
       $\rho_\chi=0$.
     \end{proof}
@@ -634,50 +695,58 @@ Theorem~\ref{thm:negative} does not depend on it.
 
     The epistemic stratification of the statements is as follows.
 
+    The premises used below are: [H-WS] of~\cite{Beau2026q11of}; [H-Spin] of~\cite{Beau2026q14}, taken as input; the
+    modelling premise [M] (completeness of the generator list, equivalently carrier-preservation of every admissible
+    operation); the A4 hypotheses ([H-Gen], $J_\Pi$-covariance, diagonal form, a locked pair); and the inherited
+    central-phase convention [C] of~\cite{Beau2026cho}.
+
     \begin{center}
       \small
-      \begin{tabular}{@{}p{0.215\textwidth}p{0.40\textwidth}p{0.30\textwidth}@{}}
+      \begin{tabular}{@{}p{0.215\textwidth}p{0.36\textwidth}p{0.34\textwidth}@{}}
         \hline
         Statement & Content & Status\\
         \hline
         Lemma~\ref{lem:algebraic} & ratio $3:2\Rightarrow\epsilon=\tfrac{1}{10}$ & proved, trivial, case-independent\\
-        Theorem~\ref{thm:conditional} & gate $\Rightarrow$ ratio $3:2\Rightarrow\epsilon$ & conditional / open hypothesis\\
-        Lemma~\ref{lem:organizing} & parity $\perp$ Galois-spin in $\Gal(K_q/\mathbb{Q})$ & proved\\
+        Theorem~\ref{thm:conditional} & gate $\Rightarrow$ ratio $3:2\Rightarrow\epsilon$ & conditional on the gate (open hypothesis)\\
+        Lemma~\ref{lem:organizing} & parity $\perp$ $\sigma$ in $\Gal(K_q/\mathbb{Q})$ & proved (Galois theory)\\
         Corollary~\ref{cor:tiebreak} & order five $=$ order ten mod central lift
-        & proved under [H-WS] ($R_b$ realises the central lift $\times(-I)$)\\
-        Theorem~\ref{thm:negative} & no Galois-spin for the ADE gate (present construction)
-        & proved for every generator of $\mathcal{A}_{\mathrm{spin}}$ other than $R_b$; the $R_b$ clause of
-        Prop.~\ref{prop:spinrigidity} is under [H-WS]\\
-        Proposition~\ref{prop:spinrigidity} & spin-stratum type-rigidity (corpus construction)
-        & proved (character-table audit); the $R_b$ clause is under [H-WS]\\
-        Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp$ Galois-spin
-        & under [H-Spin] (as input) and, for $R_b$, [H-WS]; inherits the $R_b$ clause of Prop.~\ref{prop:spinrigidity}\\
-        Lemma~\ref{lem:weyl} & $\sigma_L$ (Weyl type $\mathbf{2}$ vs.\ $\bar{\mathbf{2}}$) $\perp$ outer automorphism $2$ vs.\ $2'$
-        & under [H-Spin] (as input; $2I\subset\mathrm{SU}(2)\subset\mathrm{SL}(2,\mathbb{C})$)\\
-        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum)
-        & proved under [H-Spin] (as input) and [H-WS]\\
-        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & established (admissible-operation sense)\\
-        Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sqrt{5}$-moving operation
-        & proved, realisation audit\\
-        Proposition~\ref{prop:verticality-admissible-identifications} & admissible fibre identifications are vertical
-        & proved; the generator list omits $R_b$, which if added inherits the $R_b$ clause (under [H-WS])\\
+        & under [H-WS]; reading of the projective quotient is a modelling premise\\
+        Prop.~\ref{prop:spinrigidity}(a) & $-I$, $J_\Pi$, inner conjugations act as the identity on $\mathrm{Irr}(2I)$; $\sigma$ acts as $(2\,2')(3\,3')$
+        & proved (character-table audit, \texttt{code/})\\
+        Prop.~\ref{prop:spinrigidity}(b) & $R_b$ acts as $-I$ & under [H-WS]\\
+        Prop.~\ref{prop:spinrigidity}(c) & A4 locking contributes only a parity-odd sign
+        & under the A4 hypotheses (a locked pair exists)\\
+        Prop.~\ref{prop:spinrigidity}(d) & tensor functors, Schur projection fix $\mathbb{Q}(\sqrt{5})$ & modelling assertion (not audited)\\
+        Theorem~\ref{thm:negative} & no listed operation realises $\sigma$
+        & follows from (a)--(d); completeness clause relative to [M]\\
+        Link gate $\leftrightarrow\sigma$ & the gate requires $\sigma$ & \textbf{not established} (Remark~\ref{rem:gate-link})\\
+        Lemma~\ref{lem:boost} & lift supplies no action on $\mathbb{Q}(\sqrt{5})$ & structural assertion, under [H-Spin] (input)\\
+        Lemma~\ref{lem:weyl} & $\sigma_L$ (Weyl type $\mathbf{2}$ vs.\ $\bar{\mathbf{2}}$) $\perp$ outer automorphism
+        & under [H-Spin] (input)\\
+        Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp\sigma$
+        & under [H-Spin] (input), [M] and, for $R_b$, [H-WS]\\
+        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$, $N_A\neq0$ (present stratum)
+        & under [H-Spin] (input), [H-WS], [M] and [C]; $\rho_\chi=1$ by definition of $\sigma_L$\\
+        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & relative to [M] (not unconditional)\\
+        Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sigma$-realising operation
+        & relative to [M]; audit proves $\sigma(2I)\neq2I$, $\langle\chi_2\circ\sigma,\chi_2\rangle=0$\\
+        Prop.~\ref{prop:verticality-admissible-identifications} & admissible fibre identifications are vertical
+        & relative to [M]; if $R_b$ is added it inherits clause (b)\\
         Corollary~\ref{cor:full-tower-type-preservation} & finite tower preserves the arithmetic type
-        & proved; same proviso as the preceding row\\
+        & relative to [M]; same proviso\\
         \hline
       \end{tabular}
     \end{center}
 
-    The net statement is that $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate, and that for the
-    present corpus construction the gate is a no-go (for the central reflection $R_b$, under [H-WS]): the spin-stratum operations generate a $\sqrt{5}$-fixing subgroup
-    $\langle\mathcal{A}_{\mathrm{spin}}\rangle\subset\Gal(K_q/\mathbb{Q})_{\sqrt{5}}$, closed under composition, so no
-    iteration, central lift, Schur projection or A4 locking can manufacture the outer automorphism that the
-    $\sqrt{5}$-locus requires.
-    The obstruction is therefore not an unresolved computation but a closure argument: for the present corpus
-    construction, the gate requires an additional arithmetic principle not supplied by A1--A4, ENI, or A4 locking.
-    The same closure argument, applied to the Lorentzian chiral lift, discharges the residual obstruction of the chiral
-    orientation note: the lift induces no action on $\mathbb{Q}(\sqrt{5})$, so $[\mathrm{H\text{-}orient}]$ is closed
-    within the present spin stratum, under [H-Spin] (taken as input, not derived here) and [H-WS], the gate no-go and the chiral closure being opposite cuts of
-    Proposition~\ref{prop:spinrigidity}~\cite{Beau2026cho}.
+    The net statement is that $\epsilon=\tfrac{1}{10}$ is a theorem modulo the ADE case-selection gate, and that, for the
+    listed operations of the spin stratum and under the clauses above, no operation realises the Galois action $\sigma$:
+    the generated group acts trivially on $\mathrm{Irr}(2I)$, and the $\sqrt{5}$-fixing automorphisms form a subgroup, so
+    no iteration, central lift, Schur projection or A4 locking built from these generators can induce $\sigma$.
+    Whether the gate requires $\sigma$ is not established, so this note leaves the first-principles status of the gate
+    unchanged: it remains open.
+    Applied to the Lorentzian chiral lift, the same closure argument shows, under [H-Spin] (taken as input, not derived
+    here), [H-WS], [M] and [C], that the lift induces no action on $\mathbb{Q}(\sqrt{5})$, so that the residual
+    spin-Galois caveat of the chiral orientation note does not arise within the present spin stratum~\cite{Beau2026cho}.
 
     The downstream consequence bounds the relevance of the gate.
     The gate fixes a ratio of levels and hence the structural input $\epsilon$; it does not fix observable masses.
@@ -685,9 +754,8 @@ Theorem~\ref{thm:negative} does not depend on it.
     $E_\Pi$ and the projected Yukawa sector, with the mass hierarchy carried by the cascade amplification and its
     exponent~\cite{Beau2026fmnote,Beau2026prs,Beau2026a4}.
     Even a derivation of the gate would not by itself produce a mass.
-    The gate is therefore a finite, characterisable structural sub-problem, now settled negatively for the present
-    construction (for the central reflection $R_b$, under [H-WS]), while the quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa
-    sector.
+    The gate remains an open, characterisable structural sub-problem, which this note does not settle, while the
+    quantitative effort proceeds on $E_\Pi$, the explicit Lorentzian block, and the Yukawa sector.
 
     \paragraph{Residual role of the ADE gate in the angular normalisation.}
     The Weil--BFS angular-capacity audit~\cite{Beau2026aar} fixes the first-shell (onset) coefficient $\tfrac13$ of the central-phase increment for the standard $\{\pm X,\pm Y\}$ campaign (angular under the $A_c$ input), but
@@ -705,8 +773,8 @@ Theorem~\ref{thm:negative} does not depend on it.
       R=\frac{\tfrac12+\epsilon}{\tfrac12-\epsilon}.
     \]
     For $R=3/2$ one obtains $\epsilon=\tfrac{1}{10}$, equivalently $N_{A,\mathrm{red}}^{\mathrm{geom}}=\tfrac{3}{10}$.
-    Thus the remaining angular-normalisation residue is not a fitted number: it is the same ADE / type-rigidity datum,
-    namely the prime $5$ or $\sqrt5$-gate, that controls the dictionary value.
+    Thus the remaining angular-normalisation residue is not a fitted number: it is the level ratio $R$, which the choice of
+    the generator class (the gate) supplies; this note does not relate that choice to $\sigma$.
 
     \paragraph{Concrete form of the remaining generator fork.}
     The residual ADE gate can be stated equivalently as a generator-set fork inside the binary icosahedral stratum.
@@ -743,14 +811,13 @@ Theorem~\ref{thm:negative} does not depend on it.
     The latter is not a harmless convention change: it transports to the different value $\epsilon=\tfrac18$, not to
     $\epsilon=\tfrac1{10}$.
 
-    This also closes, under [H-WS] of~\cite{Beau2026q11of}, the tempting fermionic shortcut.
+    The tempting fermionic shortcut, chirality selecting the locus, is not settled here either.
     The spinorial grading read by the Lorentzian chiral lift is common to the relevant two-dimensional spinorial types
-    and induces no action on $\mathbb{Q}(\sqrt{5})$~\cite{Beau2026cho}.
-    Consequently, under [H-WS] and the statuses of~\cite{Beau2026cho}, chirality supplies the frontier orientation
-    within the present spin stratum, but it does not select the
-    $\sqrt{5}$-locus.
-    The remaining datum is therefore exactly the type-rigidity datum isolated above: whether any recursive spin stratum
-    can supply a non-cyclotomic arithmetic action moving $\sqrt{5}$.
+    and, under [H-Spin] and [H-WS], induces no action on $\mathbb{Q}(\sqrt{5})$~\cite{Beau2026cho}.
+    Consequently, under these inputs and the statuses of~\cite{Beau2026cho}, chirality supplies the frontier orientation
+    within the present spin stratum, but it does not supply $\sigma$.
+    Since no link between the gate and $\sigma$ is established (Remark~\ref{rem:gate-link}), this note draws no conclusion
+    on whether chirality selects the $\sqrt{5}$-locus: that datum remains the gate itself.
 
     \paragraph{Downstream mass-split gate.}
     The order-five Cayley-spectral ratio $R_{\mathrm{ADE}}=3/2$ induces the split value
@@ -758,8 +825,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     On the projected Yukawa side, the same formula rewrites the free diagonal parameter $u$ through
     $R_\Pi=(\tfrac12+u)/(\tfrac12-u)$, so that $\epsilon(R_\Pi)=u$~\cite{Beau2026pyo}.
     The remaining assertion $u=1/10$ is therefore precisely the dictionary identification $R_\Pi=R_{\mathrm{ADE}}$.
-    It is not supplied by the carrier-preserving recursion, which cannot manufacture the horizontal Galois transport
-    $2\leftrightarrow 2'$.
+    It is not derived here: the results above bear on $\sigma$ only, not on this identification.
 
     \newpage
     \appendix
@@ -767,7 +833,7 @@ Theorem~\ref{thm:negative} does not depend on it.
   \section{Reproducible audit of the spin-stratum operations}
     \label{app:audit}
 
-    The audit is a finite, bias-independent computation, reproducible from the group with no hard-coded character data.
+    The audit is a finite computation, reproducible from the group with no hard-coded character data.
     The protocol is as follows.
     \begin{enumerate}
       \item Construct $2I\cong\mathrm{SL}(2,5)$ explicitly as the $120$ matrices over $\mathbb{F}_5$ of determinant one.
@@ -776,13 +842,21 @@ Theorem~\ref{thm:negative} does not depend on it.
       \item Reconstruct the character table from the class algebra by simultaneous diagonalisation of the class-sum
       matrices $A_i$, with $(A_i)_{jk}=a_{ikj}$ the class-multiplication constants, recovering the dimensions
       $1,2,2',3,3',4,4',5,6$.
-      \item Validate by the row orthogonality relations, which hold to machine precision; the reconstructed table agrees
-      with the published character table of $2I$~\cite{Beau2026a1}.
+      \item Validate by the row orthogonality relations, which hold to machine precision.
+      The comparison of the reconstructed table with the published character table of $2I$~\cite{Beau2026a1} is by
+      inspection and is not performed by the scripts.
       \item Apply the Galois action $\sqrt{5}\mapsto-\sqrt{5}$ to the table: it induces the permutation
       $(2\,2')(3\,3')$ of $\mathrm{Irr}(2I)$, fixing $1,4,4',5,6$.
-      \item Compute the action of each spin-stratum operation: inner conjugations, complex conjugation $J_\Pi$, the
-      central element $-I$ and, under [H-WS] of~\cite{Beau2026q11of}, $R_b=W(-I)$ all induce the identity permutation of
-      $\mathrm{Irr}(2I)$; none realises $2\leftrightarrow2'$.
+      On classes, the outer automorphism of $\mathrm{SL}(2,5)$ (conjugation by $\mathrm{diag}(2,1)$ in
+      $\mathrm{GL}(2,5)$) exchanges $5a\leftrightarrow5b$ and $10a\leftrightarrow10b$ and fixes the classes of orders
+      $1,2,3,4,6$; the order-four class is fixed and each of the loci $5a\cup5b$, $10a\cup10b$ is mapped onto itself.
+      \item Compute the action of the operations covered by the audit: inner conjugations, complex conjugation
+      $J_\Pi$ and the central element $-I$ induce the identity permutation of $\mathrm{Irr}(2I)$; none realises
+      $2\leftrightarrow2'$.
+      The central reflection $R_b=W(-I)$ is assigned the action of $-I$ under [H-WS] of~\cite{Beau2026q11of}; this is a
+      hypothesis, not a computation.
+      The tensor functors, the Schur projection and the A4 locking are not computed by the audit (clauses (c) and (d) of
+      Proposition~\ref{prop:spinrigidity}).
     \end{enumerate}
 
     The two two-dimensional irreducible characters on the $\sqrt{5}$-locus are Galois-conjugate, with
@@ -801,22 +875,32 @@ Theorem~\ref{thm:negative} does not depend on it.
     central element $-I$ acts by the scalar $\chi(-I)/\chi(1)=\pm1$ without permuting, and so does $R_b=W(-I)$ under
     [H-WS] of~\cite{Beau2026q11of}; and inner
     conjugations are trivial on class functions.
-    No spin-stratum operation moves $\mathbb{Q}(\sqrt{5})$, and the $\sqrt{5}$-fixing automorphisms form a subgroup, so
-    no composition of them realises $\sigma$.
-    This establishes Proposition~\ref{prop:spinrigidity}.
+    The $\sqrt{5}$-fixing automorphisms form a subgroup, so no composition of the operations above realises $\sigma$.
+    This establishes clause (a) of Proposition~\ref{prop:spinrigidity}, and clause (b) under [H-WS].
 
-    A complementary realisation audit confirms the carrier-level statement of
+    A complementary realisation audit supports the carrier-level statement of
     Lemma~\ref{lem:no-horizontal-admissible-operation}.
     Realising $2I$ as the $120$ icosians in $\mathrm{SU}(2)$, exact over $\mathbb{Q}(\mathrm{i},\sqrt{5})$, the
-    entrywise Galois map $\sigma:\sqrt{5}\mapsto-\sqrt{5}$ does not preserve this set: it carries the icosians onto the
-    opposite-chirality copy $\sigma(2I)\neq 2I$, and $\chi_2\circ\sigma=\chi_{2'}$ with
+    entrywise Galois map $\sigma:\sqrt{5}\mapsto-\sqrt{5}$ does not preserve this set: it carries the icosians onto
+    a different binary icosahedral subgroup $\sigma(2I)\neq 2I$, and $\chi_2\circ\sigma=\chi_{2'}$ with
     $\langle\chi_2\circ\sigma,\chi_2\rangle=0$.
     By contrast the entrywise complex conjugation $\kappa:\mathrm{i}\mapsto-\mathrm{i}$, the Born--Infeld parity,
     preserves $2I$ and fixes both $\sqrt{5}$ and the golden ratio $\varphi$, so $\chi_2\circ\kappa=\chi_2$.
     Thus the operation exchanging $2\leftrightarrow2'$ is not carrier-preserving, whereas every admissible operation is,
-    which is the content of Lemma~\ref{lem:no-horizontal-admissible-operation}.
-    Companion scripts performing the construction, reconstruction, orthogonality validation, permutation tests, and the
-    icosian realisation audit are deposited with the note.
+    by the premise [M] of Section~\ref{sec:rigidity}.
+
+    \paragraph{Reproduction.}
+    The scripts are in \texttt{code/} of this repository (provenance, dependencies, expected output and runtimes in
+    \texttt{code/README.md}).
+    With the dependencies of \texttt{code/requirements.txt}, run from the repository root:
+    \begin{itemize}
+      \item \texttt{python code/spin-stratum-type-rigidity-test.py}: character table and its permutations (about 0.1 s);
+      \item \texttt{python code/outer\_automorphism\_classes.py}: class action of the outer automorphism and of the
+      central lift (about 0.1 s);
+      \item \texttt{python code/frontB2\_no\_horizontal\_operation.py}: icosian realisation audit (about 1 s);
+      \item \texttt{python code/frontB\_recursive\_type\_rigidity.py}: exact character field and class data (about 3 s).
+    \end{itemize}
+    The first, third and fourth scripts are vendored from the PRS repository; the second was written for this version.
 
     \newpage
     \bibliographystyle{plain}
