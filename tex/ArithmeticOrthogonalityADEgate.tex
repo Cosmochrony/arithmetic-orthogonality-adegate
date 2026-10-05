@@ -55,9 +55,11 @@
     fix $\mathbb{Q}(\sqrt{5})$, so their generated group lies in the $\sqrt{5}$-fixing subgroup of
     $\Gal(K_q/\mathbb{Q})$, which by closure cannot manufacture the outer automorphism that realises
     $\sqrt{5}\mapsto-\sqrt{5}$.
-    The no-go for the ADE gate is therefore unconditional in the present construction; the same rigidity closes the
+    The no-go for the ADE gate is therefore unconditional in the present construction (its use of the central reflection
+    $R_b$ as the element $-I$ of $2I$ being under the hypothesis [H-WS] of~\cite{Beau2026q11of}); the same rigidity closes the
     chiral orientation note, the Lorentzian chiral lift inducing no action on $\mathbb{Q}(\sqrt{5})$ and hence
-    $[\mathrm{H\text{-}orient}]$ unconditionally within the present spin stratum~\cite{Beau2026cho}.
+    $[\mathrm{H\text{-}orient}]$ within the present spin stratum, under [H-WS] of~\cite{Beau2026q11of} and
+    \cite{Beau2026cho}.
     The abstract type-rigidity of the full recursive tower is then established under the corpus notion of an admissible
     fibre operation: recursive non-injectivity multiplies the vertical parity type already present and cannot
     manufacture the horizontal Galois transport, so it preserves the binary-icosahedral arithmetic type.
@@ -239,8 +241,11 @@ The orthogonality is therefore structural, not numerical.
 
     The order-ten elements of $2I$ are the order-five elements multiplied by the central element $-I$, since for an
     order-five $g$ one has $(-Ig)^{5}=-I$ and $(-Ig)^{10}=I$.
-    The Weil lift of $-I$ is the central reflection $R_b=W(-I)=\mathrm{FT}^{2}$, scalar on the chiral carrier and
-    commuting with $\gamma_5$~\cite{Beau2026q11of}.
+    The Weil lift of $-I$ is the central reflection $R_b=W(-I)=\mathrm{FT}^{2}$.
+    That it is scalar on the chiral carrier and commutes with $\gamma_5$ holds under the hypothesis [H-WS]
+    of~\cite{Beau2026q11of}: a group-level map from the finite Weil group to the spin-solder
+    $\mathrm{SL}(2,\mathbb{C})$ taking $W(-I)$ to $-I$, supplied by no source.
+    Every use below of $R_b$ as the central element $-I$ of $2I$ is under [H-WS].
 
     \begin{corollary}[Order-five versus order-ten is below parity resolution]
       \label{cor:tiebreak}
@@ -291,7 +296,8 @@ The orthogonality is therefore structural, not numerical.
     \end{proof}
 
     \begin{remark}[Scope]
-      Theorem~\ref{thm:negative} is unconditional for the ADE gate in the present construction, resting on the
+      Theorem~\ref{thm:negative} is unconditional for the ADE gate in the present construction (modulo [H-WS] for
+      $R_b$), resting on the
       established Proposition~\ref{prop:spinrigidity}.
       The abstract generalisation to every conceivable recursive stratum, Lemma~\ref{lem:rigidity}, is established under
       the corpus notion of an admissible fibre operation by
@@ -326,8 +332,9 @@ mere gap in the derivation.
       $2I\cong\mathrm{SL}(2,5)$, carried out from the group in Appendix~\ref{app:audit} and validated by the
       orthogonality relations.
       Inner conjugations act trivially on $\mathrm{Irr}(2I)$, since characters are class functions.
-      The central element $-I$ and its Weil lift $R_b=W(-I)$ act on each irreducible representation by the scalar
-      $\chi(-I)/\chi(1)=\pm1$, a spinorial grading that permutes nothing.
+      The central element $-I$ acts on each irreducible representation by the scalar
+      $\chi(-I)/\chi(1)=\pm1$, a spinorial grading that permutes nothing; under [H-WS] of~\cite{Beau2026q11of}, its
+      Weil lift $R_b=W(-I)$ acts by the same scalar.
       The projective involution $J_\Pi$ is complex conjugation on the central character; since every character of $2I$
       is real-valued, it fixes every irreducible representation.
       The tensor functors have integer fusion coefficients, and the Schur projection is defined through the
@@ -361,7 +368,7 @@ mere gap in the derivation.
     For the spin stratum the statement is established for the present corpus construction by
     Proposition~\ref{prop:spinrigidity}: the operations actually available there generate a $\sqrt{5}$-fixing group.
     This is the only stratum the $\sqrt{5}$-locus of the ADE gate requires, so the no-go of
-    Theorem~\ref{thm:negative} is unconditional in the present construction.
+    Theorem~\ref{thm:negative} is unconditional in the present construction (modulo [H-WS] for $R_b$).
 
     For the abstract claim over every conceivable recursive stratum the statement was open at the abstract level.
     ENI~Corollary~6 forces $S_{\Pi_i}>0$ at each stratum of a tower of genuinely distinct emergent levels, but it
@@ -502,7 +509,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     The object is the metaplectic lift of the ordered cascade step.
     The two cascade flows are the Weil images of the unipotent one-parameter subgroups of $\mathrm{SL}(2,\mathbb{R})$,
     with product $S_X(t)S_Y(s)=W\!\left(\begin{smallmatrix}1+ts&t\\s&1\end{smallmatrix}\right)$; a
-    Baker--Campbell--Hausdorff reduction in $\mathfrak{sl}_2$ identifies the per-step $J_3$ component with the
+    Baker--Campbell--Hausdorff reduction in $\mathfrak{sl}_2$ identifies the per-step $J_3$ component, to leading order, with the
     oriented product $ts$ of the two shear parameters, produced by the $\mathfrak{sl}_2$ commutator $[E,F]=H$ and not by
     the Heisenberg bracket~\cite{Beau2026aar,Beau2026q14}.
     The Lorentzian metric forces the complexification
@@ -558,7 +565,7 @@ Theorem~\ref{thm:negative} does not depend on it.
       Hence the induced action on $K_q$ fixes $\mathbb{Q}(\sqrt{5})$, and any nontrivial part is cyclotomic.
     \end{proof}
 
-    \begin{corollary}[Unconditional orientation within the present spin stratum]
+    \begin{corollary}[Orientation within the present spin stratum, under {[H-WS]}]
       \label{cor:orient}
       Within the Lorentzian chiral lift generated by the present spin stratum,
       \[
@@ -584,12 +591,13 @@ Theorem~\ref{thm:negative} does not depend on it.
     \begin{remark}[Boundary with the Schur transport]
       Corollary~\ref{cor:orient} closes the frontier amplitude datum $N_A\neq0$.
       It does not establish $u\neq0$, which is located in the projected Dirac residue through the Schur complement and
-      related to the $J_\Pi$-odd asymmetry of the eliminated block as a structural reading, not a theorem, and not to any
-      frontier average~\cite{Beau2026prs}.
+      related, under the reading map [H-Gen], to the $J_\Pi$-odd asymmetry of the eliminated block as a structural
+      reading, not a theorem, and not to any frontier average; no mechanism for a non-zero split is derived~\cite{Beau2026prs}.
       The statement closed here is $N_A\neq0$, not
       $\Pi_S\,D\,(\partial_s P|_0)\,D\,\Pi_S^{*}\big|_{\mathrm{gen},\,J_\Pi\text{-odd}}\neq0$; the promotion of the
-      signal to the spectral split $u\neq0$ would need the transport hypothesis [H-Tr] of the Schur reduction on the
-      $J_\Pi$-odd generation sector, supplied by no source~\cite{Beau2026prs}.
+      signal to the spectral split $u\neq0$ would need a transport of the oriented signal to the $J_\Pi$-odd generation
+      sector; the only transport stated in~\cite{Beau2026prs} is the hypothesis [H-Tr] for the $\mathfrak{sl}_2$ opening,
+      supplied by no source, and the identification of the frontier signal with that opening is a further input.
     \end{remark}
 
   \section{Status and downstream consequence}
@@ -606,13 +614,13 @@ Theorem~\ref{thm:negative} does not depend on it.
         Lemma~\ref{lem:algebraic} & ratio $3:2\Rightarrow\epsilon=\tfrac{1}{10}$ & proved, trivial, case-independent\\
         Theorem~\ref{thm:conditional} & gate $\Rightarrow$ ratio $3:2\Rightarrow\epsilon$ & conditional / open hypothesis\\
         Lemma~\ref{lem:organizing} & parity $\perp$ Galois-spin in $\Gal(K_q/\mathbb{Q})$ & proved\\
-        Corollary~\ref{cor:tiebreak} & order five $=$ order ten mod central lift & proved, modulo $R_b=W(-I)$\\
+        Corollary~\ref{cor:tiebreak} & order five $=$ order ten mod central lift & proved, modulo $R_b=W(-I)$ and under [H-WS]\\
         Theorem~\ref{thm:negative} & no Galois-spin for the ADE gate (present construction) & proved\\
         Proposition~\ref{prop:spinrigidity} & spin-stratum type-rigidity (corpus construction)
-        & proved, character-table audit\\
+        & proved (character-table audit); use of $R_b$ under [H-WS]\\
         Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp$ Galois-spin
         & proved\\
-        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum) & proved\\
+        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum) & proved under [H-WS]\\
         Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & established (admissible-operation sense)\\
         Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sqrt{5}$-moving operation
         & proved, realisation audit\\
@@ -632,7 +640,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     construction, the gate requires an additional arithmetic principle not supplied by A1--A4, ENI, or A4 locking.
     The same closure argument, applied to the Lorentzian chiral lift, discharges the residual obstruction of the chiral
     orientation note: the lift induces no action on $\mathbb{Q}(\sqrt{5})$, so $[\mathrm{H\text{-}orient}]$ is closed
-    unconditionally within the present spin stratum, the gate no-go and the chiral closure being opposite cuts of
+    within the present spin stratum and under [H-WS], the gate no-go and the chiral closure being opposite cuts of
     Proposition~\ref{prop:spinrigidity}~\cite{Beau2026cho}.
 
     The downstream consequence bounds the relevance of the gate.
@@ -753,7 +761,8 @@ Theorem~\ref{thm:negative} does not depend on it.
     so $\chi_{2'}=\sigma(\chi_2)$ with $\sigma:\sqrt{5}\mapsto-\sqrt{5}$, and the swap $2\leftrightarrow2'$ is realised
     by $\sigma$ alone.
     Since every character of $2I$ is real-valued, complex conjugation $J_\Pi$ fixes each irreducible representation; the
-    central element $-I$ and $R_b=W(-I)$ act by the scalar $\chi(-I)/\chi(1)=\pm1$ without permuting; and inner
+    central element $-I$ acts by the scalar $\chi(-I)/\chi(1)=\pm1$ without permuting, and so does $R_b=W(-I)$ under
+    [H-WS] of~\cite{Beau2026q11of}; and inner
     conjugations are trivial on class functions.
     No spin-stratum operation moves $\mathbb{Q}(\sqrt{5})$, and the $\sqrt{5}$-fixing automorphisms form a subgroup, so
     no composition of them realises $\sigma$.
