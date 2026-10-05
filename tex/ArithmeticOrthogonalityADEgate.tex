@@ -10,6 +10,11 @@
 \usepackage{amstext}
 \input{glyphtounicode}
 \pdfgentounicode=1
+\hypersetup{
+  unicode,
+  pdftitle={Spin-Stratum Type-Rigidity: Orthogonality of the ADE Gate and Closure of the Chiral Lift},
+  pdfauthor={Jérôme Beau}
+}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -58,7 +63,8 @@
     The no-go for the ADE gate is therefore proved in the present construction for every operation of the spin stratum except the central reflection $R_b$; for $R_b$ it is under [H-WS] of~\cite{Beau2026q11of}; the same rigidity closes the
     chiral orientation note, the Lorentzian chiral lift inducing no action on $\mathbb{Q}(\sqrt{5})$ and hence
     $[\mathrm{H\text{-}orient}]$ within the present spin stratum, under [H-WS] of~\cite{Beau2026q11of} and
-    \cite{Beau2026cho}.
+    \cite{Beau2026cho}, and with [H-Spin] as input.
+    The Lorentzian chiral lift ($S_L\oplus S_R$, $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$) is taken as input from Q5b, Q11 and CHO; in Q14 this is the spin-solder hypothesis [H-Spin]~\cite{Beau2026q14}, which this note does not derive.
     The abstract type-rigidity of the full recursive tower is then established under the corpus notion of an admissible
     fibre operation: recursive non-injectivity multiplies the vertical parity type already present and cannot
     manufacture the horizontal Galois transport, so it preserves the binary-icosahedral arithmetic type.
@@ -109,12 +115,13 @@
     The chiral orientation note closes $[\mathrm{H\text{-}orient}]$ in the inherited Heisenberg central-phase lift and
     isolates a single residual obstruction: a possible additional spin-Galois phase of the full Lorentzian chiral lift,
     orthogonal to $\zeta_q$, in particular a $\sqrt{5}$ or ADE-spin factor~\cite{Beau2026cho}.
-    Section~\ref{sec:chiral} discharges that obstruction, under [H-WS] of~\cite{Beau2026q11of}, from the same
+    Section~\ref{sec:chiral} discharges that obstruction, under [H-WS] of~\cite{Beau2026q11of} and with the Lorentzian
+    chiral lift taken as input ([H-Spin] of~\cite{Beau2026q14}, not derived here), from the same
     Proposition~\ref{prop:spinrigidity}: the
     Lorentzian lift induces no action on $\mathbb{Q}(\sqrt{5})$, the chiral weight $\sigma_L$ being the Weyl conjugation
     type that lives in the parity factor and not in the $\sqrt{5}$ factor.
     For the gate the rigidity is fatal, the required $\sqrt{5}$ action being absent; for the chiral lift it is the
-    closure (under [H-WS]), the feared $\sqrt{5}$ action being absent.
+    closure (under [H-Spin] as input and [H-WS]), the feared $\sqrt{5}$ action being absent.
 
     Section~\ref{sec:status} records the epistemic stratification and the downstream consequence: observable masses
     route through the explicit operator $E_\Pi$ and the Yukawa sector regardless of how the gate is
@@ -512,7 +519,18 @@ Theorem~\ref{thm:negative} does not depend on it.
     There $[\mathrm{H\text{-}orient}]$ is closed in the inherited Heisenberg central-phase lift, the chiral phase being
     the linear cyclotomic character $\omega_\chi(e)=\zeta_q^{\Delta A_c(e)}$, and the single caveat left is a possible
     additional spin-Galois phase of the full Lorentzian chiral lift, orthogonal to $\zeta_q$~\cite{Beau2026cho}.
-    We show that, under [H-WS], the caveat does not arise.
+    We show that, under [H-Spin] (as input) and [H-WS], the caveat does not arise.
+
+    \paragraph{Inputs of this section.}
+    Two named hypotheses enter, and neither is derived here.
+    (a)~[H-WS] of~\cite{Beau2026q11of}, for the $R_b$ clause (parts~(i) and~(ii), as above).
+    (b)~The Lorentzian chiral lift: the identification of the $\mathrm{SL}(2,\mathbb{C})$ obtained from
+    $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}\simeq\mathfrak{sl}_2(\mathbb{C})$ with the group acting on the chiral split
+    $S_L\oplus S_R$, in which $2I\subset\mathrm{SU}(2)\subset\mathrm{SL}(2,\mathbb{C})$ is read.
+    This lift is taken as input from~\cite{Beau2026q5b,Beau2026q11,Beau2026cho}; in Q14 it is the spin-solder
+    hypothesis [H-Spin] (the Lorentzian spin solder)~\cite{Beau2026q14}, which this note does not derive.
+    Lemma~\ref{lem:weyl} and Corollary~\ref{cor:chiralrigidity} are stated under [H-Spin] (as input) and, for the
+    $R_b$ clause, [H-WS]; Lemma~\ref{lem:boost} uses the same lift, and Corollary~\ref{cor:orient} inherits both.
 
     The object is the metaplectic lift of the ordered cascade step.
     The two cascade flows are the Weil images of the unipotent one-parameter subgroups of $\mathrm{SL}(2,\mathbb{R})$,
@@ -540,7 +558,7 @@ Theorem~\ref{thm:negative} does not depend on it.
       spin stratum.
     \end{lemma}
 
-    \begin{lemma}[Weyl conjugation versus Galois conjugation]
+    \begin{lemma}[Weyl conjugation versus Galois conjugation, under {[H-Spin]} as input]
       \label{lem:weyl}
       The chiral weight $\sigma_L$ classes the Weyl branches $S_L$ versus $S_R$ by complex-conjugation type,
       $\mathbf{2}$ versus $\bar{\mathbf{2}}$~\cite{Beau2026cho}, whereas the Galois action $\sqrt{5}\mapsto-\sqrt{5}$
@@ -556,10 +574,11 @@ Theorem~\ref{thm:negative} does not depend on it.
       Hence $\sigma_L$ is orthogonal to the outer automorphism that distinguishes $2$ from $2'$.
     \end{lemma}
 
-    \begin{corollary}[Spin-Galois type-rigidity of the Lorentzian chiral lift]
+    \begin{corollary}[Spin-Galois type-rigidity of the Lorentzian chiral lift, under {[H-Spin]} as input and {[H-WS]}]
       \label{cor:chiralrigidity}
       Let $q$ be prime with $q\neq5$.
-      Under [H-WS] of~\cite{Beau2026q11of} (inherited through the $R_b$ clause of Proposition~\ref{prop:spinrigidity}),
+      Under [H-Spin] (taken as input, not derived here) and, for the $R_b$ clause of Proposition~\ref{prop:spinrigidity},
+      under [H-WS] of~\cite{Beau2026q11of},
       every field automorphism induced on $K_q$ by the Lorentzian chiral lift of the ordered cascade step acts
       trivially on $\mathbb{Q}(\sqrt{5})$; the nontrivial action, when present, is cyclotomic.
       In particular $\sigma_L$ lies in the parity factor $\Gal(\mathbb{Q}(\zeta_q)/\mathbb{Q})$ and does not probe the
@@ -575,7 +594,7 @@ Theorem~\ref{thm:negative} does not depend on it.
       Hence the induced action on $K_q$ fixes $\mathbb{Q}(\sqrt{5})$, and any nontrivial part is cyclotomic.
     \end{proof}
 
-    \begin{corollary}[Orientation within the present spin stratum, under {[H-WS]}]
+    \begin{corollary}[Orientation within the present spin stratum, under {[H-Spin]} as input and {[H-WS]}]
       \label{cor:orient}
       Within the Lorentzian chiral lift generated by the present spin stratum,
       \[
@@ -613,7 +632,7 @@ Theorem~\ref{thm:negative} does not depend on it.
   \section{Status and downstream consequence}
     \label{sec:status}
 
-    The epistemic stratification of the nine statements is as follows.
+    The epistemic stratification of the statements is as follows.
 
     \begin{center}
       \small
@@ -632,8 +651,11 @@ Theorem~\ref{thm:negative} does not depend on it.
         Proposition~\ref{prop:spinrigidity} & spin-stratum type-rigidity (corpus construction)
         & proved (character-table audit); the $R_b$ clause is under [H-WS]\\
         Corollary~\ref{cor:chiralrigidity} & chiral lift fixes $\mathbb{Q}(\sqrt{5})$; $\sigma_L\perp$ Galois-spin
-        & proved; inherits the $R_b$ clause of Prop.~\ref{prop:spinrigidity} (under [H-WS])\\
-        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum) & proved under [H-WS]\\
+        & under [H-Spin] (as input) and, for $R_b$, [H-WS]; inherits the $R_b$ clause of Prop.~\ref{prop:spinrigidity}\\
+        Lemma~\ref{lem:weyl} & $\sigma_L$ (Weyl type $\mathbf{2}$ vs.\ $\bar{\mathbf{2}}$) $\perp$ outer automorphism $2$ vs.\ $2'$
+        & under [H-Spin] (as input; $2I\subset\mathrm{SU}(2)\subset\mathrm{SL}(2,\mathbb{C})$)\\
+        Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$ closed, $N_A\neq0$ (present stratum)
+        & proved under [H-Spin] (as input) and [H-WS]\\
         Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & established (admissible-operation sense)\\
         Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sqrt{5}$-moving operation
         & proved, realisation audit\\
@@ -654,7 +676,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     construction, the gate requires an additional arithmetic principle not supplied by A1--A4, ENI, or A4 locking.
     The same closure argument, applied to the Lorentzian chiral lift, discharges the residual obstruction of the chiral
     orientation note: the lift induces no action on $\mathbb{Q}(\sqrt{5})$, so $[\mathrm{H\text{-}orient}]$ is closed
-    within the present spin stratum and under [H-WS], the gate no-go and the chiral closure being opposite cuts of
+    within the present spin stratum, under [H-Spin] (taken as input, not derived here) and [H-WS], the gate no-go and the chiral closure being opposite cuts of
     Proposition~\ref{prop:spinrigidity}~\cite{Beau2026cho}.
 
     The downstream consequence bounds the relevance of the gate.
@@ -668,7 +690,7 @@ Theorem~\ref{thm:negative} does not depend on it.
     sector.
 
     \paragraph{Residual role of the ADE gate in the angular normalisation.}
-    The Weil--BFS angular-capacity audit~\cite{Beau2026aar} closes the standard-campaign central-phase onset coefficient (angular under the $A_c$ input), but
+    The Weil--BFS angular-capacity audit~\cite{Beau2026aar} fixes the first-shell (onset) coefficient $\tfrac13$ of the central-phase increment for the standard $\{\pm X,\pm Y\}$ campaign (angular under the $A_c$ input), but
     it does not derive the dictionary value $\epsilon=\tfrac{1}{10}$ from the $\mathrm{Sym}^2$ geometry alone.
     After removing the trivial angle factor $2\pi/q$, the reduced conversion problem is
     \[

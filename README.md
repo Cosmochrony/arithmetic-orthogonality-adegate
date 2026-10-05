@@ -40,18 +40,22 @@ The same spin-stratum type-rigidity has a second consequence, of **opposite sign
 orientation note (CHO) closes $[\mathrm{H\text{-}orient}]$ in the inherited Heisenberg
 central-phase lift and leaves a single residual obstruction: a possible additional spin-Galois
 phase of the full Lorentzian chiral lift, orthogonal to $\zeta_q$ — in particular a $\sqrt{5}$ or
-ADE-spin factor. This note discharges, under [H-WS], that obstruction from the same proposition:
+ADE-spin factor. This note discharges, under [H-WS] and with the Lorentzian chiral lift as an input, that obstruction
+from the same proposition. The Lorentzian chiral lift ($S_L\oplus S_R$, $\mathfrak{mp}(2,\mathbb{R})_{\mathbb{C}}
+\simeq\mathfrak{sl}_2(\mathbb{C})$) is taken as input from Q5b, Q11 and CHO; in Q14 this is the spin-solder
+hypothesis [H-Spin], which AOG does not derive. The Weyl-versus-Galois lemma and the spin-Galois rigidity corollary
+are stated under [H-Spin] (as input) and, for $R_b$, [H-WS]:
 
 - **Lemma (Galois-internal boost).** The Lorentzian chiral lift extends the spin-stratum action on
   $K_q$ only by the central character and the analytic complexification, both fixing
   $\mathbb{Q}(\sqrt{5})$.
-- **Lemma (Weyl vs. Galois conjugation).** The chiral weight $\sigma_L$ classes the Weyl branches
+- **Lemma (Weyl vs. Galois conjugation, under [H-Spin] as input).** The chiral weight $\sigma_L$ classes the Weyl branches
   $S_L$ vs. $S_R$ by complex-conjugation type ($\mathbf{2}$ vs. $\bar{\mathbf{2}}$), which is
   orthogonal to the outer automorphism that separates the two two-dimensional irreducible
   characters $2$ vs. $2'$ of $2I$.
-- **Corollary (spin-Galois rigidity of the lift, under [H-WS]).** Every field automorphism induced on $K_q$ by
+- **Corollary (spin-Galois rigidity of the lift, under [H-Spin] as input and [H-WS]).** Every field automorphism induced on $K_q$ by
   the Lorentzian chiral lift fixes $\mathbb{Q}(\sqrt{5})$; any nontrivial part is cyclotomic.
-- **Corollary (orientation, under [H-WS]).** Within the present spin stratum,
+- **Corollary (orientation, under [H-Spin] as input and [H-WS]).** Within the present spin stratum,
   $\omega_\chi(e) = \zeta_q^{\Delta A_c(e)} \Rightarrow \rho_\chi = 1 \Rightarrow
   [\mathrm{H\text{-}orient}] \Rightarrow N_A = \theta_{\max} \neq 0$.
 
@@ -67,7 +71,7 @@ further input.
 This note belongs to the **fermionic matter sub-programme** (Presentation Note 6). It fixes the
 logical status of the generation-split value $\epsilon$, shows that the ADE case-selection gate is
 a no-go proved in the present corpus construction (for the central reflection $R_b$, under [H-WS]), and — via the chiral-lift corollary —
-discharges, under [H-WS], the residual obstruction of the **chiral orientation note** (CHO), the gate no-go and
+discharges, under [H-WS] and with [H-Spin] as input, the residual obstruction of the **chiral orientation note** (CHO), the gate no-go and
 the chiral closure being opposite cuts of a single spin-stratum type-rigidity. The downstream
 consequence bounds the relevance of the gate: observable masses route through the explicit operator
 $E_\Pi$ and the Yukawa sector regardless of how the gate is resolved (FM-Note, PRS).
