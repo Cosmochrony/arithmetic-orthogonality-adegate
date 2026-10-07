@@ -7,7 +7,7 @@ Goal (bias-independent, no fit, exact over Q(i, sqrt5)):
   (A) VERTICAL operations (fibre identifications: the central element -I, scalar/Schur action,
       inner conjugations) fix every irreducible character pointwise, hence fix the character
       field Q(sqrt5).  These are exactly the operations a non-injective FIBRE identification
-      {chi, -chi} can realise (ENI minimal-fibre condition).
+      {chi, -chi} can realise (candidate minimal-fibre condition, Foundation M).
 
   (B) HORIZONTAL operation (the Galois action sqrt5 -> -sqrt5): its class in Out(2I) = Out(SL(2,5)) is the
       outer class; it permutes the two 2-dimensional irreducible characters chi_2 <-> chi_2'.
@@ -178,10 +178,10 @@ print(f"  -I acts as scalar (-1)*Identity in defining rep: {matkey(-eye(2)) == m
 print("\nVERTICAL fact: inner conjugation fixes class functions (characters are class functions);")
 print("central/scalar action multiplies a rep by a scalar => fixes its character value up to the")
 print("global trace factor and never moves sqrt5.  Hence every fibre identification {chi,-chi}")
-print("(ENI minimal fibre) is sqrt5-fixing.")
+print("(candidate minimal fibre, Foundation M) is sqrt5-fixing.")
 
 print("\n=== VERDICT ===")
 print("HORIZONTAL (sqrt5->-sqrt5) induces the outer class of 2I, the class of the character swap chi_2<->chi_2'.")
-print("VERTICAL (central/scalar/inner = every ENI fibre identification) fixes Q(sqrt5) pointwise.")
+print("VERTICAL (central/scalar/inner = every fibre identification, with the candidate minimal fibre of Foundation M as premise) fixes Q(sqrt5) pointwise.")
 print("Realising sigma needs HORIZONTAL; the listed fibre operations (modelled as the only ones) are VERTICAL.")
 print("(AOG 1.8: no link between the ADE gate and sigma is claimed by this script.)")

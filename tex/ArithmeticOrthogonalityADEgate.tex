@@ -50,8 +50,8 @@
     which this note does not settle.
     We then examine a candidate arithmetic obstruction.
     In the compositum $K_q=\mathbb{Q}(\zeta_q,\sqrt{5})$ the Born--Infeld parity $c\mapsto q-c$, the restriction of
-complex conjugation $\zeta_q\mapsto\zeta_q^{-1}$ (the candidate fibre involution of the foundations, taken here as a
-premise), fixes $\sqrt{5}$, whereas the Galois action
+    complex conjugation $\zeta_q\mapsto\zeta_q^{-1}$ (the candidate fibre involution of the foundations, taken here as a
+    premise), fixes $\sqrt{5}$, whereas the Galois action
     $\sigma:\sqrt{5}\mapsto-\sqrt{5}$, which exchanges the two two-dimensional irreducible characters of the binary
     icosahedral group $2I\cong\mathrm{SL}(2,5)$, lies in the other direct factor of the Galois group: the two are
     arithmetically orthogonal.
@@ -312,7 +312,7 @@ The orthogonality of the two factors is structural, not numerical.
 
     The parity fixes $\mathbb{Q}(\sqrt{5})$ and permutes no class of $2I$ (every character is real); the central lift
     $\times(-I)$ is the separate operation $R_b$ (under [H-WS]).
-    The listed operations therefore neither separates order five from order ten, nor separates the two classes $5a$ and $5b$, which
+    The listed operations therefore neither separate order five from order ten, nor separates the two classes $5a$ and $5b$, which
     $\sigma$ exchanges.
 
   \section{The negative theorem}
@@ -394,6 +394,9 @@ The orthogonality of the two factors is structural, not numerical.
     operation is carrier-preserving; the carrier-level Lemma~\ref{lem:no-horizontal-admissible-operation} uses only
     this weaker consequence, whereas the closing clause of Theorem~\ref{thm:negative} (``all the operations that
     \dots make available'') uses completeness itself.
+    Throughout, ``relative to [M]'' includes the statuses of clauses (a)--(d) of
+    Proposition~\ref{prop:spinrigidity}, in particular [H-WS] for $R_b$ and the A4 hypotheses, together with the
+    candidate base-fibre parity taken as a premise.
 
     \begin{proposition}[Spin-stratum type-rigidity for the listed operations]
       \label{prop:spinrigidity}
@@ -445,7 +448,7 @@ The orthogonality of the two factors is structural, not numerical.
 
     \begin{lemma}[Full recursive type-rigidity, relative to the modelling premise {[M]}]
       \label{lem:rigidity}
-      Every non-injective projection forced by A1--A4 and ENI~Corollary~6, including the recursive non-injectivities at
+      Every non-injective projection of the tower (existence: ENI~Corollary~6), including the recursive non-injectivities at
       every stratum above the base fibre, acts on the cyclotomic factor $\mathbb{Q}(\zeta_q)$ and fixes the real
       quadratic factor $\mathbb{Q}(\sqrt{5})$, relative to [M].
     \end{lemma}
@@ -583,9 +586,9 @@ Theorem~\ref{thm:negative} does not depend on it, except for its completeness cl
     \end{proof}
 
     The full-tower statement thus carries one status throughout this note: it holds relative to the modelling premise
-    [M], that every admissible stratum operation is a carrier-preserving operation of the list of
-    Proposition~\ref{prop:spinrigidity}, which is the defining property of a fibre identification in the corpus notion
-    of an admissible fibre operation; [M] is not proved.
+    [M] (completeness of the list of Proposition~\ref{prop:spinrigidity}, which implies carrier-preservation under
+    its clauses (a)--(d)), with [H-WS] for $R_b$ and the candidate base-fibre parity as stated there; [M] is not
+    proved.
     It does not assert that no external equivalence of abstract character tables exists; it shows that, relative to
     [M], the horizontal Galois exchange is not realised by an operation preserving the binary-icosahedral carrier.
 
@@ -782,13 +785,13 @@ Link gate $\leftrightarrow\sigma$ & the gate requires $\sigma$ & \textbf{not est
         & under [H-Spin] (input), [M], [B] and, for $R_b$, [H-WS]\\
         Corollary~\ref{cor:orient} & $[\mathrm{H\text{-}orient}]$, $N_A\neq0$ (present stratum)
         & under [H-Spin] (input), [H-WS], [M], [B] and [C]; $\rho_\chi=1$ by definition of $\sigma_L$\\
-        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & relative to [M] (not unconditional)\\
+        Lemma~\ref{lem:rigidity} & full recursive (all-tower) type-rigidity & relative to [M], clauses (a)--(d) and, for $R_b$, [H-WS] (not unconditional)\\
         Lemma~\ref{lem:no-horizontal-admissible-operation} & no admissible $\sigma$-realising operation
-        & relative to [M]; audit proves $\sigma(2I)\neq2I$, $\langle\chi_2\circ\sigma,\chi_2\rangle=0$\\
+        & relative to [M], clauses (a)--(d) and, for $R_b$, [H-WS]; audit proves $\sigma(2I)\neq2I$, $\langle\chi_2\circ\sigma,\chi_2\rangle=0$\\
         Prop.~\ref{prop:verticality-admissible-identifications} & admissible fibre identifications are vertical
         & relative to [M] and, for $R_b$, [H-WS]; candidate parity as premise\\
         Corollary~\ref{cor:full-tower-type-preservation} & finite tower preserves the arithmetic type
-        & relative to [M]; same proviso\\
+        & relative to [M], clauses (a)--(d) and, for $R_b$, [H-WS]; same proviso\\
         \hline
       \end{tabular}
     \end{center}
@@ -944,7 +947,7 @@ fixes the choice of $5a$ versus $5b$ (the table of~\cite{Beau2026a1} labels $10a
     By contrast the entrywise complex conjugation $\kappa:\mathrm{i}\mapsto-\mathrm{i}$, the Born--Infeld parity,
     preserves $2I$ and fixes both $\sqrt{5}$ and the golden ratio $\varphi$, so $\chi_2\circ\kappa=\chi_2$.
     Thus the operation exchanging $2\leftrightarrow2'$ is not carrier-preserving, whereas every admissible operation is,
-    by the premise [M] of Section~\ref{sec:rigidity}.
+    by the premise [M] of Section~\ref{sec:rigidity} (with its clause statuses, in particular [H-WS] for $R_b$).
 
     \paragraph{Reproduction.}
     The scripts are in \texttt{code/} of this repository (provenance, dependencies, expected output and runtimes in
